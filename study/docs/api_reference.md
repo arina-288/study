@@ -1,9 +1,9 @@
-# API Reference
+# Справочник API
 <div id="swagger-ui"></div>
 <script>
   window.onload = function() {
     const ui = SwaggerUIBundle({
-      url: "/swagger/openapi.yaml",
+      url: "/study/study/swagger/openapi.yaml",
       dom_id: '#swagger-ui',
       presets: [
         SwaggerUIBundle.presets.apis,

@@ -1,5 +1,7 @@
 site_name: Документация API
 
+repo_url: https://github.com/arina-288/study
+
 theme: 
   name: 'material'
 
