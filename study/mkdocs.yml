@@ -10,7 +10,7 @@ nav:
   - Обзор: review.md
   - Аутентификация и авторизация: authentication_and_authorization.md
   - Руководство по началу работы: getting_started_guide.md
-  - Справочник API: api_reference.md
+#  - Справочник API: api_reference.md
   - Примеры использования API: api_usage_examples.md
   - История изменений: history_of_changes.md
   - Контакты: contacts.md
