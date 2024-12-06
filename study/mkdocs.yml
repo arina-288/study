@@ -1,0 +1,22 @@
+site_name: Документация API Basis vStorage
+site_description: Тестовая документация API
+
+theme: 
+  name: 'material'
+
+nav:
+  - Главная страница: index.md
+  - Обзор: review.md
+  - Аутентификация и авторизация: authentication_and_authorization.md
+  - Руководство по началу работы: getting_started_guide.md
+  - Справочник API: api_reference.md
+  - Примеры использования API: api_usage_examples.md
+  - История изменений: history_of_changes.md
+  - Контакты: contacts.md
+  - Глоссарий: glossary.md
+
+extra_javascript:
+  - https://unpkg.com/swagger-ui-dist/swagger-ui-bundle.js
+  - https://unpkg.com/swagger-ui-dist/swagger-ui-standalone-preset.js
+extra_css:
+  - https://unpkg.com/swagger-ui-dist/swagger-ui.css
