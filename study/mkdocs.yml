@@ -1,5 +1,4 @@
-site_name: Документация API Basis vStorage
-site_description: Тестовая документация API
+site_name: Документация API
 
 theme: 
   name: 'material'
