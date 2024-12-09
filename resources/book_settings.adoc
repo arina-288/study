@@ -1,0 +1,31 @@
+:doctype: book
+:toc: macro
+:toc-title: Содержание
+:toclevels: 5
+:icons: font
+:sectnums:
+:sectnumlevels: 5
+:pdf-theme: basis
+:resdir: resources
+:pdf-themesdir: {resdir}/themes
+:stylesheet: {resdir}/style/style.css
+:template: {resdir}/templates/template.html
+:title-dir: ../../{resdir}/title
+//:docinfodir: {resdir}/style/
+:docinfo1:
+:imagesdir: media/
+:chapter-dir: chapters
+:appendix-dir: appendix
+:figure-caption: Рисунок
+:table-caption: Таблица
+:xrefstyle: short
+:chapter-signifier:
+:chapter-refsig: гл.
+:section-refsig: разд.
+:appendix-refsig: прил.
+:appendix-caption: Приложение
+:experimental:
+// для подсветки синтаксиса
+:source-highlighter: coderay
+//:source-highlighter: pygments
+//:pygments-style: default
