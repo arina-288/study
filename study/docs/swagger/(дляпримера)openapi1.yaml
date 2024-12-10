@@ -1,0 +1,30 @@
+openapi: 3.0.0
+
+info:
+  title: Code Basics
+  version: 1.0.0
+
+servers:
+  - url: https://code-basics.com
+
+paths:
+  /api/languages: # Описываемый путь
+    get: # Описываемый метод
+      summary: Короткое описание в заголовке метода
+      description: Более подробное описание
+      tags:
+        - Тег 1
+      responses:
+        "200": # Описание ответа при коде 200
+          description: Успешный ответ
+          content:
+            application/json:
+              schema: # Структура возвращаемых данных в json
+                type: object
+                properties:
+                  data:
+                    type: array
+                    description: Описание
+                    example: пример
+                    items:
+                      type: object
