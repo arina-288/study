@@ -17,14 +17,14 @@ def convert_yaml_to_asciidoc(yaml_file, adoc_file):
 
             # Пути и методы
             for path, methods in api_spec['paths'].items():
-                file.write(f"== URL: {path}\n")
+                file.write(f"=== URL: {path}\n")
                 for method, details in methods.items():
-                    file.write(f"\n=== Метод: {method.upper()}\n")
-                    file.write(f"==== Описание\n{details.get('summary', 'Описание отсутствует.')}\n\n")
+                    file.write(f"\n==== Метод: {method.upper()}\n")
+                    file.write(f"===== Описание\n{details.get('summary', 'Описание отсутствует.')}\n\n")
 
                     # Параметры
                     if 'parameters' in details:
-                        file.write("==== Параметры\n\n[options=\"header\",cols=\"2,1,3,2\"]\n|===\n| Параметр | Тип | Описание | Значение по умолчанию\n")
+                        file.write("===== Параметры\n\n[options=\"header\",cols=\"2,1,3,2\"]\n|===\n| Параметр | Тип | Описание | Значение по умолчанию\n")
                         for param in details['parameters']:
                             name = param['name']
                             param_type = param.get('type', 'Не указано')
@@ -36,7 +36,7 @@ def convert_yaml_to_asciidoc(yaml_file, adoc_file):
                         file.write("|===\n")
 
                     # Ответы
-                    file.write("==== Ответы\n\n[options=\"header\",cols=\"1,4\"]\n|===\n| Код | Описание\n")
+                    file.write("===== Ответы\n\n[options=\"header\",cols=\"1,4\"]\n|===\n| Код | Описание\n")
                     for code, response in details.get('responses', {}).items():
                         file.write(f"| {code} | {response.get('description', 'Описание отсутствует.')}\n")
                     file.write("|===\n")

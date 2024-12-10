@@ -1,10 +1,10 @@
-== URL: /
+=== URL: /
 
-=== Метод: GET
-==== Описание
+==== Метод: GET
+===== Описание
 Retrieve API metadata
 
-==== Ответы
+===== Ответы
 
 [options="header",cols="1,4"]
 |===
@@ -13,13 +13,13 @@ Retrieve API metadata
 |===
 *Тип возвращаемого значения:* object
 
-== URL: /alba/backends/
+=== URL: /alba/backends/
 
-=== Метод: GET
-==== Описание
+==== Метод: GET
+===== Описание
 Перечислите все доступные серверные части ALBA
 
-==== Параметры
+===== Параметры
 
 [options="header",cols="2,1,3,2"]
 |===
@@ -33,7 +33,7 @@ Retrieve API metadata
 | contents | array | *_<обязательный параметр>_* +
  Укажите возвращаемое содержимое | 
 |===
-==== Ответы
+===== Ответы
 
 [options="header",cols="1,4"]
 |===
@@ -44,11 +44,11 @@ Retrieve API metadata
 *Тип возвращаемого значения:* object
 
 
-=== Метод: POST
-==== Описание
+==== Метод: POST
+===== Описание
 Создает серверную часть ALBA
 
-==== Параметры
+===== Параметры
 
 [options="header",cols="2,1,3,2"]
 |===
@@ -58,7 +58,7 @@ Retrieve API metadata
 | body | Не указано | _<необязательный параметр>_ +
  Описание отсутствует. | 
 |===
-==== Ответы
+===== Ответы
 
 [options="header",cols="1,4"]
 |===
@@ -66,13 +66,13 @@ Retrieve API metadata
 | 201 | Создает серверную часть ALBA
 | default | Полезная нагрузка при ошибке
 |===
-== URL: /alba/backends/{guid}/
+=== URL: /alba/backends/{guid}/
 
-=== Метод: DELETE
-==== Описание
+==== Метод: DELETE
+===== Описание
 Deletes an ALBA Backend
 
-==== Параметры
+===== Параметры
 
 [options="header",cols="2,1,3,2"]
 |===
@@ -80,7 +80,7 @@ Deletes an ALBA Backend
 | guid | string | *_<обязательный параметр>_* +
  Identifier of the object on which to call is applied. | 
 |===
-==== Ответы
+===== Ответы
 
 [options="header",cols="1,4"]
 |===
@@ -91,11 +91,11 @@ Deletes an ALBA Backend
 *Тип возвращаемого значения:* string
 
 
-=== Метод: GET
-==== Описание
+==== Метод: GET
+===== Описание
 Load information about a given ALBA Backend
 
-==== Параметры
+===== Параметры
 
 [options="header",cols="2,1,3,2"]
 |===
@@ -105,7 +105,7 @@ Load information about a given ALBA Backend
 | contents | array | *_<обязательный параметр>_* +
  Specify the returned contents. | 
 |===
-==== Ответы
+===== Ответы
 
 [options="header",cols="1,4"]
 |===
@@ -115,13 +115,13 @@ Load information about a given ALBA Backend
 |===
 *Тип возвращаемого значения:* AlbaBackend
 
-== URL: /alba/backends/{guid}/add_preset/
+=== URL: /alba/backends/{guid}/add_preset/
 
-=== Метод: POST
-==== Описание
+==== Метод: POST
+===== Описание
 Adds a preset to a Backend
 
-==== Параметры
+===== Параметры
 
 [options="header",cols="2,1,3,2"]
 |===
@@ -131,7 +131,7 @@ Adds a preset to a Backend
 | albabackend | Не указано | _<необязательный параметр>_ +
  Описание отсутствует. | 
 |===
-==== Ответы
+===== Ответы
 
 [options="header",cols="1,4"]
 |===
@@ -141,13 +141,13 @@ Adds a preset to a Backend
 |===
 *Тип возвращаемого значения:* string
 
-== URL: /alba/backends/{guid}/add_units/
+=== URL: /alba/backends/{guid}/add_units/
 
-=== Метод: POST
-==== Описание
+==== Метод: POST
+===== Описание
 Add storage units to the backend and register with ALBA NSM
 
-==== Параметры
+===== Параметры
 
 [options="header",cols="2,1,3,2"]
 |===
@@ -157,7 +157,7 @@ Add storage units to the backend and register with ALBA NSM
 | albabackend | Не указано | _<необязательный параметр>_ +
  Описание отсутствует. | 
 |===
-==== Ответы
+===== Ответы
 
 [options="header",cols="1,4"]
 |===
@@ -167,13 +167,13 @@ Add storage units to the backend and register with ALBA NSM
 |===
 *Тип возвращаемого значения:* string
 
-== URL: /alba/backends/{guid}/calculate_safety/
+=== URL: /alba/backends/{guid}/calculate_safety/
 
-=== Метод: GET
-==== Описание
+==== Метод: GET
+===== Описание
 Returns the safety resulting the removal of a given Disk
 
-==== Параметры
+===== Параметры
 
 [options="header",cols="2,1,3,2"]
 |===
@@ -183,7 +183,7 @@ Returns the safety resulting the removal of a given Disk
 | asd_id | string | *_<обязательный параметр>_* +
   ID of the ASD to calculate safety off | 
 |===
-==== Ответы
+===== Ответы
 
 [options="header",cols="1,4"]
 |===
@@ -193,13 +193,13 @@ Returns the safety resulting the removal of a given Disk
 |===
 *Тип возвращаемого значения:* string
 
-== URL: /alba/backends/{guid}/delete_preset/
+=== URL: /alba/backends/{guid}/delete_preset/
 
-=== Метод: POST
-==== Описание
+==== Метод: POST
+===== Описание
 Deletes a preset
 
-==== Параметры
+===== Параметры
 
 [options="header",cols="2,1,3,2"]
 |===
@@ -209,7 +209,7 @@ Deletes a preset
 | albabackend | Не указано | _<необязательный параметр>_ +
  Описание отсутствует. | 
 |===
-==== Ответы
+===== Ответы
 
 [options="header",cols="1,4"]
 |===
@@ -219,13 +219,13 @@ Deletes a preset
 |===
 *Тип возвращаемого значения:* string
 
-== URL: /alba/backends/{guid}/expand_nsm_clusters/
+=== URL: /alba/backends/{guid}/expand_nsm_clusters/
 
-=== Метод: POST
-==== Описание
+==== Метод: POST
+===== Описание
 Internally managed NSM Arakoon clusters: Deploy and claim additional NSM Arakoon clusters
 
-==== Параметры
+===== Параметры
 
 [options="header",cols="2,1,3,2"]
 |===
@@ -235,7 +235,7 @@ Internally managed NSM Arakoon clusters: Deploy and claim additional NSM Arakoon
 | albabackend | Не указано | _<необязательный параметр>_ +
  Описание отсутствует. | 
 |===
-==== Ответы
+===== Ответы
 
 [options="header",cols="1,4"]
 |===
@@ -245,13 +245,13 @@ Internally managed NSM Arakoon clusters: Deploy and claim additional NSM Arakoon
 |===
 *Тип возвращаемого значения:* string
 
-== URL: /alba/backends/{guid}/get_available_actions/
+=== URL: /alba/backends/{guid}/get_available_actions/
 
-=== Метод: GET
-==== Описание
+==== Метод: GET
+===== Описание
 Gets a list of all available actions
 
-==== Параметры
+===== Параметры
 
 [options="header",cols="2,1,3,2"]
 |===
@@ -259,7 +259,7 @@ Gets a list of all available actions
 | guid | string | *_<обязательный параметр>_* +
  Identifier of the object on which to call is applied. | 
 |===
-==== Ответы
+===== Ответы
 
 [options="header",cols="1,4"]
 |===
@@ -269,13 +269,13 @@ Gets a list of all available actions
 |===
 *Тип возвращаемого значения:* string
 
-== URL: /alba/backends/{guid}/get_config_metadata/
+=== URL: /alba/backends/{guid}/get_config_metadata/
 
-=== Метод: GET
-==== Описание
+==== Метод: GET
+===== Описание
 Gets the configuration metadata for an ALBA Backend
 
-==== Параметры
+===== Параметры
 
 [options="header",cols="2,1,3,2"]
 |===
@@ -283,7 +283,7 @@ Gets the configuration metadata for an ALBA Backend
 | guid | string | *_<обязательный параметр>_* +
  Identifier of the object on which to call is applied. | 
 |===
-==== Ответы
+===== Ответы
 
 [options="header",cols="1,4"]
 |===
@@ -293,13 +293,13 @@ Gets the configuration metadata for an ALBA Backend
 |===
 *Тип возвращаемого значения:* string
 
-== URL: /alba/backends/{guid}/link_alba_backends/
+=== URL: /alba/backends/{guid}/link_alba_backends/
 
-=== Метод: POST
-==== Описание
+==== Метод: POST
+===== Описание
 Link a GLOBAL ALBA Backend to a LOCAL or another GLOBAL ALBA Backend
 
-==== Параметры
+===== Параметры
 
 [options="header",cols="2,1,3,2"]
 |===
@@ -309,7 +309,7 @@ Link a GLOBAL ALBA Backend to a LOCAL or another GLOBAL ALBA Backend
 | albabackend | Не указано | _<необязательный параметр>_ +
  Описание отсутствует. | 
 |===
-==== Ответы
+===== Ответы
 
 [options="header",cols="1,4"]
 |===
@@ -319,13 +319,13 @@ Link a GLOBAL ALBA Backend to a LOCAL or another GLOBAL ALBA Backend
 |===
 *Тип возвращаемого значения:* string
 
-== URL: /alba/backends/{guid}/unlink_alba_backends/
+=== URL: /alba/backends/{guid}/unlink_alba_backends/
 
-=== Метод: POST
-==== Описание
+==== Метод: POST
+===== Описание
 Unlink a LOCAL or GLOBAL ALBA Backend from a GLOBAL ALBA Backend
 
-==== Параметры
+===== Параметры
 
 [options="header",cols="2,1,3,2"]
 |===
@@ -335,7 +335,7 @@ Unlink a LOCAL or GLOBAL ALBA Backend from a GLOBAL ALBA Backend
 | albabackend | Не указано | _<необязательный параметр>_ +
  Описание отсутствует. | 
 |===
-==== Ответы
+===== Ответы
 
 [options="header",cols="1,4"]
 |===
@@ -345,13 +345,13 @@ Unlink a LOCAL or GLOBAL ALBA Backend from a GLOBAL ALBA Backend
 |===
 *Тип возвращаемого значения:* string
 
-== URL: /alba/backends/{guid}/update_preset/
+=== URL: /alba/backends/{guid}/update_preset/
 
-=== Метод: POST
-==== Описание
+==== Метод: POST
+===== Описание
 Updates a preset's policies to a Backend
 
-==== Параметры
+===== Параметры
 
 [options="header",cols="2,1,3,2"]
 |===
@@ -361,7 +361,7 @@ Updates a preset's policies to a Backend
 | albabackend | Не указано | _<необязательный параметр>_ +
  Описание отсутствует. | 
 |===
-==== Ответы
+===== Ответы
 
 [options="header",cols="1,4"]
 |===
@@ -371,13 +371,13 @@ Updates a preset's policies to a Backend
 |===
 *Тип возвращаемого значения:* string
 
-== URL: /alba/nodes/
+=== URL: /alba/nodes/
 
-=== Метод: GET
-==== Описание
+==== Метод: GET
+===== Описание
 List all available ALBA Nodes
 
-==== Параметры
+===== Параметры
 
 [options="header",cols="2,1,3,2"]
 |===
@@ -397,7 +397,7 @@ List all available ALBA Nodes
 | contents | array | *_<обязательный параметр>_* +
  Specify the returned contents. | 
 |===
-==== Ответы
+===== Ответы
 
 [options="header",cols="1,4"]
 |===
@@ -408,11 +408,11 @@ List all available ALBA Nodes
 *Тип возвращаемого значения:* object
 
 
-=== Метод: POST
-==== Описание
+==== Метод: POST
+===== Описание
 Add a ALBA Node with a given node_id to the model
 
-==== Параметры
+===== Параметры
 
 [options="header",cols="2,1,3,2"]
 |===
@@ -420,7 +420,7 @@ Add a ALBA Node with a given node_id to the model
 | body | Не указано | _<необязательный параметр>_ +
  Описание отсутствует. | 
 |===
-==== Ответы
+===== Ответы
 
 [options="header",cols="1,4"]
 |===
@@ -430,13 +430,13 @@ Add a ALBA Node with a given node_id to the model
 |===
 *Тип возвращаемого значения:* string
 
-== URL: /alba/nodes/{guid}/
+=== URL: /alba/nodes/{guid}/
 
-=== Метод: DELETE
-==== Описание
+==== Метод: DELETE
+===== Описание
 Delete an ALBA Node
 
-==== Параметры
+===== Параметры
 
 [options="header",cols="2,1,3,2"]
 |===
@@ -444,7 +444,7 @@ Delete an ALBA Node
 | guid | string | *_<обязательный параметр>_* +
  Identifier of the object on which to call is applied. | 
 |===
-==== Ответы
+===== Ответы
 
 [options="header",cols="1,4"]
 |===
@@ -455,11 +455,11 @@ Delete an ALBA Node
 *Тип возвращаемого значения:* string
 
 
-=== Метод: GET
-==== Описание
+==== Метод: GET
+===== Описание
 Load information about a given ALBA Backend
 
-==== Параметры
+===== Параметры
 
 [options="header",cols="2,1,3,2"]
 |===
@@ -469,7 +469,7 @@ Load information about a given ALBA Backend
 | contents | array | *_<обязательный параметр>_* +
  Specify the returned contents. | 
 |===
-==== Ответы
+===== Ответы
 
 [options="header",cols="1,4"]
 |===
@@ -479,13 +479,13 @@ Load information about a given ALBA Backend
 |===
 *Тип возвращаемого значения:* AlbaNode
 
-== URL: /alba/nodes/{guid}/get_logfiles/
+=== URL: /alba/nodes/{guid}/get_logfiles/
 
-=== Метод: GET
-==== Описание
+==== Метод: GET
+===== Описание
 Retrieve the logfiles of an ALBA Node
 
-==== Параметры
+===== Параметры
 
 [options="header",cols="2,1,3,2"]
 |===
@@ -493,7 +493,7 @@ Retrieve the logfiles of an ALBA Node
 | guid | string | *_<обязательный параметр>_* +
  Identifier of the object on which to call is applied. | 
 |===
-==== Ответы
+===== Ответы
 
 [options="header",cols="1,4"]
 |===
@@ -503,13 +503,13 @@ Retrieve the logfiles of an ALBA Node
 |===
 *Тип возвращаемого значения:* string
 
-== URL: /alba/nodes/{guid}/initialize_disks/
+=== URL: /alba/nodes/{guid}/initialize_disks/
 
-=== Метод: POST
-==== Описание
+==== Метод: POST
+===== Описание
 Initialize the Disks
 
-==== Параметры
+===== Параметры
 
 [options="header",cols="2,1,3,2"]
 |===
@@ -519,7 +519,7 @@ Initialize the Disks
 | albanode | Не указано | _<необязательный параметр>_ +
  Описание отсутствует. | 
 |===
-==== Ответы
+===== Ответы
 
 [options="header",cols="1,4"]
 |===
@@ -529,13 +529,13 @@ Initialize the Disks
 |===
 *Тип возвращаемого значения:* string
 
-== URL: /alba/nodes/{guid}/remove_disk/
+=== URL: /alba/nodes/{guid}/remove_disk/
 
-=== Метод: POST
-==== Описание
+==== Метод: POST
+===== Описание
 Remove the Disk
 
-==== Параметры
+===== Параметры
 
 [options="header",cols="2,1,3,2"]
 |===
@@ -545,7 +545,7 @@ Remove the Disk
 | albanode | Не указано | _<необязательный параметр>_ +
  Описание отсутствует. | 
 |===
-==== Ответы
+===== Ответы
 
 [options="header",cols="1,4"]
 |===
@@ -555,13 +555,13 @@ Remove the Disk
 |===
 *Тип возвращаемого значения:* string
 
-== URL: /alba/nodes/{guid}/replace_node/
+=== URL: /alba/nodes/{guid}/replace_node/
 
-=== Метод: POST
-==== Описание
+==== Метод: POST
+===== Описание
 Replace an existing ALBA Node with a newly configured node (only possible if IPs are identical)
 
-==== Параметры
+===== Параметры
 
 [options="header",cols="2,1,3,2"]
 |===
@@ -571,7 +571,7 @@ Replace an existing ALBA Node with a newly configured node (only possible if IPs
 | albanode | Не указано | _<необязательный параметр>_ +
  Описание отсутствует. | 
 |===
-==== Ответы
+===== Ответы
 
 [options="header",cols="1,4"]
 |===
@@ -581,13 +581,13 @@ Replace an existing ALBA Node with a newly configured node (only possible if IPs
 |===
 *Тип возвращаемого значения:* string
 
-== URL: /alba/nodes/{guid}/reset_asd/
+=== URL: /alba/nodes/{guid}/reset_asd/
 
-=== Метод: POST
-==== Описание
+==== Метод: POST
+===== Описание
 Remove and re-add an ASD
 
-==== Параметры
+===== Параметры
 
 [options="header",cols="2,1,3,2"]
 |===
@@ -597,7 +597,7 @@ Remove and re-add an ASD
 | albanode | Не указано | _<необязательный параметр>_ +
  Описание отсутствует. | 
 |===
-==== Ответы
+===== Ответы
 
 [options="header",cols="1,4"]
 |===
@@ -607,13 +607,13 @@ Remove and re-add an ASD
 |===
 *Тип возвращаемого значения:* string
 
-== URL: /alba/nodes/{guid}/restart_asd/
+=== URL: /alba/nodes/{guid}/restart_asd/
 
-=== Метод: POST
-==== Описание
+==== Метод: POST
+===== Описание
 Restart an ASD process
 
-==== Параметры
+===== Параметры
 
 [options="header",cols="2,1,3,2"]
 |===
@@ -623,7 +623,7 @@ Restart an ASD process
 | albanode | Не указано | _<необязательный параметр>_ +
  Описание отсутствует. | 
 |===
-==== Ответы
+===== Ответы
 
 [options="header",cols="1,4"]
 |===
@@ -633,13 +633,13 @@ Restart an ASD process
 |===
 *Тип возвращаемого значения:* string
 
-== URL: /alba/nodes/{guid}/restart_disk/
+=== URL: /alba/nodes/{guid}/restart_disk/
 
-=== Метод: POST
-==== Описание
+==== Метод: POST
+===== Описание
 Restart a Disk
 
-==== Параметры
+===== Параметры
 
 [options="header",cols="2,1,3,2"]
 |===
@@ -649,7 +649,7 @@ Restart a Disk
 | albanode | Не указано | _<необязательный параметр>_ +
  Описание отсутствует. | 
 |===
-==== Ответы
+===== Ответы
 
 [options="header",cols="1,4"]
 |===
@@ -659,13 +659,13 @@ Restart a Disk
 |===
 *Тип возвращаемого значения:* string
 
-== URL: /backends/
+=== URL: /backends/
 
-=== Метод: GET
-==== Описание
+==== Метод: GET
+===== Описание
 Overview of all Backends (from a certain type, if given) on the LOCAL Node (or a remote one)
 
-==== Параметры
+===== Параметры
 
 [options="header",cols="2,1,3,2"]
 |===
@@ -681,7 +681,7 @@ Overview of all Backends (from a certain type, if given) on the LOCAL Node (or a
 | contents | array | *_<обязательный параметр>_* +
  Specify the returned contents. | 
 |===
-==== Ответы
+===== Ответы
 
 [options="header",cols="1,4"]
 |===
@@ -692,11 +692,11 @@ Overview of all Backends (from a certain type, if given) on the LOCAL Node (or a
 *Тип возвращаемого значения:* object
 
 
-=== Метод: POST
-==== Описание
+==== Метод: POST
+===== Описание
 Creates a Backend
 
-==== Параметры
+===== Параметры
 
 [options="header",cols="2,1,3,2"]
 |===
@@ -706,7 +706,7 @@ Creates a Backend
 | body | Не указано | _<необязательный параметр>_ +
  Описание отсутствует. | 
 |===
-==== Ответы
+===== Ответы
 
 [options="header",cols="1,4"]
 |===
@@ -714,13 +714,13 @@ Creates a Backend
 | 201 | Creates a Backend
 | default | Error payload
 |===
-== URL: /backends/{guid}/
+=== URL: /backends/{guid}/
 
-=== Метод: GET
-==== Описание
+==== Метод: GET
+===== Описание
 Load information about a given Backend
 
-==== Параметры
+===== Параметры
 
 [options="header",cols="2,1,3,2"]
 |===
@@ -730,7 +730,7 @@ Load information about a given Backend
 | contents | array | *_<обязательный параметр>_* +
  Specify the returned contents. | 
 |===
-==== Ответы
+===== Ответы
 
 [options="header",cols="1,4"]
 |===
@@ -740,13 +740,13 @@ Load information about a given Backend
 |===
 *Тип возвращаемого значения:* Backend
 
-== URL: /backends/{guid}/configure_rights/
+=== URL: /backends/{guid}/configure_rights/
 
-=== Метод: POST
-==== Описание
+==== Метод: POST
+===== Описание
 Configures the access rights for this Backend
 
-==== Параметры
+===== Параметры
 
 [options="header",cols="2,1,3,2"]
 |===
@@ -756,7 +756,7 @@ Configures the access rights for this Backend
 | backend | Не указано | _<необязательный параметр>_ +
  Описание отсутствует. | 
 |===
-==== Ответы
+===== Ответы
 
 [options="header",cols="1,4"]
 |===
@@ -766,13 +766,13 @@ Configures the access rights for this Backend
 |===
 *Тип возвращаемого значения:* object
 
-== URL: /backends/{guid}/set_domains/
+=== URL: /backends/{guid}/set_domains/
 
-=== Метод: POST
-==== Описание
+==== Метод: POST
+===== Описание
 Configures the given Domains to the Storage Router.
 
-==== Параметры
+===== Параметры
 
 [options="header",cols="2,1,3,2"]
 |===
@@ -782,7 +782,7 @@ Configures the given Domains to the Storage Router.
 | backend | Не указано | _<необязательный параметр>_ +
  Описание отсутствует. | 
 |===
-==== Ответы
+===== Ответы
 
 [options="header",cols="1,4"]
 |===
@@ -790,13 +790,13 @@ Configures the given Domains to the Storage Router.
 | 204 | Configures the given Domains to the Storage Router.
 | default | Error payload
 |===
-== URL: /backendtypes/
+=== URL: /backendtypes/
 
-=== Метод: GET
-==== Описание
+==== Метод: GET
+===== Описание
 Overview of all Backend Types
 
-==== Параметры
+===== Параметры
 
 [options="header",cols="2,1,3,2"]
 |===
@@ -812,7 +812,7 @@ Overview of all Backend Types
 | contents | array | *_<обязательный параметр>_* +
  Specify the returned contents. | 
 |===
-==== Ответы
+===== Ответы
 
 [options="header",cols="1,4"]
 |===
@@ -822,13 +822,13 @@ Overview of all Backend Types
 |===
 *Тип возвращаемого значения:* object
 
-== URL: /backendtypes/{guid}/
+=== URL: /backendtypes/{guid}/
 
-=== Метод: GET
-==== Описание
+==== Метод: GET
+===== Описание
 Load information about a given Backend Type
 
-==== Параметры
+===== Параметры
 
 [options="header",cols="2,1,3,2"]
 |===
@@ -838,7 +838,7 @@ Load information about a given Backend Type
 | contents | array | *_<обязательный параметр>_* +
  Specify the returned contents. | 
 |===
-==== Ответы
+===== Ответы
 
 [options="header",cols="1,4"]
 |===
@@ -848,13 +848,13 @@ Load information about a given Backend Type
 |===
 *Тип возвращаемого значения:* BackendType
 
-== URL: /branding/
+=== URL: /branding/
 
-=== Метод: GET
-==== Описание
+==== Метод: GET
+===== Описание
 Overview of all Brandings
 
-==== Параметры
+===== Параметры
 
 [options="header",cols="2,1,3,2"]
 |===
@@ -868,7 +868,7 @@ Overview of all Brandings
 | contents | array | *_<обязательный параметр>_* +
  Specify the returned contents. | 
 |===
-==== Ответы
+===== Ответы
 
 [options="header",cols="1,4"]
 |===
@@ -878,13 +878,13 @@ Overview of all Brandings
 |===
 *Тип возвращаемого значения:* object
 
-== URL: /branding/{guid}/
+=== URL: /branding/{guid}/
 
-=== Метод: GET
-==== Описание
+==== Метод: GET
+===== Описание
 Load information about a given Branding
 
-==== Параметры
+===== Параметры
 
 [options="header",cols="2,1,3,2"]
 |===
@@ -894,7 +894,7 @@ Load information about a given Branding
 | contents | array | *_<обязательный параметр>_* +
  Specify the returned contents. | 
 |===
-==== Ответы
+===== Ответы
 
 [options="header",cols="1,4"]
 |===
@@ -904,13 +904,13 @@ Load information about a given Branding
 |===
 *Тип возвращаемого значения:* Branding
 
-== URL: /clients/
+=== URL: /clients/
 
-=== Метод: GET
-==== Описание
+==== Метод: GET
+===== Описание
 Lists all available Clients where the logged in user has access to
 
-==== Параметры
+===== Параметры
 
 [options="header",cols="2,1,3,2"]
 |===
@@ -928,7 +928,7 @@ Lists all available Clients where the logged in user has access to
 | contents | array | *_<обязательный параметр>_* +
  Specify the returned contents. | 
 |===
-==== Ответы
+===== Ответы
 
 [options="header",cols="1,4"]
 |===
@@ -939,11 +939,11 @@ Lists all available Clients where the logged in user has access to
 *Тип возвращаемого значения:* object
 
 
-=== Метод: POST
-==== Описание
+==== Метод: POST
+===== Описание
 Creates a Client
 
-==== Параметры
+===== Параметры
 
 [options="header",cols="2,1,3,2"]
 |===
@@ -953,7 +953,7 @@ Creates a Client
 | body | Не указано | _<необязательный параметр>_ +
  Описание отсутствует. | 
 |===
-==== Ответы
+===== Ответы
 
 [options="header",cols="1,4"]
 |===
@@ -961,13 +961,13 @@ Creates a Client
 | 201 | Creates a Client
 | default | Error payload
 |===
-== URL: /clients/{guid}/
+=== URL: /clients/{guid}/
 
-=== Метод: DELETE
-==== Описание
+==== Метод: DELETE
+===== Описание
 Deletes a User
 
-==== Параметры
+===== Параметры
 
 [options="header",cols="2,1,3,2"]
 |===
@@ -975,7 +975,7 @@ Deletes a User
 | guid | string | *_<обязательный параметр>_* +
  Identifier of the object on which to call is applied. | 
 |===
-==== Ответы
+===== Ответы
 
 [options="header",cols="1,4"]
 |===
@@ -984,11 +984,11 @@ Deletes a User
 | default | Error payload
 |===
 
-=== Метод: GET
-==== Описание
+==== Метод: GET
+===== Описание
 Load information about a given Client
 
-==== Параметры
+===== Параметры
 
 [options="header",cols="2,1,3,2"]
 |===
@@ -998,7 +998,7 @@ Load information about a given Client
 | contents | array | *_<обязательный параметр>_* +
  Specify the returned contents. | 
 |===
-==== Ответы
+===== Ответы
 
 [options="header",cols="1,4"]
 |===
@@ -1008,13 +1008,13 @@ Load information about a given Client
 |===
 *Тип возвращаемого значения:* Client
 
-== URL: /diskpartitions/
+=== URL: /diskpartitions/
 
-=== Метод: GET
-==== Описание
+==== Метод: GET
+===== Описание
 Overview of all Disks
 
-==== Параметры
+===== Параметры
 
 [options="header",cols="2,1,3,2"]
 |===
@@ -1030,7 +1030,7 @@ Overview of all Disks
 | contents | array | *_<обязательный параметр>_* +
  Specify the returned contents. | 
 |===
-==== Ответы
+===== Ответы
 
 [options="header",cols="1,4"]
 |===
@@ -1040,13 +1040,13 @@ Overview of all Disks
 |===
 *Тип возвращаемого значения:* object
 
-== URL: /diskpartitions/{guid}/
+=== URL: /diskpartitions/{guid}/
 
-=== Метод: GET
-==== Описание
+==== Метод: GET
+===== Описание
 Load information about a given Disk Partition
 
-==== Параметры
+===== Параметры
 
 [options="header",cols="2,1,3,2"]
 |===
@@ -1056,7 +1056,7 @@ Load information about a given Disk Partition
 | contents | array | *_<обязательный параметр>_* +
  Specify the returned contents. | 
 |===
-==== Ответы
+===== Ответы
 
 [options="header",cols="1,4"]
 |===
@@ -1066,13 +1066,13 @@ Load information about a given Disk Partition
 |===
 *Тип возвращаемого значения:* DiskPartition
 
-== URL: /disks/
+=== URL: /disks/
 
-=== Метод: GET
-==== Описание
+==== Метод: GET
+===== Описание
 Overview of all disks
 
-==== Параметры
+===== Параметры
 
 [options="header",cols="2,1,3,2"]
 |===
@@ -1088,7 +1088,7 @@ Overview of all disks
 | contents | array | *_<обязательный параметр>_* +
  Specify the returned contents. | 
 |===
-==== Ответы
+===== Ответы
 
 [options="header",cols="1,4"]
 |===
@@ -1098,13 +1098,13 @@ Overview of all disks
 |===
 *Тип возвращаемого значения:* object
 
-== URL: /disks/{guid}/
+=== URL: /disks/{guid}/
 
-=== Метод: GET
-==== Описание
+==== Метод: GET
+===== Описание
 Load information about a given disk
 
-==== Параметры
+===== Параметры
 
 [options="header",cols="2,1,3,2"]
 |===
@@ -1114,7 +1114,7 @@ Load information about a given disk
 | contents | array | *_<обязательный параметр>_* +
  Specify the returned contents. | 
 |===
-==== Ответы
+===== Ответы
 
 [options="header",cols="1,4"]
 |===
@@ -1124,13 +1124,13 @@ Load information about a given disk
 |===
 *Тип возвращаемого значения:* Disk
 
-== URL: /domains/
+=== URL: /domains/
 
-=== Метод: GET
-==== Описание
+==== Метод: GET
+===== Описание
 Lists all available Domains
 
-==== Параметры
+===== Параметры
 
 [options="header",cols="2,1,3,2"]
 |===
@@ -1146,7 +1146,7 @@ Lists all available Domains
 | contents | array | *_<обязательный параметр>_* +
  Specify the returned contents. | 
 |===
-==== Ответы
+===== Ответы
 
 [options="header",cols="1,4"]
 |===
@@ -1157,11 +1157,11 @@ Lists all available Domains
 *Тип возвращаемого значения:* object
 
 
-=== Метод: POST
-==== Описание
+==== Метод: POST
+===== Описание
 Creates a new Domain
 
-==== Параметры
+===== Параметры
 
 [options="header",cols="2,1,3,2"]
 |===
@@ -1171,7 +1171,7 @@ Creates a new Domain
 | body | Не указано | _<необязательный параметр>_ +
  Описание отсутствует. | 
 |===
-==== Ответы
+===== Ответы
 
 [options="header",cols="1,4"]
 |===
@@ -1179,13 +1179,13 @@ Creates a new Domain
 | 201 | Creates a new Domain
 | default | Error payload
 |===
-== URL: /domains/{guid}/
+=== URL: /domains/{guid}/
 
-=== Метод: DELETE
-==== Описание
+==== Метод: DELETE
+===== Описание
 Deletes a Domain
 
-==== Параметры
+===== Параметры
 
 [options="header",cols="2,1,3,2"]
 |===
@@ -1193,7 +1193,7 @@ Deletes a Domain
 | guid | string | *_<обязательный параметр>_* +
  Identifier of the object on which to call is applied. | 
 |===
-==== Ответы
+===== Ответы
 
 [options="header",cols="1,4"]
 |===
@@ -1202,11 +1202,11 @@ Deletes a Domain
 | default | Error payload
 |===
 
-=== Метод: GET
-==== Описание
+==== Метод: GET
+===== Описание
 Load information about a given Domain
 
-==== Параметры
+===== Параметры
 
 [options="header",cols="2,1,3,2"]
 |===
@@ -1216,7 +1216,7 @@ Load information about a given Domain
 | contents | array | *_<обязательный параметр>_* +
  Specify the returned contents. | 
 |===
-==== Ответы
+===== Ответы
 
 [options="header",cols="1,4"]
 |===
@@ -1227,11 +1227,11 @@ Load information about a given Domain
 *Тип возвращаемого значения:* Domain
 
 
-=== Метод: PATCH
-==== Описание
+==== Метод: PATCH
+===== Описание
 Update a Failure Domain
 
-==== Параметры
+===== Параметры
 
 [options="header",cols="2,1,3,2"]
 |===
@@ -1243,7 +1243,7 @@ Update a Failure Domain
 | domain | Не указано | _<необязательный параметр>_ +
  Описание отсутствует. | 
 |===
-==== Ответы
+===== Ответы
 
 [options="header",cols="1,4"]
 |===
@@ -1251,13 +1251,13 @@ Update a Failure Domain
 | 202 | Update a Failure Domain
 | default | Error payload
 |===
-== URL: /groups/
+=== URL: /groups/
 
-=== Метод: GET
-==== Описание
+==== Метод: GET
+===== Описание
 Lists all available Groups
 
-==== Параметры
+===== Параметры
 
 [options="header",cols="2,1,3,2"]
 |===
@@ -1271,7 +1271,7 @@ Lists all available Groups
 | contents | array | *_<обязательный параметр>_* +
  Specify the returned contents. | 
 |===
-==== Ответы
+===== Ответы
 
 [options="header",cols="1,4"]
 |===
@@ -1281,13 +1281,13 @@ Lists all available Groups
 |===
 *Тип возвращаемого значения:* object
 
-== URL: /groups/{guid}/
+=== URL: /groups/{guid}/
 
-=== Метод: GET
-==== Описание
+==== Метод: GET
+===== Описание
 Load information about a given Group
 
-==== Параметры
+===== Параметры
 
 [options="header",cols="2,1,3,2"]
 |===
@@ -1297,7 +1297,7 @@ Load information about a given Group
 | contents | array | *_<обязательный параметр>_* +
  Specify the returned contents. | 
 |===
-==== Ответы
+===== Ответы
 
 [options="header",cols="1,4"]
 |===
@@ -1307,19 +1307,19 @@ Load information about a given Group
 |===
 *Тип возвращаемого значения:* Group
 
-== URL: /health/
+=== URL: /health/
 
-=== Метод: GET
-==== Описание
+==== Метод: GET
+===== Описание
 Returns {IP: Status} of LOCAL Storage Router
 
-==== Параметры
+===== Параметры
 
 [options="header",cols="2,1,3,2"]
 |===
 | Параметр | Тип | Описание | Значение по умолчанию
 |===
-==== Ответы
+===== Ответы
 
 [options="header",cols="1,4"]
 |===
@@ -1329,13 +1329,13 @@ Returns {IP: Status} of LOCAL Storage Router
 |===
 *Тип возвращаемого значения:* object
 
-== URL: /health/run_healthchecks/
+=== URL: /health/run_healthchecks/
 
-=== Метод: POST
-==== Описание
+==== Метод: POST
+===== Описание
 Execute chosen HealthChecks (tests) on DES node and return results.
 
-==== Параметры
+===== Параметры
 
 [options="header",cols="2,1,3,2"]
 |===
@@ -1343,7 +1343,7 @@ Execute chosen HealthChecks (tests) on DES node and return results.
 | body | Не указано | _<необязательный параметр>_ +
  Описание отсутствует. | 
 |===
-==== Ответы
+===== Ответы
 
 [options="header",cols="1,4"]
 |===
@@ -1353,13 +1353,13 @@ Execute chosen HealthChecks (tests) on DES node and return results.
 |===
 *Тип возвращаемого значения:* string
 
-== URL: /iscsi/nodes/
+=== URL: /iscsi/nodes/
 
-=== Метод: GET
-==== Описание
+==== Метод: GET
+===== Описание
 Lists all available iSCSI Nodes
 
-==== Параметры
+===== Параметры
 
 [options="header",cols="2,1,3,2"]
 |===
@@ -1375,7 +1375,7 @@ Lists all available iSCSI Nodes
 | contents | array | *_<обязательный параметр>_* +
  Specify the returned contents. | 
 |===
-==== Ответы
+===== Ответы
 
 [options="header",cols="1,4"]
 |===
@@ -1386,11 +1386,11 @@ Lists all available iSCSI Nodes
 *Тип возвращаемого значения:* object
 
 
-=== Метод: POST
-==== Описание
+==== Метод: POST
+===== Описание
 Adds a node with a given node_id to the model
 
-==== Параметры
+===== Параметры
 
 [options="header",cols="2,1,3,2"]
 |===
@@ -1400,7 +1400,7 @@ Adds a node with a given node_id to the model
 | body | Не указано | _<необязательный параметр>_ +
  Описание отсутствует. | 
 |===
-==== Ответы
+===== Ответы
 
 [options="header",cols="1,4"]
 |===
@@ -1408,13 +1408,13 @@ Adds a node with a given node_id to the model
 | 201 | Adds a node with a given node_id to the model
 | default | Error payload
 |===
-== URL: /iscsi/nodes/unexpose_vdisk/
+=== URL: /iscsi/nodes/unexpose_vdisk/
 
-=== Метод: POST
-==== Описание
+==== Метод: POST
+===== Описание
 Un-expose a vDisk from all iSCSI Nodes
 
-==== Параметры
+===== Параметры
 
 [options="header",cols="2,1,3,2"]
 |===
@@ -1422,7 +1422,7 @@ Un-expose a vDisk from all iSCSI Nodes
 | body | Не указано | _<необязательный параметр>_ +
  Описание отсутствует. | 
 |===
-==== Ответы
+===== Ответы
 
 [options="header",cols="1,4"]
 |===
@@ -1432,13 +1432,13 @@ Un-expose a vDisk from all iSCSI Nodes
 |===
 *Тип возвращаемого значения:* string
 
-== URL: /iscsi/nodes/{guid}/
+=== URL: /iscsi/nodes/{guid}/
 
-=== Метод: DELETE
-==== Описание
+==== Метод: DELETE
+===== Описание
 Deletes an iSCSI node
 
-==== Параметры
+===== Параметры
 
 [options="header",cols="2,1,3,2"]
 |===
@@ -1446,7 +1446,7 @@ Deletes an iSCSI node
 | guid | string | *_<обязательный параметр>_* +
  Identifier of the object on which to call is applied. | 
 |===
-==== Ответы
+===== Ответы
 
 [options="header",cols="1,4"]
 |===
@@ -1457,11 +1457,11 @@ Deletes an iSCSI node
 *Тип возвращаемого значения:* string
 
 
-=== Метод: GET
-==== Описание
+==== Метод: GET
+===== Описание
 Load information about a given iSCSI Node
 
-==== Параметры
+===== Параметры
 
 [options="header",cols="2,1,3,2"]
 |===
@@ -1471,7 +1471,7 @@ Load information about a given iSCSI Node
 | contents | array | *_<обязательный параметр>_* +
  Specify the returned contents. | 
 |===
-==== Ответы
+===== Ответы
 
 [options="header",cols="1,4"]
 |===
@@ -1481,13 +1481,13 @@ Load information about a given iSCSI Node
 |===
 *Тип возвращаемого значения:* IscsiNode
 
-== URL: /iscsi/nodes/{guid}/expose_vdisk/
+=== URL: /iscsi/nodes/{guid}/expose_vdisk/
 
-=== Метод: POST
-==== Описание
+==== Метод: POST
+===== Описание
 Expose a vDisk on the specified iSCSI Node
 
-==== Параметры
+===== Параметры
 
 [options="header",cols="2,1,3,2"]
 |===
@@ -1497,7 +1497,7 @@ Expose a vDisk on the specified iSCSI Node
 | iscsinode | Не указано | _<необязательный параметр>_ +
  Описание отсутствует. | 
 |===
-==== Ответы
+===== Ответы
 
 [options="header",cols="1,4"]
 |===
@@ -1507,13 +1507,13 @@ Expose a vDisk on the specified iSCSI Node
 |===
 *Тип возвращаемого значения:* string
 
-== URL: /iscsi/nodes/{guid}/get_config/
+=== URL: /iscsi/nodes/{guid}/get_config/
 
-=== Метод: GET
-==== Описание
+==== Метод: GET
+===== Описание
 Retrieve the configuration of the specified iSCSI node
 
-==== Параметры
+===== Параметры
 
 [options="header",cols="2,1,3,2"]
 |===
@@ -1521,7 +1521,7 @@ Retrieve the configuration of the specified iSCSI node
 | guid | string | *_<обязательный параметр>_* +
  Identifier of the object on which to call is applied. | 
 |===
-==== Ответы
+===== Ответы
 
 [options="header",cols="1,4"]
 |===
@@ -1531,13 +1531,13 @@ Retrieve the configuration of the specified iSCSI node
 |===
 *Тип возвращаемого значения:* object
 
-== URL: /iscsi/nodes/{guid}/get_logfiles/
+=== URL: /iscsi/nodes/{guid}/get_logfiles/
 
-=== Метод: GET
-==== Описание
+==== Метод: GET
+===== Описание
 Retrieve the log files of an iSCSI Node
 
-==== Параметры
+===== Параметры
 
 [options="header",cols="2,1,3,2"]
 |===
@@ -1545,7 +1545,7 @@ Retrieve the log files of an iSCSI Node
 | guid | string | *_<обязательный параметр>_* +
  Identifier of the object on which to call is applied. | 
 |===
-==== Ответы
+===== Ответы
 
 [options="header",cols="1,4"]
 |===
@@ -1555,13 +1555,13 @@ Retrieve the log files of an iSCSI Node
 |===
 *Тип возвращаемого значения:* string
 
-== URL: /iscsi/nodes/{guid}/get_vdisks_exposed_on_node/
+=== URL: /iscsi/nodes/{guid}/get_vdisks_exposed_on_node/
 
-=== Метод: GET
-==== Описание
+==== Метод: GET
+===== Описание
 Retrieve the vDisks exposed on specified iSCSI node
 
-==== Параметры
+===== Параметры
 
 [options="header",cols="2,1,3,2"]
 |===
@@ -1577,7 +1577,7 @@ Retrieve the vDisks exposed on specified iSCSI node
 | contents | array | *_<обязательный параметр>_* +
  Specify the returned contents. | 
 |===
-==== Ответы
+===== Ответы
 
 [options="header",cols="1,4"]
 |===
@@ -1587,13 +1587,13 @@ Retrieve the vDisks exposed on specified iSCSI node
 |===
 *Тип возвращаемого значения:* object
 
-== URL: /iscsi/nodes/{guid}/service_restart/
+=== URL: /iscsi/nodes/{guid}/service_restart/
 
-=== Метод: POST
-==== Описание
+==== Метод: POST
+===== Описание
 Restart the iSCSI Manager service on the specified iSCSI node
 
-==== Параметры
+===== Параметры
 
 [options="header",cols="2,1,3,2"]
 |===
@@ -1603,7 +1603,7 @@ Restart the iSCSI Manager service on the specified iSCSI node
 | iscsinode | Не указано | _<необязательный параметр>_ +
  Описание отсутствует. | 
 |===
-==== Ответы
+===== Ответы
 
 [options="header",cols="1,4"]
 |===
@@ -1613,13 +1613,13 @@ Restart the iSCSI Manager service on the specified iSCSI node
 |===
 *Тип возвращаемого значения:* string
 
-== URL: /nbd/nodes/
+=== URL: /nbd/nodes/
 
-=== Метод: GET
-==== Описание
+==== Метод: GET
+===== Описание
 Lists all available NBD Nodes
 
-==== Параметры
+===== Параметры
 
 [options="header",cols="2,1,3,2"]
 |===
@@ -1635,7 +1635,7 @@ Lists all available NBD Nodes
 | contents | array | *_<обязательный параметр>_* +
  Specify the returned contents. | 
 |===
-==== Ответы
+===== Ответы
 
 [options="header",cols="1,4"]
 |===
@@ -1646,11 +1646,11 @@ Lists all available NBD Nodes
 *Тип возвращаемого значения:* object
 
 
-=== Метод: POST
-==== Описание
+==== Метод: POST
+===== Описание
 Adds a node with a given node_id to the model
 
-==== Параметры
+===== Параметры
 
 [options="header",cols="2,1,3,2"]
 |===
@@ -1660,7 +1660,7 @@ Adds a node with a given node_id to the model
 | body | Не указано | _<необязательный параметр>_ +
  Описание отсутствует. | 
 |===
-==== Ответы
+===== Ответы
 
 [options="header",cols="1,4"]
 |===
@@ -1668,13 +1668,13 @@ Adds a node with a given node_id to the model
 | 201 | Adds a node with a given node_id to the model
 | default | Error payload
 |===
-== URL: /nbd/nodes/restart_exports/
+=== URL: /nbd/nodes/restart_exports/
 
-=== Метод: POST
-==== Описание
+==== Метод: POST
+===== Описание
 Restart NBD exports of chosen vDisks.
 
-==== Параметры
+===== Параметры
 
 [options="header",cols="2,1,3,2"]
 |===
@@ -1682,7 +1682,7 @@ Restart NBD exports of chosen vDisks.
 | body | Не указано | _<необязательный параметр>_ +
  Описание отсутствует. | 
 |===
-==== Ответы
+===== Ответы
 
 [options="header",cols="1,4"]
 |===
@@ -1692,13 +1692,13 @@ Restart NBD exports of chosen vDisks.
 |===
 *Тип возвращаемого значения:* string
 
-== URL: /nbd/nodes/unexpose_vdisk/
+=== URL: /nbd/nodes/unexpose_vdisk/
 
-=== Метод: POST
-==== Описание
+==== Метод: POST
+===== Описание
 Un-expose a vDisk from all NBD Nodes
 
-==== Параметры
+===== Параметры
 
 [options="header",cols="2,1,3,2"]
 |===
@@ -1706,7 +1706,7 @@ Un-expose a vDisk from all NBD Nodes
 | body | Не указано | _<необязательный параметр>_ +
  Описание отсутствует. | 
 |===
-==== Ответы
+===== Ответы
 
 [options="header",cols="1,4"]
 |===
@@ -1716,13 +1716,13 @@ Un-expose a vDisk from all NBD Nodes
 |===
 *Тип возвращаемого значения:* string
 
-== URL: /nbd/nodes/{guid}/
+=== URL: /nbd/nodes/{guid}/
 
-=== Метод: DELETE
-==== Описание
+==== Метод: DELETE
+===== Описание
 Deletes an NBD node
 
-==== Параметры
+===== Параметры
 
 [options="header",cols="2,1,3,2"]
 |===
@@ -1730,7 +1730,7 @@ Deletes an NBD node
 | guid | string | *_<обязательный параметр>_* +
  Identifier of the object on which to call is applied. | 
 |===
-==== Ответы
+===== Ответы
 
 [options="header",cols="1,4"]
 |===
@@ -1741,11 +1741,11 @@ Deletes an NBD node
 *Тип возвращаемого значения:* string
 
 
-=== Метод: GET
-==== Описание
+==== Метод: GET
+===== Описание
 Load information about a given NBD Node
 
-==== Параметры
+===== Параметры
 
 [options="header",cols="2,1,3,2"]
 |===
@@ -1755,7 +1755,7 @@ Load information about a given NBD Node
 | contents | array | *_<обязательный параметр>_* +
  Specify the returned contents. | 
 |===
-==== Ответы
+===== Ответы
 
 [options="header",cols="1,4"]
 |===
@@ -1765,13 +1765,13 @@ Load information about a given NBD Node
 |===
 *Тип возвращаемого значения:* NbdNode
 
-== URL: /nbd/nodes/{guid}/expose_vdisk/
+=== URL: /nbd/nodes/{guid}/expose_vdisk/
 
-=== Метод: POST
-==== Описание
+==== Метод: POST
+===== Описание
 Expose a vDisk on the specified NBD Node
 
-==== Параметры
+===== Параметры
 
 [options="header",cols="2,1,3,2"]
 |===
@@ -1781,7 +1781,7 @@ Expose a vDisk on the specified NBD Node
 | nbdnode | Не указано | _<необязательный параметр>_ +
  Описание отсутствует. | 
 |===
-==== Ответы
+===== Ответы
 
 [options="header",cols="1,4"]
 |===
@@ -1791,13 +1791,13 @@ Expose a vDisk on the specified NBD Node
 |===
 *Тип возвращаемого значения:* string
 
-== URL: /nbd/nodes/{guid}/get_config/
+=== URL: /nbd/nodes/{guid}/get_config/
 
-=== Метод: GET
-==== Описание
+==== Метод: GET
+===== Описание
 Retrieve the configuration of the specified NBD node
 
-==== Параметры
+===== Параметры
 
 [options="header",cols="2,1,3,2"]
 |===
@@ -1805,7 +1805,7 @@ Retrieve the configuration of the specified NBD node
 | guid | string | *_<обязательный параметр>_* +
  Identifier of the object on which to call is applied. | 
 |===
-==== Ответы
+===== Ответы
 
 [options="header",cols="1,4"]
 |===
@@ -1815,13 +1815,13 @@ Retrieve the configuration of the specified NBD node
 |===
 *Тип возвращаемого значения:* object
 
-== URL: /nbd/nodes/{guid}/get_export_config/
+=== URL: /nbd/nodes/{guid}/get_export_config/
 
-=== Метод: GET
-==== Описание
+==== Метод: GET
+===== Описание
 Retrieve current NBD export config of vDisk from NBD Node.
 
-==== Параметры
+===== Параметры
 
 [options="header",cols="2,1,3,2"]
 |===
@@ -1831,7 +1831,7 @@ Retrieve current NBD export config of vDisk from NBD Node.
 | vdisk_guid | string | *_<обязательный параметр>_* +
   GUID of the vDisk to get config of. | 
 |===
-==== Ответы
+===== Ответы
 
 [options="header",cols="1,4"]
 |===
@@ -1841,13 +1841,13 @@ Retrieve current NBD export config of vDisk from NBD Node.
 |===
 *Тип возвращаемого значения:* object
 
-== URL: /nbd/nodes/{guid}/get_logfiles/
+=== URL: /nbd/nodes/{guid}/get_logfiles/
 
-=== Метод: GET
-==== Описание
+==== Метод: GET
+===== Описание
 Retrieve the log files of an NBD Node
 
-==== Параметры
+===== Параметры
 
 [options="header",cols="2,1,3,2"]
 |===
@@ -1855,7 +1855,7 @@ Retrieve the log files of an NBD Node
 | guid | string | *_<обязательный параметр>_* +
  Identifier of the object on which to call is applied. | 
 |===
-==== Ответы
+===== Ответы
 
 [options="header",cols="1,4"]
 |===
@@ -1865,13 +1865,13 @@ Retrieve the log files of an NBD Node
 |===
 *Тип возвращаемого значения:* string
 
-== URL: /nbd/nodes/{guid}/get_main_config/
+=== URL: /nbd/nodes/{guid}/get_main_config/
 
-=== Метод: GET
-==== Описание
+==== Метод: GET
+===== Описание
 Return main NBD config as dict (e.g. contents of "/etc/nbd-server/config").
 
-==== Параметры
+===== Параметры
 
 [options="header",cols="2,1,3,2"]
 |===
@@ -1879,7 +1879,7 @@ Return main NBD config as dict (e.g. contents of "/etc/nbd-server/config").
 | guid | string | *_<обязательный параметр>_* +
  Identifier of the object on which to call is applied. | 
 |===
-==== Ответы
+===== Ответы
 
 [options="header",cols="1,4"]
 |===
@@ -1889,13 +1889,13 @@ Return main NBD config as dict (e.g. contents of "/etc/nbd-server/config").
 |===
 *Тип возвращаемого значения:* object
 
-== URL: /nbd/nodes/{guid}/get_vdisks_exposed_on_node/
+=== URL: /nbd/nodes/{guid}/get_vdisks_exposed_on_node/
 
-=== Метод: GET
-==== Описание
+==== Метод: GET
+===== Описание
 Retrieve the vDisks exposed on specified NBD node
 
-==== Параметры
+===== Параметры
 
 [options="header",cols="2,1,3,2"]
 |===
@@ -1911,7 +1911,7 @@ Retrieve the vDisks exposed on specified NBD node
 | contents | array | *_<обязательный параметр>_* +
  Specify the returned contents. | 
 |===
-==== Ответы
+===== Ответы
 
 [options="header",cols="1,4"]
 |===
@@ -1921,13 +1921,13 @@ Retrieve the vDisks exposed on specified NBD node
 |===
 *Тип возвращаемого значения:* object
 
-== URL: /nbd/nodes/{guid}/list_export_connections/
+=== URL: /nbd/nodes/{guid}/list_export_connections/
 
-=== Метод: GET
-==== Описание
+==== Метод: GET
+===== Описание
 List all active NBD connections to vDisk (NBD export).
 
-==== Параметры
+===== Параметры
 
 [options="header",cols="2,1,3,2"]
 |===
@@ -1937,7 +1937,7 @@ List all active NBD connections to vDisk (NBD export).
 | vdisk_guid | string | *_<обязательный параметр>_* +
   GUID of the vDisk. | 
 |===
-==== Ответы
+===== Ответы
 
 [options="header",cols="1,4"]
 |===
@@ -1947,13 +1947,13 @@ List all active NBD connections to vDisk (NBD export).
 |===
 *Тип возвращаемого значения:* object
 
-== URL: /nbd/nodes/{guid}/service_restart/
+=== URL: /nbd/nodes/{guid}/service_restart/
 
-=== Метод: POST
-==== Описание
+==== Метод: POST
+===== Описание
 Restart the NBD Manager service on the specified NBD node
 
-==== Параметры
+===== Параметры
 
 [options="header",cols="2,1,3,2"]
 |===
@@ -1963,7 +1963,7 @@ Restart the NBD Manager service on the specified NBD node
 | nbdnode | Не указано | _<необязательный параметр>_ +
  Описание отсутствует. | 
 |===
-==== Ответы
+===== Ответы
 
 [options="header",cols="1,4"]
 |===
@@ -1973,13 +1973,13 @@ Restart the NBD Manager service on the specified NBD node
 |===
 *Тип возвращаемого значения:* string
 
-== URL: /nbd/nodes/{guid}/set_export_config/
+=== URL: /nbd/nodes/{guid}/set_export_config/
 
-=== Метод: PATCH
-==== Описание
+==== Метод: PATCH
+===== Описание
 Set NBD export config on NBD Node.
 
-==== Параметры
+===== Параметры
 
 [options="header",cols="2,1,3,2"]
 |===
@@ -1989,7 +1989,7 @@ Set NBD export config on NBD Node.
 | nbdnode | Не указано | _<необязательный параметр>_ +
  Описание отсутствует. | 
 |===
-==== Ответы
+===== Ответы
 
 [options="header",cols="1,4"]
 |===
@@ -1999,13 +1999,13 @@ Set NBD export config on NBD Node.
 |===
 *Тип возвращаемого значения:* string
 
-== URL: /nbd/nodes/{guid}/set_main_config/
+=== URL: /nbd/nodes/{guid}/set_main_config/
 
-=== Метод: PATCH
-==== Описание
+==== Метод: PATCH
+===== Описание
 Set NBD main config on NBD Node.
 
-==== Параметры
+===== Параметры
 
 [options="header",cols="2,1,3,2"]
 |===
@@ -2015,7 +2015,7 @@ Set NBD main config on NBD Node.
 | nbdnode | Не указано | _<необязательный параметр>_ +
  Описание отсутствует. | 
 |===
-==== Ответы
+===== Ответы
 
 [options="header",cols="1,4"]
 |===
@@ -2025,13 +2025,13 @@ Set NBD main config on NBD Node.
 |===
 *Тип возвращаемого значения:* string
 
-== URL: /roles/
+=== URL: /roles/
 
-=== Метод: GET
-==== Описание
+==== Метод: GET
+===== Описание
 Lists all available Roles
 
-==== Параметры
+===== Параметры
 
 [options="header",cols="2,1,3,2"]
 |===
@@ -2045,7 +2045,7 @@ Lists all available Roles
 | contents | array | *_<обязательный параметр>_* +
  Specify the returned contents. | 
 |===
-==== Ответы
+===== Ответы
 
 [options="header",cols="1,4"]
 |===
@@ -2055,13 +2055,13 @@ Lists all available Roles
 |===
 *Тип возвращаемого значения:* object
 
-== URL: /roles/{guid}/
+=== URL: /roles/{guid}/
 
-=== Метод: GET
-==== Описание
+==== Метод: GET
+===== Описание
 Load information about a given Role
 
-==== Параметры
+===== Параметры
 
 [options="header",cols="2,1,3,2"]
 |===
@@ -2071,7 +2071,7 @@ Load information about a given Role
 | contents | array | *_<обязательный параметр>_* +
  Specify the returned contents. | 
 |===
-==== Ответы
+===== Ответы
 
 [options="header",cols="1,4"]
 |===
@@ -2081,13 +2081,13 @@ Load information about a given Role
 |===
 *Тип возвращаемого значения:* Role
 
-== URL: /storagedrivers/
+=== URL: /storagedrivers/
 
-=== Метод: GET
-==== Описание
+==== Метод: GET
+===== Описание
 Overview of all Storage Drivers
 
-==== Параметры
+===== Параметры
 
 [options="header",cols="2,1,3,2"]
 |===
@@ -2103,7 +2103,7 @@ Overview of all Storage Drivers
 | contents | array | *_<обязательный параметр>_* +
  Specify the returned contents. | 
 |===
-==== Ответы
+===== Ответы
 
 [options="header",cols="1,4"]
 |===
@@ -2113,13 +2113,13 @@ Overview of all Storage Drivers
 |===
 *Тип возвращаемого значения:* object
 
-== URL: /storagedrivers/{guid}/
+=== URL: /storagedrivers/{guid}/
 
-=== Метод: GET
-==== Описание
+==== Метод: GET
+===== Описание
 Load information about a given Storage Driver
 
-==== Параметры
+===== Параметры
 
 [options="header",cols="2,1,3,2"]
 |===
@@ -2129,7 +2129,7 @@ Load information about a given Storage Driver
 | contents | array | *_<обязательный параметр>_* +
  Specify the returned contents. | 
 |===
-==== Ответы
+===== Ответы
 
 [options="header",cols="1,4"]
 |===
@@ -2139,13 +2139,13 @@ Load information about a given Storage Driver
 |===
 *Тип возвращаемого значения:* StorageDriver
 
-== URL: /storagedrivers/{guid}/refresh_configuration/
+=== URL: /storagedrivers/{guid}/refresh_configuration/
 
-=== Метод: POST
-==== Описание
+==== Метод: POST
+===== Описание
 Refresh the configuration of the Storage Driver
 
-==== Параметры
+===== Параметры
 
 [options="header",cols="2,1,3,2"]
 |===
@@ -2153,7 +2153,7 @@ Refresh the configuration of the Storage Driver
 | guid | string | *_<обязательный параметр>_* +
  Identifier of the object on which to call is applied. | 
 |===
-==== Ответы
+===== Ответы
 
 [options="header",cols="1,4"]
 |===
@@ -2163,13 +2163,13 @@ Refresh the configuration of the Storage Driver
 |===
 *Тип возвращаемого значения:* string
 
-== URL: /storagerouters/
+=== URL: /storagerouters/
 
-=== Метод: GET
-==== Описание
+==== Метод: GET
+===== Описание
 Overview of all Storage Routers
 
-==== Параметры
+===== Параметры
 
 [options="header",cols="2,1,3,2"]
 |===
@@ -2185,7 +2185,7 @@ Overview of all Storage Routers
 | contents | array | *_<обязательный параметр>_* +
  Specify the returned contents. | 
 |===
-==== Ответы
+===== Ответы
 
 [options="header",cols="1,4"]
 |===
@@ -2195,13 +2195,13 @@ Overview of all Storage Routers
 |===
 *Тип возвращаемого значения:* object
 
-== URL: /storagerouters/configure_support/
+=== URL: /storagerouters/configure_support/
 
-=== Метод: POST
-==== Описание
+==== Метод: POST
+===== Описание
 Configures support
 
-==== Параметры
+===== Параметры
 
 [options="header",cols="2,1,3,2"]
 |===
@@ -2209,7 +2209,7 @@ Configures support
 | body | Не указано | _<необязательный параметр>_ +
  Описание отсутствует. | 
 |===
-==== Ответы
+===== Ответы
 
 [options="header",cols="1,4"]
 |===
@@ -2219,19 +2219,19 @@ Configures support
 |===
 *Тип возвращаемого значения:* string
 
-== URL: /storagerouters/get_update_information/
+=== URL: /storagerouters/get_update_information/
 
-=== Метод: GET
-==== Описание
+==== Метод: GET
+===== Описание
 Retrieve the update information for all Storage Routers
 
-==== Параметры
+===== Параметры
 
 [options="header",cols="2,1,3,2"]
 |===
 | Параметр | Тип | Описание | Значение по умолчанию
 |===
-==== Ответы
+===== Ответы
 
 [options="header",cols="1,4"]
 |===
@@ -2241,19 +2241,19 @@ Retrieve the update information for all Storage Routers
 |===
 *Тип возвращаемого значения:* string
 
-== URL: /storagerouters/merge_package_information/
+=== URL: /storagerouters/merge_package_information/
 
-=== Метод: GET
-==== Описание
+==== Метод: GET
+===== Описание
 Retrieve the package information from the model for both Storage Routers and ALBA Nodes and merge it
 
-==== Параметры
+===== Параметры
 
 [options="header",cols="2,1,3,2"]
 |===
 | Параметр | Тип | Описание | Значение по умолчанию
 |===
-==== Ответы
+===== Ответы
 
 [options="header",cols="1,4"]
 |===
@@ -2263,19 +2263,19 @@ Retrieve the package information from the model for both Storage Routers and ALB
 |===
 *Тип возвращаемого значения:* string
 
-== URL: /storagerouters/refresh_package_information/
+=== URL: /storagerouters/refresh_package_information/
 
-=== Метод: GET
-==== Описание
+==== Метод: GET
+===== Описание
 Refresh the package information for all StorageRouters.
 
-==== Параметры
+===== Параметры
 
 [options="header",cols="2,1,3,2"]
 |===
 | Параметр | Тип | Описание | Значение по умолчанию
 |===
-==== Ответы
+===== Ответы
 
 [options="header",cols="1,4"]
 |===
@@ -2285,13 +2285,13 @@ Refresh the package information for all StorageRouters.
 |===
 *Тип возвращаемого значения:* string
 
-== URL: /storagerouters/update_components/
+=== URL: /storagerouters/update_components/
 
-=== Метод: POST
-==== Описание
+==== Метод: POST
+===== Описание
 Initiate a task on a Storage Router to update the specified components on all Storage Routers
 
-==== Параметры
+===== Параметры
 
 [options="header",cols="2,1,3,2"]
 |===
@@ -2299,7 +2299,7 @@ Initiate a task on a Storage Router to update the specified components on all St
 | body | Не указано | _<необязательный параметр>_ +
  Описание отсутствует. | 
 |===
-==== Ответы
+===== Ответы
 
 [options="header",cols="1,4"]
 |===
@@ -2309,13 +2309,13 @@ Initiate a task on a Storage Router to update the specified components on all St
 |===
 *Тип возвращаемого значения:* string
 
-== URL: /storagerouters/{guid}/
+=== URL: /storagerouters/{guid}/
 
-=== Метод: GET
-==== Описание
+==== Метод: GET
+===== Описание
 Load information about a given Storage Router
 
-==== Параметры
+===== Параметры
 
 [options="header",cols="2,1,3,2"]
 |===
@@ -2325,7 +2325,7 @@ Load information about a given Storage Router
 | contents | array | *_<обязательный параметр>_* +
  Specify the returned contents. | 
 |===
-==== Ответы
+===== Ответы
 
 [options="header",cols="1,4"]
 |===
@@ -2336,11 +2336,11 @@ Load information about a given Storage Router
 *Тип возвращаемого значения:* StorageRouter
 
 
-=== Метод: PATCH
-==== Описание
+==== Метод: PATCH
+===== Описание
 Update a Storage Router
 
-==== Параметры
+===== Параметры
 
 [options="header",cols="2,1,3,2"]
 |===
@@ -2352,7 +2352,7 @@ Update a Storage Router
 | storagerouter | Не указано | _<необязательный параметр>_ +
  Описание отсутствует. | 
 |===
-==== Ответы
+===== Ответы
 
 [options="header",cols="1,4"]
 |===
@@ -2360,13 +2360,13 @@ Update a Storage Router
 | 202 | Update a Storage Router
 | default | Error payload
 |===
-== URL: /storagerouters/{guid}/add_vpool/
+=== URL: /storagerouters/{guid}/add_vpool/
 
-=== Метод: POST
-==== Описание
+==== Метод: POST
+===== Описание
 Adds a vPool to a given Storage Router
 
-==== Параметры
+===== Параметры
 
 [options="header",cols="2,1,3,2"]
 |===
@@ -2376,7 +2376,7 @@ Adds a vPool to a given Storage Router
 | storagerouter | Не указано | _<необязательный параметр>_ +
  Описание отсутствует. | 
 |===
-==== Ответы
+===== Ответы
 
 [options="header",cols="1,4"]
 |===
@@ -2386,13 +2386,13 @@ Adds a vPool to a given Storage Router
 |===
 *Тип возвращаемого значения:* string
 
-== URL: /storagerouters/{guid}/check_mtpt/
+=== URL: /storagerouters/{guid}/check_mtpt/
 
-=== Метод: POST
-==== Описание
+==== Метод: POST
+===== Описание
 Validates whether the mountpoint for a vPool is available
 
-==== Параметры
+===== Параметры
 
 [options="header",cols="2,1,3,2"]
 |===
@@ -2402,7 +2402,7 @@ Validates whether the mountpoint for a vPool is available
 | storagerouter | Не указано | _<необязательный параметр>_ +
  Описание отсутствует. | 
 |===
-==== Ответы
+===== Ответы
 
 [options="header",cols="1,4"]
 |===
@@ -2412,13 +2412,13 @@ Validates whether the mountpoint for a vPool is available
 |===
 *Тип возвращаемого значения:* string
 
-== URL: /storagerouters/{guid}/configure_disk/
+=== URL: /storagerouters/{guid}/configure_disk/
 
-=== Метод: POST
-==== Описание
+==== Метод: POST
+===== Описание
 Configures a Disk on a Storage Router
 
-==== Параметры
+===== Параметры
 
 [options="header",cols="2,1,3,2"]
 |===
@@ -2428,7 +2428,7 @@ Configures a Disk on a Storage Router
 | storagerouter | Не указано | _<необязательный параметр>_ +
  Описание отсутствует. | 
 |===
-==== Ответы
+===== Ответы
 
 [options="header",cols="1,4"]
 |===
@@ -2438,13 +2438,13 @@ Configures a Disk on a Storage Router
 |===
 *Тип возвращаемого значения:* string
 
-== URL: /storagerouters/{guid}/create_hprm_config_files/
+=== URL: /storagerouters/{guid}/create_hprm_config_files/
 
-=== Метод: GET
-==== Описание
+==== Метод: GET
+===== Описание
 Create the required configuration files to be able to make use of HPRM (aka PRACC)
 
-==== Параметры
+===== Параметры
 
 [options="header",cols="2,1,3,2"]
 |===
@@ -2454,7 +2454,7 @@ Create the required configuration files to be able to make use of HPRM (aka PRAC
 | parameters | object | *_<обязательный параметр>_* +
   Additional information required for the HPRM configuration files | 
 |===
-==== Ответы
+===== Ответы
 
 [options="header",cols="1,4"]
 |===
@@ -2464,13 +2464,13 @@ Create the required configuration files to be able to make use of HPRM (aka PRAC
 |===
 *Тип возвращаемого значения:* string
 
-== URL: /storagerouters/{guid}/extend_vpool/
+=== URL: /storagerouters/{guid}/extend_vpool/
 
-=== Метод: POST
-==== Описание
+==== Метод: POST
+===== Описание
 Extend vPool to a given Storage Router
 
-==== Параметры
+===== Параметры
 
 [options="header",cols="2,1,3,2"]
 |===
@@ -2480,7 +2480,7 @@ Extend vPool to a given Storage Router
 | storagerouter | Не указано | _<необязательный параметр>_ +
  Описание отсутствует. | 
 |===
-==== Ответы
+===== Ответы
 
 [options="header",cols="1,4"]
 |===
@@ -2490,13 +2490,13 @@ Extend vPool to a given Storage Router
 |===
 *Тип возвращаемого значения:* string
 
-== URL: /storagerouters/{guid}/get_logfiles/
+=== URL: /storagerouters/{guid}/get_logfiles/
 
-=== Метод: GET
-==== Описание
+==== Метод: GET
+===== Описание
 Collects logs, moves them to a web-accessible location and returns log tgz's filename
 
-==== Параметры
+===== Параметры
 
 [options="header",cols="2,1,3,2"]
 |===
@@ -2504,7 +2504,7 @@ Collects logs, moves them to a web-accessible location and returns log tgz's fil
 | guid | string | *_<обязательный параметр>_* +
  Identifier of the object on which to call is applied. | 
 |===
-==== Ответы
+===== Ответы
 
 [options="header",cols="1,4"]
 |===
@@ -2514,13 +2514,13 @@ Collects logs, moves them to a web-accessible location and returns log tgz's fil
 |===
 *Тип возвращаемого значения:* string
 
-== URL: /storagerouters/{guid}/get_metadata/
+=== URL: /storagerouters/{guid}/get_metadata/
 
-=== Метод: GET
-==== Описание
+==== Метод: GET
+===== Описание
 Returns a list of mountpoints on the given Storage Router
 
-==== Параметры
+===== Параметры
 
 [options="header",cols="2,1,3,2"]
 |===
@@ -2528,7 +2528,7 @@ Returns a list of mountpoints on the given Storage Router
 | guid | string | *_<обязательный параметр>_* +
  Identifier of the object on which to call is applied. | 
 |===
-==== Ответы
+===== Ответы
 
 [options="header",cols="1,4"]
 |===
@@ -2538,13 +2538,13 @@ Returns a list of mountpoints on the given Storage Router
 |===
 *Тип возвращаемого значения:* string
 
-== URL: /storagerouters/{guid}/get_proxy_config/
+=== URL: /storagerouters/{guid}/get_proxy_config/
 
-=== Метод: GET
-==== Описание
+==== Метод: GET
+===== Описание
 Gets the ALBA Proxy for a given Storage Router and vPool
 
-==== Параметры
+===== Параметры
 
 [options="header",cols="2,1,3,2"]
 |===
@@ -2554,7 +2554,7 @@ Gets the ALBA Proxy for a given Storage Router and vPool
 | vpool_guid | string | *_<обязательный параметр>_* +
   Guid of the vPool for which the proxy is configured | 
 |===
-==== Ответы
+===== Ответы
 
 [options="header",cols="1,4"]
 |===
@@ -2564,13 +2564,13 @@ Gets the ALBA Proxy for a given Storage Router and vPool
 |===
 *Тип возвращаемого значения:* string
 
-== URL: /storagerouters/{guid}/get_support_info/
+=== URL: /storagerouters/{guid}/get_support_info/
 
-=== Метод: GET
-==== Описание
+==== Метод: GET
+===== Описание
 Gets support information of a given Storage Router
 
-==== Параметры
+===== Параметры
 
 [options="header",cols="2,1,3,2"]
 |===
@@ -2578,7 +2578,7 @@ Gets support information of a given Storage Router
 | guid | string | *_<обязательный параметр>_* +
  Identifier of the object on which to call is applied. | 
 |===
-==== Ответы
+===== Ответы
 
 [options="header",cols="1,4"]
 |===
@@ -2588,13 +2588,13 @@ Gets support information of a given Storage Router
 |===
 *Тип возвращаемого значения:* string
 
-== URL: /storagerouters/{guid}/get_support_metadata/
+=== URL: /storagerouters/{guid}/get_support_metadata/
 
-=== Метод: GET
-==== Описание
+==== Метод: GET
+===== Описание
 Gets support metadata of a given Storage Router
 
-==== Параметры
+===== Параметры
 
 [options="header",cols="2,1,3,2"]
 |===
@@ -2602,7 +2602,7 @@ Gets support metadata of a given Storage Router
 | guid | string | *_<обязательный параметр>_* +
  Identifier of the object on which to call is applied. | 
 |===
-==== Ответы
+===== Ответы
 
 [options="header",cols="1,4"]
 |===
@@ -2612,13 +2612,13 @@ Gets support metadata of a given Storage Router
 |===
 *Тип возвращаемого значения:* string
 
-== URL: /storagerouters/{guid}/get_update_metadata/
+=== URL: /storagerouters/{guid}/get_update_metadata/
 
-=== Метод: GET
-==== Описание
+==== Метод: GET
+===== Описание
 Returns metadata required for updating
 
-==== Параметры
+===== Параметры
 
 [options="header",cols="2,1,3,2"]
 |===
@@ -2626,7 +2626,7 @@ Returns metadata required for updating
 | guid | string | *_<обязательный параметр>_* +
  Identifier of the object on which to call is applied. | 
 |===
-==== Ответы
+===== Ответы
 
 [options="header",cols="1,4"]
 |===
@@ -2636,13 +2636,13 @@ Returns metadata required for updating
 |===
 *Тип возвращаемого значения:* string
 
-== URL: /storagerouters/{guid}/get_version_info/
+=== URL: /storagerouters/{guid}/get_version_info/
 
-=== Метод: GET
-==== Описание
+==== Метод: GET
+===== Описание
 Gets version information of a given Storage Router
 
-==== Параметры
+===== Параметры
 
 [options="header",cols="2,1,3,2"]
 |===
@@ -2650,7 +2650,7 @@ Gets version information of a given Storage Router
 | guid | string | *_<обязательный параметр>_* +
  Identifier of the object on which to call is applied. | 
 |===
-==== Ответы
+===== Ответы
 
 [options="header",cols="1,4"]
 |===
@@ -2660,13 +2660,13 @@ Gets version information of a given Storage Router
 |===
 *Тип возвращаемого значения:* string
 
-== URL: /storagerouters/{guid}/mark_offline/
+=== URL: /storagerouters/{guid}/mark_offline/
 
-=== Метод: POST
-==== Описание
+==== Метод: POST
+===== Описание
 Marks all Storage Drivers of a given Node offline. DO NOT USE ON RUNNING STORAGE ROUTERS!
 
-==== Параметры
+===== Параметры
 
 [options="header",cols="2,1,3,2"]
 |===
@@ -2674,7 +2674,7 @@ Marks all Storage Drivers of a given Node offline. DO NOT USE ON RUNNING STORAGE
 | guid | string | *_<обязательный параметр>_* +
  Identifier of the object on which to call is applied. | 
 |===
-==== Ответы
+===== Ответы
 
 [options="header",cols="1,4"]
 |===
@@ -2684,13 +2684,13 @@ Marks all Storage Drivers of a given Node offline. DO NOT USE ON RUNNING STORAGE
 |===
 *Тип возвращаемого значения:* string
 
-== URL: /storagerouters/{guid}/refresh_hardware/
+=== URL: /storagerouters/{guid}/refresh_hardware/
 
-=== Метод: POST
-==== Описание
+==== Метод: POST
+===== Описание
 Refreshes all hardware parameters
 
-==== Параметры
+===== Параметры
 
 [options="header",cols="2,1,3,2"]
 |===
@@ -2698,7 +2698,7 @@ Refreshes all hardware parameters
 | guid | string | *_<обязательный параметр>_* +
  Identifier of the object on which to call is applied. | 
 |===
-==== Ответы
+===== Ответы
 
 [options="header",cols="1,4"]
 |===
@@ -2708,13 +2708,13 @@ Refreshes all hardware parameters
 |===
 *Тип возвращаемого значения:* string
 
-== URL: /storagerouters/{guid}/rescan_disks/
+=== URL: /storagerouters/{guid}/rescan_disks/
 
-=== Метод: POST
-==== Описание
+==== Метод: POST
+===== Описание
 Triggers a Disk sync on the given Storage Router
 
-==== Параметры
+===== Параметры
 
 [options="header",cols="2,1,3,2"]
 |===
@@ -2722,7 +2722,7 @@ Triggers a Disk sync on the given Storage Router
 | guid | string | *_<обязательный параметр>_* +
  Identifier of the object on which to call is applied. | 
 |===
-==== Ответы
+===== Ответы
 
 [options="header",cols="1,4"]
 |===
@@ -2732,13 +2732,13 @@ Triggers a Disk sync on the given Storage Router
 |===
 *Тип возвращаемого значения:* string
 
-== URL: /storagerouters/{guid}/set_domains/
+=== URL: /storagerouters/{guid}/set_domains/
 
-=== Метод: POST
-==== Описание
+==== Метод: POST
+===== Описание
 Configures the given Domains to the Storage Router.
 
-==== Параметры
+===== Параметры
 
 [options="header",cols="2,1,3,2"]
 |===
@@ -2748,7 +2748,7 @@ Configures the given Domains to the Storage Router.
 | storagerouter | Не указано | _<необязательный параметр>_ +
  Описание отсутствует. | 
 |===
-==== Ответы
+===== Ответы
 
 [options="header",cols="1,4"]
 |===
@@ -2756,19 +2756,19 @@ Configures the given Domains to the Storage Router.
 | 204 | Configures the given Domains to the Storage Router.
 | default | Error payload
 |===
-== URL: /tasks/
+=== URL: /tasks/
 
-=== Метод: GET
-==== Описание
+==== Метод: GET
+===== Описание
 Overview of active, scheduled, reserved and revoked tasks
 
-==== Параметры
+===== Параметры
 
 [options="header",cols="2,1,3,2"]
 |===
 | Параметр | Тип | Описание | Значение по умолчанию
 |===
-==== Ответы
+===== Ответы
 
 [options="header",cols="1,4"]
 |===
@@ -2778,13 +2778,13 @@ Overview of active, scheduled, reserved and revoked tasks
 |===
 *Тип возвращаемого значения:* object
 
-== URL: /tasks/{guid}/
+=== URL: /tasks/{guid}/
 
-=== Метод: GET
-==== Описание
+==== Метод: GET
+===== Описание
 Load information about a given task
 
-==== Параметры
+===== Параметры
 
 [options="header",cols="2,1,3,2"]
 |===
@@ -2792,7 +2792,7 @@ Load information about a given task
 | guid | string | *_<обязательный параметр>_* +
  Identifier of the object on which the call is applied. | 
 |===
-==== Ответы
+===== Ответы
 
 [options="header",cols="1,4"]
 |===
@@ -2802,13 +2802,13 @@ Load information about a given task
 |===
 *Тип возвращаемого значения:* object
 
-== URL: /tasks/{guid}/get/
+=== URL: /tasks/{guid}/get/
 
-=== Метод: GET
-==== Описание
+==== Метод: GET
+===== Описание
 Gets a given task's result
 
-==== Параметры
+===== Параметры
 
 [options="header",cols="2,1,3,2"]
 |===
@@ -2816,7 +2816,7 @@ Gets a given task's result
 | guid | string | *_<обязательный параметр>_* +
  Identifier of the object on which the call is applied. | 
 |===
-==== Ответы
+===== Ответы
 
 [options="header",cols="1,4"]
 |===
@@ -2826,13 +2826,13 @@ Gets a given task's result
 |===
 *Тип возвращаемого значения:* object
 
-== URL: /users/
+=== URL: /users/
 
-=== Метод: GET
-==== Описание
+==== Метод: GET
+===== Описание
 Lists all available Users where the logged in User has access to
 
-==== Параметры
+===== Параметры
 
 [options="header",cols="2,1,3,2"]
 |===
@@ -2846,7 +2846,7 @@ Lists all available Users where the logged in User has access to
 | contents | array | *_<обязательный параметр>_* +
  Specify the returned contents. | 
 |===
-==== Ответы
+===== Ответы
 
 [options="header",cols="1,4"]
 |===
@@ -2857,11 +2857,11 @@ Lists all available Users where the logged in User has access to
 *Тип возвращаемого значения:* object
 
 
-=== Метод: POST
-==== Описание
+==== Метод: POST
+===== Описание
 Creates a User
 
-==== Параметры
+===== Параметры
 
 [options="header",cols="2,1,3,2"]
 |===
@@ -2871,7 +2871,7 @@ Creates a User
 | body | Не указано | _<необязательный параметр>_ +
  Описание отсутствует. | 
 |===
-==== Ответы
+===== Ответы
 
 [options="header",cols="1,4"]
 |===
@@ -2879,13 +2879,13 @@ Creates a User
 | 201 | Creates a User
 | default | Error payload
 |===
-== URL: /users/{guid}/
+=== URL: /users/{guid}/
 
-=== Метод: DELETE
-==== Описание
+==== Метод: DELETE
+===== Описание
 Deletes a User
 
-==== Параметры
+===== Параметры
 
 [options="header",cols="2,1,3,2"]
 |===
@@ -2893,7 +2893,7 @@ Deletes a User
 | guid | string | *_<обязательный параметр>_* +
  Identifier of the object on which to call is applied. | 
 |===
-==== Ответы
+===== Ответы
 
 [options="header",cols="1,4"]
 |===
@@ -2902,11 +2902,11 @@ Deletes a User
 | default | Error payload
 |===
 
-=== Метод: GET
-==== Описание
+==== Метод: GET
+===== Описание
 Load information about a given User. Only the currently logged in User is accessible, or all if the logged in User has a manage role
 
-==== Параметры
+===== Параметры
 
 [options="header",cols="2,1,3,2"]
 |===
@@ -2916,7 +2916,7 @@ Load information about a given User. Only the currently logged in User is access
 | contents | array | *_<обязательный параметр>_* +
  Specify the returned contents. | 
 |===
-==== Ответы
+===== Ответы
 
 [options="header",cols="1,4"]
 |===
@@ -2927,11 +2927,11 @@ Load information about a given User. Only the currently logged in User is access
 *Тип возвращаемого значения:* User
 
 
-=== Метод: PATCH
-==== Описание
+==== Метод: PATCH
+===== Описание
 Update a User
 
-==== Параметры
+===== Параметры
 
 [options="header",cols="2,1,3,2"]
 |===
@@ -2943,7 +2943,7 @@ Update a User
 | user | Не указано | _<необязательный параметр>_ +
  Описание отсутствует. | 
 |===
-==== Ответы
+===== Ответы
 
 [options="header",cols="1,4"]
 |===
@@ -2951,13 +2951,13 @@ Update a User
 | 202 | Update a User
 | default | Error payload
 |===
-== URL: /users/{guid}/set_password/
+=== URL: /users/{guid}/set_password/
 
-=== Метод: POST
-==== Описание
+==== Метод: POST
+===== Описание
 Sets the password of a given User. A logged in User can only changes its own password, or all passwords if the logged in User has a manage role
 
-==== Параметры
+===== Параметры
 
 [options="header",cols="2,1,3,2"]
 |===
@@ -2969,7 +2969,7 @@ Sets the password of a given User. A logged in User can only changes its own pas
 | user | Не указано | _<необязательный параметр>_ +
  Описание отсутствует. | 
 |===
-==== Ответы
+===== Ответы
 
 [options="header",cols="1,4"]
 |===
@@ -2977,13 +2977,13 @@ Sets the password of a given User. A logged in User can only changes its own pas
 | 202 | Sets the password of a given User. A logged in User can only changes its own password, or all passwords if the logged in User has a manage role
 | default | Error payload
 |===
-== URL: /vdisks/
+=== URL: /vdisks/
 
-=== Метод: GET
-==== Описание
+==== Метод: GET
+===== Описание
 Overview of all vDisks
 
-==== Параметры
+===== Параметры
 
 [options="header",cols="2,1,3,2"]
 |===
@@ -3003,7 +3003,7 @@ Overview of all vDisks
 | contents | array | *_<обязательный параметр>_* +
  Specify the returned contents. | 
 |===
-==== Ответы
+===== Ответы
 
 [options="header",cols="1,4"]
 |===
@@ -3014,11 +3014,11 @@ Overview of all vDisks
 *Тип возвращаемого значения:* object
 
 
-=== Метод: POST
-==== Описание
+==== Метод: POST
+===== Описание
 Create a new vDisk
 
-==== Параметры
+===== Параметры
 
 [options="header",cols="2,1,3,2"]
 |===
@@ -3026,7 +3026,7 @@ Create a new vDisk
 | body | Не указано | _<необязательный параметр>_ +
  Описание отсутствует. | 
 |===
-==== Ответы
+===== Ответы
 
 [options="header",cols="1,4"]
 |===
@@ -3036,13 +3036,13 @@ Create a new vDisk
 |===
 *Тип возвращаемого значения:* string
 
-== URL: /vdisks/{guid}/
+=== URL: /vdisks/{guid}/
 
-=== Метод: DELETE
-==== Описание
+==== Метод: DELETE
+===== Описание
 Delete a given vDisk
 
-==== Параметры
+===== Параметры
 
 [options="header",cols="2,1,3,2"]
 |===
@@ -3050,7 +3050,7 @@ Delete a given vDisk
 | guid | string | *_<обязательный параметр>_* +
  Identifier of the object on which to call is applied. | 
 |===
-==== Ответы
+===== Ответы
 
 [options="header",cols="1,4"]
 |===
@@ -3061,11 +3061,11 @@ Delete a given vDisk
 *Тип возвращаемого значения:* string
 
 
-=== Метод: GET
-==== Описание
+==== Метод: GET
+===== Описание
 Load information about a given vDisk
 
-==== Параметры
+===== Параметры
 
 [options="header",cols="2,1,3,2"]
 |===
@@ -3075,7 +3075,7 @@ Load information about a given vDisk
 | contents | array | *_<обязательный параметр>_* +
  Specify the returned contents. | 
 |===
-==== Ответы
+===== Ответы
 
 [options="header",cols="1,4"]
 |===
@@ -3085,13 +3085,13 @@ Load information about a given vDisk
 |===
 *Тип возвращаемого значения:* VDisk
 
-== URL: /vdisks/{guid}/clone/
+=== URL: /vdisks/{guid}/clone/
 
-=== Метод: POST
-==== Описание
+==== Метод: POST
+===== Описание
 Clones a vDisk
 
-==== Параметры
+===== Параметры
 
 [options="header",cols="2,1,3,2"]
 |===
@@ -3101,7 +3101,7 @@ Clones a vDisk
 | vdisk | Не указано | _<необязательный параметр>_ +
  Описание отсутствует. | 
 |===
-==== Ответы
+===== Ответы
 
 [options="header",cols="1,4"]
 |===
@@ -3111,13 +3111,13 @@ Clones a vDisk
 |===
 *Тип возвращаемого значения:* string
 
-== URL: /vdisks/{guid}/create_from_template/
+=== URL: /vdisks/{guid}/create_from_template/
 
-=== Метод: POST
-==== Описание
+==== Метод: POST
+===== Описание
 Create a new vDisk from a Template vDisk
 
-==== Параметры
+===== Параметры
 
 [options="header",cols="2,1,3,2"]
 |===
@@ -3127,7 +3127,7 @@ Create a new vDisk from a Template vDisk
 | vdisk | Не указано | _<необязательный параметр>_ +
  Описание отсутствует. | 
 |===
-==== Ответы
+===== Ответы
 
 [options="header",cols="1,4"]
 |===
@@ -3137,13 +3137,13 @@ Create a new vDisk from a Template vDisk
 |===
 *Тип возвращаемого значения:* string
 
-== URL: /vdisks/{guid}/create_snapshot/
+=== URL: /vdisks/{guid}/create_snapshot/
 
-=== Метод: POST
-==== Описание
+==== Метод: POST
+===== Описание
 Creates a snapshot from the vDisk
 
-==== Параметры
+===== Параметры
 
 [options="header",cols="2,1,3,2"]
 |===
@@ -3153,7 +3153,7 @@ Creates a snapshot from the vDisk
 | vdisk | Не указано | _<необязательный параметр>_ +
  Описание отсутствует. | 
 |===
-==== Ответы
+===== Ответы
 
 [options="header",cols="1,4"]
 |===
@@ -3163,13 +3163,13 @@ Creates a snapshot from the vDisk
 |===
 *Тип возвращаемого значения:* string
 
-== URL: /vdisks/{guid}/extend/
+=== URL: /vdisks/{guid}/extend/
 
-=== Метод: POST
-==== Описание
+==== Метод: POST
+===== Описание
 Extends a given vDisk to a new size
 
-==== Параметры
+===== Параметры
 
 [options="header",cols="2,1,3,2"]
 |===
@@ -3179,7 +3179,7 @@ Extends a given vDisk to a new size
 | vdisk | Не указано | _<необязательный параметр>_ +
  Описание отсутствует. | 
 |===
-==== Ответы
+===== Ответы
 
 [options="header",cols="1,4"]
 |===
@@ -3189,13 +3189,13 @@ Extends a given vDisk to a new size
 |===
 *Тип возвращаемого значения:* string
 
-== URL: /vdisks/{guid}/get_config_params/
+=== URL: /vdisks/{guid}/get_config_params/
 
-=== Метод: GET
-==== Описание
+==== Метод: GET
+===== Описание
 Retrieve the configuration parameters for the given Disk from the Storage Driver.
 
-==== Параметры
+===== Параметры
 
 [options="header",cols="2,1,3,2"]
 |===
@@ -3203,7 +3203,7 @@ Retrieve the configuration parameters for the given Disk from the Storage Driver
 | guid | string | *_<обязательный параметр>_* +
  Identifier of the object on which to call is applied. | 
 |===
-==== Ответы
+===== Ответы
 
 [options="header",cols="1,4"]
 |===
@@ -3213,13 +3213,13 @@ Retrieve the configuration parameters for the given Disk from the Storage Driver
 |===
 *Тип возвращаемого значения:* string
 
-== URL: /vdisks/{guid}/get_scrub_storagerouters/
+=== URL: /vdisks/{guid}/get_scrub_storagerouters/
 
-=== Метод: GET
-==== Описание
+==== Метод: GET
+===== Описание
 Loads a list of suitable Storage Routers for scrubbing the given vDisk
 
-==== Параметры
+===== Параметры
 
 [options="header",cols="2,1,3,2"]
 |===
@@ -3235,7 +3235,7 @@ Loads a list of suitable Storage Routers for scrubbing the given vDisk
 | contents | array | *_<обязательный параметр>_* +
  Specify the returned contents. | 
 |===
-==== Ответы
+===== Ответы
 
 [options="header",cols="1,4"]
 |===
@@ -3245,13 +3245,13 @@ Loads a list of suitable Storage Routers for scrubbing the given vDisk
 |===
 *Тип возвращаемого значения:* object
 
-== URL: /vdisks/{guid}/get_target_storagerouters/
+=== URL: /vdisks/{guid}/get_target_storagerouters/
 
-=== Метод: GET
-==== Описание
+==== Метод: GET
+===== Описание
 Gets all possible target Storage Routers for a given vDisk (e.g. when cloning, creating from template or moving)
 
-==== Параметры
+===== Параметры
 
 [options="header",cols="2,1,3,2"]
 |===
@@ -3267,7 +3267,7 @@ Gets all possible target Storage Routers for a given vDisk (e.g. when cloning, c
 | contents | array | *_<обязательный параметр>_* +
  Specify the returned contents. | 
 |===
-==== Ответы
+===== Ответы
 
 [options="header",cols="1,4"]
 |===
@@ -3277,13 +3277,13 @@ Gets all possible target Storage Routers for a given vDisk (e.g. when cloning, c
 |===
 *Тип возвращаемого значения:* object
 
-== URL: /vdisks/{guid}/is_volume_synced_up_to_snapshot/
+=== URL: /vdisks/{guid}/is_volume_synced_up_to_snapshot/
 
-=== Метод: POST
-==== Описание
+==== Метод: POST
+===== Описание
 Verify if volume is synced to Backend up to a specific snapshot
 
-==== Параметры
+===== Параметры
 
 [options="header",cols="2,1,3,2"]
 |===
@@ -3293,7 +3293,7 @@ Verify if volume is synced to Backend up to a specific snapshot
 | vdisk | Не указано | _<необязательный параметр>_ +
  Описание отсутствует. | 
 |===
-==== Ответы
+===== Ответы
 
 [options="header",cols="1,4"]
 |===
@@ -3303,13 +3303,13 @@ Verify if volume is synced to Backend up to a specific snapshot
 |===
 *Тип возвращаемого значения:* string
 
-== URL: /vdisks/{guid}/is_volume_synced_up_to_tlog/
+=== URL: /vdisks/{guid}/is_volume_synced_up_to_tlog/
 
-=== Метод: POST
-==== Описание
+==== Метод: POST
+===== Описание
 Verify if volume is synced to Backend up to a specific tlog
 
-==== Параметры
+===== Параметры
 
 [options="header",cols="2,1,3,2"]
 |===
@@ -3319,7 +3319,7 @@ Verify if volume is synced to Backend up to a specific tlog
 | vdisk | Не указано | _<необязательный параметр>_ +
  Описание отсутствует. | 
 |===
-==== Ответы
+===== Ответы
 
 [options="header",cols="1,4"]
 |===
@@ -3329,13 +3329,13 @@ Verify if volume is synced to Backend up to a specific tlog
 |===
 *Тип возвращаемого значения:* string
 
-== URL: /vdisks/{guid}/move/
+=== URL: /vdisks/{guid}/move/
 
-=== Метод: POST
-==== Описание
+==== Метод: POST
+===== Описание
 Moves a vDisk
 
-==== Параметры
+===== Параметры
 
 [options="header",cols="2,1,3,2"]
 |===
@@ -3345,7 +3345,7 @@ Moves a vDisk
 | vdisk | Не указано | _<необязательный параметр>_ +
  Описание отсутствует. | 
 |===
-==== Ответы
+===== Ответы
 
 [options="header",cols="1,4"]
 |===
@@ -3355,13 +3355,13 @@ Moves a vDisk
 |===
 *Тип возвращаемого значения:* string
 
-== URL: /vdisks/{guid}/remove_snapshot/
+=== URL: /vdisks/{guid}/remove_snapshot/
 
-=== Метод: POST
-==== Описание
+==== Метод: POST
+===== Описание
 Remove a snapshot from a vDisk
 
-==== Параметры
+===== Параметры
 
 [options="header",cols="2,1,3,2"]
 |===
@@ -3371,7 +3371,7 @@ Remove a snapshot from a vDisk
 | vdisk | Не указано | _<необязательный параметр>_ +
  Описание отсутствует. | 
 |===
-==== Ответы
+===== Ответы
 
 [options="header",cols="1,4"]
 |===
@@ -3381,13 +3381,13 @@ Remove a snapshot from a vDisk
 |===
 *Тип возвращаемого значения:* string
 
-== URL: /vdisks/{guid}/restart/
+=== URL: /vdisks/{guid}/restart/
 
-=== Метод: POST
-==== Описание
+==== Метод: POST
+===== Описание
 Restart a vDisk
 
-==== Параметры
+===== Параметры
 
 [options="header",cols="2,1,3,2"]
 |===
@@ -3397,7 +3397,7 @@ Restart a vDisk
 | vdisk | Не указано | _<необязательный параметр>_ +
  Описание отсутствует. | 
 |===
-==== Ответы
+===== Ответы
 
 [options="header",cols="1,4"]
 |===
@@ -3407,13 +3407,13 @@ Restart a vDisk
 |===
 *Тип возвращаемого значения:* string
 
-== URL: /vdisks/{guid}/rollback/
+=== URL: /vdisks/{guid}/rollback/
 
-=== Метод: POST
-==== Описание
+==== Метод: POST
+===== Описание
 Rollbacks a vDisk to a given timestamp
 
-==== Параметры
+===== Параметры
 
 [options="header",cols="2,1,3,2"]
 |===
@@ -3423,7 +3423,7 @@ Rollbacks a vDisk to a given timestamp
 | vdisk | Не указано | _<необязательный параметр>_ +
  Описание отсутствует. | 
 |===
-==== Ответы
+===== Ответы
 
 [options="header",cols="1,4"]
 |===
@@ -3433,13 +3433,13 @@ Rollbacks a vDisk to a given timestamp
 |===
 *Тип возвращаемого значения:* string
 
-== URL: /vdisks/{guid}/schedule_backend_sync/
+=== URL: /vdisks/{guid}/schedule_backend_sync/
 
-=== Метод: POST
-==== Описание
+==== Метод: POST
+===== Описание
 Schedule a Backend sync on a vDisk
 
-==== Параметры
+===== Параметры
 
 [options="header",cols="2,1,3,2"]
 |===
@@ -3447,7 +3447,7 @@ Schedule a Backend sync on a vDisk
 | guid | string | *_<обязательный параметр>_* +
  Identifier of the object on which to call is applied. | 
 |===
-==== Ответы
+===== Ответы
 
 [options="header",cols="1,4"]
 |===
@@ -3457,13 +3457,13 @@ Schedule a Backend sync on a vDisk
 |===
 *Тип возвращаемого значения:* string
 
-== URL: /vdisks/{guid}/scrub/
+=== URL: /vdisks/{guid}/scrub/
 
-=== Метод: POST
-==== Описание
+==== Метод: POST
+===== Описание
 Scrubs a given vDisk on a given Storage Router
 
-==== Параметры
+===== Параметры
 
 [options="header",cols="2,1,3,2"]
 |===
@@ -3473,7 +3473,7 @@ Scrubs a given vDisk on a given Storage Router
 | vdisk | Не указано | _<необязательный параметр>_ +
  Описание отсутствует. | 
 |===
-==== Ответы
+===== Ответы
 
 [options="header",cols="1,4"]
 |===
@@ -3483,13 +3483,13 @@ Scrubs a given vDisk on a given Storage Router
 |===
 *Тип возвращаемого значения:* string
 
-== URL: /vdisks/{guid}/set_as_template/
+=== URL: /vdisks/{guid}/set_as_template/
 
-=== Метод: POST
-==== Описание
+==== Метод: POST
+===== Описание
 Sets a vDisk as Template
 
-==== Параметры
+===== Параметры
 
 [options="header",cols="2,1,3,2"]
 |===
@@ -3497,7 +3497,7 @@ Sets a vDisk as Template
 | guid | string | *_<обязательный параметр>_* +
  Identifier of the object on which to call is applied. | 
 |===
-==== Ответы
+===== Ответы
 
 [options="header",cols="1,4"]
 |===
@@ -3507,13 +3507,13 @@ Sets a vDisk as Template
 |===
 *Тип возвращаемого значения:* string
 
-== URL: /vdisks/{guid}/set_config_params/
+=== URL: /vdisks/{guid}/set_config_params/
 
-=== Метод: POST
-==== Описание
+==== Метод: POST
+===== Описание
 Sets configuration parameters to a given vDisk.
 
-==== Параметры
+===== Параметры
 
 [options="header",cols="2,1,3,2"]
 |===
@@ -3523,7 +3523,7 @@ Sets configuration parameters to a given vDisk.
 | vdisk | Не указано | _<необязательный параметр>_ +
  Описание отсутствует. | 
 |===
-==== Ответы
+===== Ответы
 
 [options="header",cols="1,4"]
 |===
@@ -3533,13 +3533,13 @@ Sets configuration parameters to a given vDisk.
 |===
 *Тип возвращаемого значения:* string
 
-== URL: /vpools/
+=== URL: /vpools/
 
-=== Метод: GET
-==== Описание
+==== Метод: GET
+===== Описание
 Overview of all vPools
 
-==== Параметры
+===== Параметры
 
 [options="header",cols="2,1,3,2"]
 |===
@@ -3553,7 +3553,7 @@ Overview of all vPools
 | contents | array | *_<обязательный параметр>_* +
  Specify the returned contents. | 
 |===
-==== Ответы
+===== Ответы
 
 [options="header",cols="1,4"]
 |===
@@ -3563,13 +3563,13 @@ Overview of all vPools
 |===
 *Тип возвращаемого значения:* object
 
-== URL: /vpools/create_snapshots/
+=== URL: /vpools/create_snapshots/
 
-=== Метод: POST
-==== Описание
+==== Метод: POST
+===== Описание
 Creates snapshots for a list of VDisks
 
-==== Параметры
+===== Параметры
 
 [options="header",cols="2,1,3,2"]
 |===
@@ -3577,7 +3577,7 @@ Creates snapshots for a list of VDisks
 | body | Не указано | _<необязательный параметр>_ +
  Описание отсутствует. | 
 |===
-==== Ответы
+===== Ответы
 
 [options="header",cols="1,4"]
 |===
@@ -3587,13 +3587,13 @@ Creates snapshots for a list of VDisks
 |===
 *Тип возвращаемого значения:* string
 
-== URL: /vpools/remove_snapshots/
+=== URL: /vpools/remove_snapshots/
 
-=== Метод: POST
-==== Описание
+==== Метод: POST
+===== Описание
 Remove a snapshot from a list of VDisks
 
-==== Параметры
+===== Параметры
 
 [options="header",cols="2,1,3,2"]
 |===
@@ -3601,7 +3601,7 @@ Remove a snapshot from a list of VDisks
 | body | Не указано | _<необязательный параметр>_ +
  Описание отсутствует. | 
 |===
-==== Ответы
+===== Ответы
 
 [options="header",cols="1,4"]
 |===
@@ -3611,13 +3611,13 @@ Remove a snapshot from a list of VDisks
 |===
 *Тип возвращаемого значения:* string
 
-== URL: /vpools/{guid}/
+=== URL: /vpools/{guid}/
 
-=== Метод: GET
-==== Описание
+==== Метод: GET
+===== Описание
 Load information about a given vPool
 
-==== Параметры
+===== Параметры
 
 [options="header",cols="2,1,3,2"]
 |===
@@ -3627,7 +3627,7 @@ Load information about a given vPool
 | contents | array | *_<обязательный параметр>_* +
  Specify the returned contents. | 
 |===
-==== Ответы
+===== Ответы
 
 [options="header",cols="1,4"]
 |===
@@ -3637,13 +3637,13 @@ Load information about a given vPool
 |===
 *Тип возвращаемого значения:* VPool
 
-== URL: /vpools/{guid}/devicename_exists/
+=== URL: /vpools/{guid}/devicename_exists/
 
-=== Метод: GET
-==== Описание
+==== Метод: GET
+===== Описание
 Checks whether a given name can be created on the vPool
 
-==== Параметры
+===== Параметры
 
 [options="header",cols="2,1,3,2"]
 |===
@@ -3655,7 +3655,7 @@ Checks whether a given name can be created on the vPool
 | names | array | _<необязательный параметр>_ +
   Candidate names | 
 |===
-==== Ответы
+===== Ответы
 
 [options="header",cols="1,4"]
 |===
@@ -3665,13 +3665,13 @@ Checks whether a given name can be created on the vPool
 |===
 *Тип возвращаемого значения:* boolean
 
-== URL: /vpools/{guid}/scrub_all_vdisks/
+=== URL: /vpools/{guid}/scrub_all_vdisks/
 
-=== Метод: POST
-==== Описание
+==== Метод: POST
+===== Описание
 Scrubs the vDisks linked to the specified vPool
 
-==== Параметры
+===== Параметры
 
 [options="header",cols="2,1,3,2"]
 |===
@@ -3679,7 +3679,7 @@ Scrubs the vDisks linked to the specified vPool
 | guid | string | *_<обязательный параметр>_* +
  Identifier of the object on which to call is applied. | 
 |===
-==== Ответы
+===== Ответы
 
 [options="header",cols="1,4"]
 |===
@@ -3689,13 +3689,13 @@ Scrubs the vDisks linked to the specified vPool
 |===
 *Тип возвращаемого значения:* string
 
-== URL: /vpools/{guid}/scrub_multiple_vdisks/
+=== URL: /vpools/{guid}/scrub_multiple_vdisks/
 
-=== Метод: POST
-==== Описание
+==== Метод: POST
+===== Описание
 Scrubs the specified vDisks or all vDisks of the vPool is no guids are passed in
 
-==== Параметры
+===== Параметры
 
 [options="header",cols="2,1,3,2"]
 |===
@@ -3705,7 +3705,7 @@ Scrubs the specified vDisks or all vDisks of the vPool is no guids are passed in
 | vpool | Не указано | _<необязательный параметр>_ +
  Описание отсутствует. | 
 |===
-==== Ответы
+===== Ответы
 
 [options="header",cols="1,4"]
 |===
@@ -3715,13 +3715,13 @@ Scrubs the specified vDisks or all vDisks of the vPool is no guids are passed in
 |===
 *Тип возвращаемого значения:* string
 
-== URL: /vpools/{guid}/shrink_vpool/
+=== URL: /vpools/{guid}/shrink_vpool/
 
-=== Метод: POST
-==== Описание
+==== Метод: POST
+===== Описание
 Remove the Storage Driver linking the specified vPool and storagerouter_guid
 
-==== Параметры
+===== Параметры
 
 [options="header",cols="2,1,3,2"]
 |===
@@ -3731,7 +3731,7 @@ Remove the Storage Driver linking the specified vPool and storagerouter_guid
 | vpool | Не указано | _<необязательный параметр>_ +
  Описание отсутствует. | 
 |===
-==== Ответы
+===== Ответы
 
 [options="header",cols="1,4"]
 |===
@@ -3741,13 +3741,13 @@ Remove the Storage Driver linking the specified vPool and storagerouter_guid
 |===
 *Тип возвращаемого значения:* string
 
-== URL: /vpools/{guid}/storagerouters/
+=== URL: /vpools/{guid}/storagerouters/
 
-=== Метод: GET
-==== Описание
+==== Метод: GET
+===== Описание
 Retrieves a list of Storage Routers, serving a given vPool
 
-==== Параметры
+===== Параметры
 
 [options="header",cols="2,1,3,2"]
 |===
@@ -3763,7 +3763,7 @@ Retrieves a list of Storage Routers, serving a given vPool
 | contents | array | *_<обязательный параметр>_* +
  Specify the returned contents. | 
 |===
-==== Ответы
+===== Ответы
 
 [options="header",cols="1,4"]
 |===
@@ -3773,13 +3773,13 @@ Retrieves a list of Storage Routers, serving a given vPool
 |===
 *Тип возвращаемого значения:* object
 
-== URL: /vpools/{guid}/sync_with_reality/
+=== URL: /vpools/{guid}/sync_with_reality/
 
-=== Метод: POST
-==== Описание
+==== Метод: POST
+===== Описание
 Syncs the model for a given vPool with real values.
 
-==== Параметры
+===== Параметры
 
 [options="header",cols="2,1,3,2"]
 |===
@@ -3787,7 +3787,7 @@ Syncs the model for a given vPool with real values.
 | guid | string | *_<обязательный параметр>_* +
  Identifier of the object on which to call is applied. | 
 |===
-==== Ответы
+===== Ответы
 
 [options="header",cols="1,4"]
 |===
