@@ -297,7 +297,7 @@ components:
             - house
         age:
           type: integer
-          description: 'Возраст'
+          description: Возраст
           example: 20
         isEmployee:
           type: boolean

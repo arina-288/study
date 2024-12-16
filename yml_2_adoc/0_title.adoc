@@ -1,0 +1,1 @@
+= Программное обеспечение «{document-title}» {document-name}

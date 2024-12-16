@@ -1,0 +1,344 @@
+font: # Настройки шрифтов, используемых в документе. Оставлены настройки, задаваемые темой default
+  catalog:
+    Noto Serif:
+      normal: GEM_FONTS_DIR/notoserif-regular-subset.ttf
+      bold: GEM_FONTS_DIR/notoserif-bold-subset.ttf
+      italic: GEM_FONTS_DIR/notoserif-italic-subset.ttf
+      bold_italic: GEM_FONTS_DIR/notoserif-bold_italic-subset.ttf
+    M+ 1mn: # Шрифт для блоков и фрагментов кода
+      normal: GEM_FONTS_DIR/mplus1mn-regular-subset.ttf
+      bold: GEM_FONTS_DIR/mplus1mn-bold-subset.ttf
+      italic: GEM_FONTS_DIR/mplus1mn-italic-subset.ttf
+      bold_italic: GEM_FONTS_DIR/mplus1mn-bold_italic-subset.ttf
+
+page: # Настройки страницы для PDF-документа
+  background_color: #FFFFFF
+  layout: portrait
+  initial_zoom: FitH
+  margin: [2.5cm, 2cm, 2.5cm, 2cm] # Поля страницы: [верх, право, низ, лево]
+  margin_inner: 2cm
+  margin_outer: 1.5cm
+  size: A4
+
+base: # Базовые настройки текста
+  text_align: justify
+  font:
+    color: #000000
+    family: Noto Serif
+    size: 12
+  line:
+    height_length: $base_font_size
+    height: 1.2
+  font_size_large: round($base_font_size * 1.25)
+  font_size_small: round($base_font_size * 0.85)
+  font_size_min: $base_font_size * 0.75
+  font_style: normal
+  border:
+    color: #7A929B
+    radius: 3
+    width: 0.35mm
+  #hyphens: true # Опция для автоматического переноса слов
+  #hyphens: 'ru' # Язык для переноса слов
+
+role: # Настройки для различных ролей (стилей). Оставлены настройки, задаваемые стилем default
+  lead: # Для выделенных текстов
+    font_size: $base_font_size_large
+  line-through: # Для зачеркнутого текста
+    text_decoration: line-through
+  underline: # Для подчеркнутого текста
+    text_decoration: underline
+  big: # Для увеличенного текста
+    font_size: 1.2em
+  small: # Для уменьшенного текста
+    font_size: 0.8em
+  subtitle: # Для подзаголовков
+    font:
+      color: 999999
+      size: 0.8em
+      style: normal_italic
+
+# Можно дополнить ритмами для изображений и таблиц
+
+vertical_rhythm: $base_line_height_length
+horizontal_rhythm: $base_line_height_length
+
+link: # Стиль для ссылок
+  font_color: #0196f0
+
+codespan: # Стиль для фрагментов кода в тексте
+  font:
+    color: #000000
+    family: M+ 1mn
+  background_color: #F4F5F7
+  border:
+    color: $codespan_background_color
+    offset: 2
+    radius: 2
+    width: 0.5
+
+button:  # Стиль для кнопок btn:[]
+  content: "[\u2009%s\u2009]"
+  font_style: bold
+
+kbd: # Стиль для kbd:[]. В данный момент не используется
+  background_color: #F5F5F5
+  border_color: #CCCCCC
+  border_offset: 2
+  border_radius: 2
+  border_width: 0.5
+  font_family: $codespan_font_family
+  separator_content: "\u202f+\u202f\u200b"
+
+menu: # Стиль для элементов меню. В данный момент не используется/ Обсуждался как вариант оформления переходов
+  caret_content: "\u00a0<font size=\"1.15em\" color=\"#DE1E58\">\u203a</font> "
+  font_style: bold
+
+heading: # Стиль для заголовков
+  text_align: left
+  font:
+    color: #000000
+    #color: #1c2a60
+    style: bold
+  line_height: $base_line_height
+  h1: # (=) используется только на титульном листе
+    font_size: 22
+    margin:
+      top: 0
+      bottom: 11
+  h2: # (==) соответствует заголовку первого уровня
+    font:
+      size: 20
+      color: #000000
+      #color: #1c2a60
+    margin:
+      top: 12
+      bottom: 12
+  h3: #(===) соответствует заголовку второго уровня
+    font:
+      size: 18
+      color: #000000
+    # color: #1c2a60
+    margin:
+      top: 9
+      bottom: 9
+  h4: #(====) соответствует заголовку третьего уровня
+    font:
+      size: 16
+      color: #000000
+      #color: #1c2a60
+    margin:
+      top: 6
+      bottom: 6
+  h5: #(=====) соответствует заголовку четвертого уровня
+    font:
+      size: 14
+      color: #000000
+      #color: #1c2a60
+    margin:
+      top: 3
+      bottom: 3
+  h6: #(======) соответствует заголовку пятого уровня
+    font:
+      size: 12
+      color: #000000
+      #color: #1c2a60
+    margin:
+      top: 3
+      bottom: 3
+
+title_page: # Настройки для титульной страницы
+  font_color: #FFFFFF
+  text_align: center
+  background_color: #1c2a60
+  margin: [27mm, 20mm, 15mm, 20mm] # Поля титульной страницы [верх, право, низ, лево]
+  logo:
+    top: 2mm
+    image: image:basis_logo_white.png[pdfwidth=67mm,align=center]
+
+  title: # Стиль строки с названием продукта
+    top: 120mm
+    font:
+      size: 22
+      color: #FFFFFF
+    line_height: 1.2
+
+  authors: # Стиль строки с шифром
+    font:
+      size: 12
+      color: #FFFFFF
+    line_height: 10
+
+  revision: # Стиль строки с версией
+    font:
+      size: 22
+      color: #FFFFFF
+    line_height: 1.2
+
+block: # Настройки для блока текста
+  margin_bottom: $vertical_rhythm
+
+prose: # Настройки для основного текста
+  margin_bottom: 8pt
+
+admonition: # Стиль для информационных блоков
+  column:
+    rule:
+      color: $base_border_color
+      width: $base_border_width
+  padding: [$vertical_rhythm / 3.0, $horizontal_rhythm, $vertical_rhythm / 3.0, $horizontal_rhythm]
+
+code: # Стиль для блоков кода
+  font:
+    color: $base_font_color
+    family: $codespan_font_family
+    size: 12
+  padding: $code_font_size
+  line:
+    height: 1.2
+    gap: 3.8
+  background_color: #F5F5F5
+  border:
+    color: #DDDDDD
+    radius: $base_border_radius
+    width: $base_border_width
+
+conum: # Настройки для чисел в кружочках. В данный момент не используется
+  font_family: $codespan_font_family
+  font_color: $codespan_font_color
+  font_size: $base_font_size
+  line_height: 4 / 3
+  glyphs: circled
+
+image: # Настройки для изображений
+  align: center
+  border:
+    color: #DDDDDD
+    width: 0.1mm
+  #width: 100%
+  caption:
+    align: center
+    font:
+      style: italic
+
+list: # Настройки для списков
+  indent: 15mm
+  item_spacing: 1
+  bullet: # Настройки для маркированных списков
+    level_1:
+      style: bullet
+      bullet:
+        shape: disc
+    level_2:
+      style: bullet
+      bullet:
+        shape: square
+    level_3:
+      style: bullet
+      bullet:
+        shape: diamond
+  number: # Настройки для нумерованных списков
+    level_1:
+      style: number
+      number:
+        format: decimal
+    level_2:
+      style: number
+      number:
+        format: lower-alpha
+    level_3:
+      style: number
+      number:
+        format: roman
+
+callout_list: # Настройки для списка выделений. Оставлены настройки, задаваемые стилем default
+  margin_top_after_code: -$block_margin_bottom / 2
+
+table: # Настройки для таблиц
+  border:
+    color: #DDDDDD
+    width: 1px
+  grid_width: 1px
+  cell_padding: 3px
+  head:
+    background_color: #F0F0F0
+    font_style: bold
+    border_bottom_width: 1
+  body:
+    stripe_background_color: #F9F9F9
+  foot:
+  caption:
+    align: left
+    font:
+      size: $base_font_size
+      style: italic
+    margin:
+      inside: $vertical_rhythm / 3
+      outside: 0
+
+toc: # Настройки для оглавления
+  indent: 15
+  line_height: 1.2
+  dot_leader:
+    content: "."
+    font_color: #808080
+    levels: 1 2 3 4 5
+  h2:
+    font_color: #000000
+    font-size: 12
+  h3:
+    font_color: #000000
+    font-size: 12
+  h4:
+    font_color: #000000
+    font-size: 12
+  h5:
+    font_color: #000000
+    font-size: 12
+  h6:
+    font_color: #000000
+    font-size: 12
+
+footnotes: # Стиль для сносок
+  font_size: round($base_font_size * 0.75)
+  item_spacing: $list_item_spacing / 2
+
+index: # Стили для индекса
+  column_gap: $vertical_rhythm
+
+header: # Настройки для верхнего колонтитула
+  font:
+    size: 10
+    color: #000000
+    #color: #1c2a60
+  border:
+    color: #7A929B
+    width: 0.35mm
+  line_height: 1.2
+  height: 20mm
+  vertical-align: bottom
+  image:
+    vertical_align: 13mm
+    horizontal_align: 10mm
+  recto: &shared_header
+    left:
+      content: image:basis_logo_header.png[pdfwidth=18mm]
+    right:
+      content: '{header-content}'
+  verso: *shared_header
+
+footer: # Настройки для нижнего колонтитула
+  font:
+    size: $header_font_size
+    color: #000000
+    #color: #1c2a60
+  border:
+    color: #7A929B
+    width: 0.35mm
+  line_height: 1.2
+  height: 20mm
+  vertical_align: top
+  padding: [0, 0, 0, 0]
+  recto: &shared_footer
+    right:
+      content: '{page-number}'
+  verso: *shared_footer

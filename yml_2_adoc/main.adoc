@@ -1,0 +1,19 @@
+include::../resources/book_settings.adoc[]
+
+include::../resources/variables.adoc[]
+
+:document-title: Basis vStorage
+:document-name: Руководство по использованию API
+
+:sectnums!:
+:toclevels: 2
+
+:header-content: {document-title}. {document-name}
+
+include::0_title.adoc[]
+
+toc::[]
+
+include::1_chapter.adoc[]
+
+include::api_spec.adoc[]

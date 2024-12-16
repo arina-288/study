@@ -1,0 +1,3799 @@
+=== URL: /
+
+==== Метод: GET
+===== Описание
+Retrieve API metadata
+
+===== Ответы
+
+[options="header",cols="1,4"]
+|===
+| Код | Описание
+| 200 | Описание отсутствует.
+|===
+*Тип возвращаемого значения:* object
+
+=== URL: /alba/backends/
+
+==== Метод: GET
+===== Описание
+Перечислите все доступные серверные части ALBA
+
+===== Параметры
+
+[options="header",cols="2,1,3,2"]
+|===
+| Параметр | Тип | Описание | Значение по умолчанию
+| page | integer | _<необязательный параметр>_ +
+ Указывает страницу, которая должна быть возвращена | 
+| page_size | integer | _<необязательный параметр>_ +
+ Определяет размер страницы. Поддерживаемые значения: 10, 25, 50 и 100. Требуется задать значение "page" | 
+| sort | array | _<необязательный параметр>_ +
+ Определяет сортировку списка | None
+| contents | array | *_<обязательный параметр>_* +
+ Укажите возвращаемое содержимое | 
+|===
+===== Ответы
+
+[options="header",cols="1,4"]
+|===
+| Код | Описание
+| 200 | Перечислите все доступные серверные части ALBA
+| default | Полезная нагрузка при ошибке
+|===
+*Тип возвращаемого значения:* object
+
+
+==== Метод: POST
+===== Описание
+Создает серверную часть ALBA
+
+===== Параметры
+
+[options="header",cols="2,1,3,2"]
+|===
+| Параметр | Тип | Описание | Значение по умолчанию
+| contents | array | *_<обязательный параметр>_* +
+ Укажите возвращаемое содержимое | 
+| body | Не указано | _<необязательный параметр>_ +
+ Описание отсутствует. | 
+|===
+===== Ответы
+
+[options="header",cols="1,4"]
+|===
+| Код | Описание
+| 201 | Создает серверную часть ALBA
+| default | Полезная нагрузка при ошибке
+|===
+=== URL: /alba/backends/{guid}/
+
+==== Метод: DELETE
+===== Описание
+Deletes an ALBA Backend
+
+===== Параметры
+
+[options="header",cols="2,1,3,2"]
+|===
+| Параметр | Тип | Описание | Значение по умолчанию
+| guid | string | *_<обязательный параметр>_* +
+ Identifier of the object on which to call is applied. | 
+|===
+===== Ответы
+
+[options="header",cols="1,4"]
+|===
+| Код | Описание
+| 200 | Deletes an ALBA Backend
+| default | Error payload
+|===
+*Тип возвращаемого значения:* string
+
+
+==== Метод: GET
+===== Описание
+Load information about a given ALBA Backend
+
+===== Параметры
+
+[options="header",cols="2,1,3,2"]
+|===
+| Параметр | Тип | Описание | Значение по умолчанию
+| guid | string | *_<обязательный параметр>_* +
+ Identifier of the object on which to call is applied. | 
+| contents | array | *_<обязательный параметр>_* +
+ Specify the returned contents. | 
+|===
+===== Ответы
+
+[options="header",cols="1,4"]
+|===
+| Код | Описание
+| 200 | Load information about a given ALBA Backend
+| default | Error payload
+|===
+*Тип возвращаемого значения:* AlbaBackend
+
+=== URL: /alba/backends/{guid}/add_preset/
+
+==== Метод: POST
+===== Описание
+Adds a preset to a Backend
+
+===== Параметры
+
+[options="header",cols="2,1,3,2"]
+|===
+| Параметр | Тип | Описание | Значение по умолчанию
+| guid | string | *_<обязательный параметр>_* +
+ Identifier of the object on which to call is applied. | 
+| albabackend | Не указано | _<необязательный параметр>_ +
+ Описание отсутствует. | 
+|===
+===== Ответы
+
+[options="header",cols="1,4"]
+|===
+| Код | Описание
+| 200 | Adds a preset to a Backend
+| default | Error payload
+|===
+*Тип возвращаемого значения:* string
+
+=== URL: /alba/backends/{guid}/add_units/
+
+==== Метод: POST
+===== Описание
+Add storage units to the backend and register with ALBA NSM
+
+===== Параметры
+
+[options="header",cols="2,1,3,2"]
+|===
+| Параметр | Тип | Описание | Значение по умолчанию
+| guid | string | *_<обязательный параметр>_* +
+ Identifier of the object on which to call is applied. | 
+| albabackend | Не указано | _<необязательный параметр>_ +
+ Описание отсутствует. | 
+|===
+===== Ответы
+
+[options="header",cols="1,4"]
+|===
+| Код | Описание
+| 200 | Add storage units to the backend and register with ALBA NSM
+| default | Error payload
+|===
+*Тип возвращаемого значения:* string
+
+=== URL: /alba/backends/{guid}/calculate_safety/
+
+==== Метод: GET
+===== Описание
+Returns the safety resulting the removal of a given Disk
+
+===== Параметры
+
+[options="header",cols="2,1,3,2"]
+|===
+| Параметр | Тип | Описание | Значение по умолчанию
+| guid | string | *_<обязательный параметр>_* +
+ Identifier of the object on which to call is applied. | 
+| asd_id | string | *_<обязательный параметр>_* +
+  ID of the ASD to calculate safety off | 
+|===
+===== Ответы
+
+[options="header",cols="1,4"]
+|===
+| Код | Описание
+| 200 | Returns the safety resulting the removal of a given Disk
+| default | Error payload
+|===
+*Тип возвращаемого значения:* string
+
+=== URL: /alba/backends/{guid}/delete_preset/
+
+==== Метод: POST
+===== Описание
+Deletes a preset
+
+===== Параметры
+
+[options="header",cols="2,1,3,2"]
+|===
+| Параметр | Тип | Описание | Значение по умолчанию
+| guid | string | *_<обязательный параметр>_* +
+ Identifier of the object on which to call is applied. | 
+| albabackend | Не указано | _<необязательный параметр>_ +
+ Описание отсутствует. | 
+|===
+===== Ответы
+
+[options="header",cols="1,4"]
+|===
+| Код | Описание
+| 200 | Deletes a preset
+| default | Error payload
+|===
+*Тип возвращаемого значения:* string
+
+=== URL: /alba/backends/{guid}/expand_nsm_clusters/
+
+==== Метод: POST
+===== Описание
+Internally managed NSM Arakoon clusters: Deploy and claim additional NSM Arakoon clusters
+
+===== Параметры
+
+[options="header",cols="2,1,3,2"]
+|===
+| Параметр | Тип | Описание | Значение по умолчанию
+| guid | string | *_<обязательный параметр>_* +
+ Identifier of the object on which to call is applied. | 
+| albabackend | Не указано | _<необязательный параметр>_ +
+ Описание отсутствует. | 
+|===
+===== Ответы
+
+[options="header",cols="1,4"]
+|===
+| Код | Описание
+| 200 | Internally managed NSM Arakoon clusters: Deploy and claim additional NSM Arakoon clusters
+| default | Error payload
+|===
+*Тип возвращаемого значения:* string
+
+=== URL: /alba/backends/{guid}/get_available_actions/
+
+==== Метод: GET
+===== Описание
+Gets a list of all available actions
+
+===== Параметры
+
+[options="header",cols="2,1,3,2"]
+|===
+| Параметр | Тип | Описание | Значение по умолчанию
+| guid | string | *_<обязательный параметр>_* +
+ Identifier of the object on which to call is applied. | 
+|===
+===== Ответы
+
+[options="header",cols="1,4"]
+|===
+| Код | Описание
+| 200 | Gets a list of all available actions
+| default | Error payload
+|===
+*Тип возвращаемого значения:* string
+
+=== URL: /alba/backends/{guid}/get_config_metadata/
+
+==== Метод: GET
+===== Описание
+Gets the configuration metadata for an ALBA Backend
+
+===== Параметры
+
+[options="header",cols="2,1,3,2"]
+|===
+| Параметр | Тип | Описание | Значение по умолчанию
+| guid | string | *_<обязательный параметр>_* +
+ Identifier of the object on which to call is applied. | 
+|===
+===== Ответы
+
+[options="header",cols="1,4"]
+|===
+| Код | Описание
+| 200 | Gets the configuration metadata for an ALBA Backend
+| default | Error payload
+|===
+*Тип возвращаемого значения:* string
+
+=== URL: /alba/backends/{guid}/link_alba_backends/
+
+==== Метод: POST
+===== Описание
+Link a GLOBAL ALBA Backend to a LOCAL or another GLOBAL ALBA Backend
+
+===== Параметры
+
+[options="header",cols="2,1,3,2"]
+|===
+| Параметр | Тип | Описание | Значение по умолчанию
+| guid | string | *_<обязательный параметр>_* +
+ Identifier of the object on which to call is applied. | 
+| albabackend | Не указано | _<необязательный параметр>_ +
+ Описание отсутствует. | 
+|===
+===== Ответы
+
+[options="header",cols="1,4"]
+|===
+| Код | Описание
+| 200 | Link a GLOBAL ALBA Backend to a LOCAL or another GLOBAL ALBA Backend
+| default | Error payload
+|===
+*Тип возвращаемого значения:* string
+
+=== URL: /alba/backends/{guid}/unlink_alba_backends/
+
+==== Метод: POST
+===== Описание
+Unlink a LOCAL or GLOBAL ALBA Backend from a GLOBAL ALBA Backend
+
+===== Параметры
+
+[options="header",cols="2,1,3,2"]
+|===
+| Параметр | Тип | Описание | Значение по умолчанию
+| guid | string | *_<обязательный параметр>_* +
+ Identifier of the object on which to call is applied. | 
+| albabackend | Не указано | _<необязательный параметр>_ +
+ Описание отсутствует. | 
+|===
+===== Ответы
+
+[options="header",cols="1,4"]
+|===
+| Код | Описание
+| 200 | Unlink a LOCAL or GLOBAL ALBA Backend from a GLOBAL ALBA Backend
+| default | Error payload
+|===
+*Тип возвращаемого значения:* string
+
+=== URL: /alba/backends/{guid}/update_preset/
+
+==== Метод: POST
+===== Описание
+Updates a preset's policies to a Backend
+
+===== Параметры
+
+[options="header",cols="2,1,3,2"]
+|===
+| Параметр | Тип | Описание | Значение по умолчанию
+| guid | string | *_<обязательный параметр>_* +
+ Identifier of the object on which to call is applied. | 
+| albabackend | Не указано | _<необязательный параметр>_ +
+ Описание отсутствует. | 
+|===
+===== Ответы
+
+[options="header",cols="1,4"]
+|===
+| Код | Описание
+| 200 | Updates a preset's policies to a Backend
+| default | Error payload
+|===
+*Тип возвращаемого значения:* string
+
+=== URL: /alba/nodes/
+
+==== Метод: GET
+===== Описание
+List all available ALBA Nodes
+
+===== Параметры
+
+[options="header",cols="2,1,3,2"]
+|===
+| Параметр | Тип | Описание | Значение по умолчанию
+| discover | boolean | _<необязательный параметр>_ +
+  If True and IP provided, return list of single ALBA node, If True and no IP provided, return all ALBA nodes else return modeled ALBA nodes | 
+| ip | string | _<необязательный параметр>_ +
+  IP of ALBA node to retrieve | 
+| node_id | string | _<необязательный параметр>_ +
+  ID of the ALBA node | 
+| page | integer | _<необязательный параметр>_ +
+ Specifies the page to be returned. | 
+| page_size | integer | _<необязательный параметр>_ +
+ Specifies the size of a page. Supported values: 10, 25, 50 and 100. Requires "page" to be set. | 
+| sort | array | _<необязательный параметр>_ +
+ Specifies the sorting of the list. | None
+| contents | array | *_<обязательный параметр>_* +
+ Specify the returned contents. | 
+|===
+===== Ответы
+
+[options="header",cols="1,4"]
+|===
+| Код | Описание
+| 200 | List all available ALBA Nodes
+| default | Error payload
+|===
+*Тип возвращаемого значения:* object
+
+
+==== Метод: POST
+===== Описание
+Add a ALBA Node with a given node_id to the model
+
+===== Параметры
+
+[options="header",cols="2,1,3,2"]
+|===
+| Параметр | Тип | Описание | Значение по умолчанию
+| body | Не указано | _<необязательный параметр>_ +
+ Описание отсутствует. | 
+|===
+===== Ответы
+
+[options="header",cols="1,4"]
+|===
+| Код | Описание
+| 200 | Add a ALBA Node with a given node_id to the model
+| default | Error payload
+|===
+*Тип возвращаемого значения:* string
+
+=== URL: /alba/nodes/{guid}/
+
+==== Метод: DELETE
+===== Описание
+Delete an ALBA Node
+
+===== Параметры
+
+[options="header",cols="2,1,3,2"]
+|===
+| Параметр | Тип | Описание | Значение по умолчанию
+| guid | string | *_<обязательный параметр>_* +
+ Identifier of the object on which to call is applied. | 
+|===
+===== Ответы
+
+[options="header",cols="1,4"]
+|===
+| Код | Описание
+| 200 | Delete an ALBA Node
+| default | Error payload
+|===
+*Тип возвращаемого значения:* string
+
+
+==== Метод: GET
+===== Описание
+Load information about a given ALBA Backend
+
+===== Параметры
+
+[options="header",cols="2,1,3,2"]
+|===
+| Параметр | Тип | Описание | Значение по умолчанию
+| guid | string | *_<обязательный параметр>_* +
+ Identifier of the object on which to call is applied. | 
+| contents | array | *_<обязательный параметр>_* +
+ Specify the returned contents. | 
+|===
+===== Ответы
+
+[options="header",cols="1,4"]
+|===
+| Код | Описание
+| 200 | Load information about a given ALBA Backend
+| default | Error payload
+|===
+*Тип возвращаемого значения:* AlbaNode
+
+=== URL: /alba/nodes/{guid}/get_logfiles/
+
+==== Метод: GET
+===== Описание
+Retrieve the logfiles of an ALBA Node
+
+===== Параметры
+
+[options="header",cols="2,1,3,2"]
+|===
+| Параметр | Тип | Описание | Значение по умолчанию
+| guid | string | *_<обязательный параметр>_* +
+ Identifier of the object on which to call is applied. | 
+|===
+===== Ответы
+
+[options="header",cols="1,4"]
+|===
+| Код | Описание
+| 200 | Retrieve the logfiles of an ALBA Node
+| default | Error payload
+|===
+*Тип возвращаемого значения:* string
+
+=== URL: /alba/nodes/{guid}/initialize_disks/
+
+==== Метод: POST
+===== Описание
+Initialize the Disks
+
+===== Параметры
+
+[options="header",cols="2,1,3,2"]
+|===
+| Параметр | Тип | Описание | Значение по умолчанию
+| guid | string | *_<обязательный параметр>_* +
+ Identifier of the object on which to call is applied. | 
+| albanode | Не указано | _<необязательный параметр>_ +
+ Описание отсутствует. | 
+|===
+===== Ответы
+
+[options="header",cols="1,4"]
+|===
+| Код | Описание
+| 200 | Initialize the Disks
+| default | Error payload
+|===
+*Тип возвращаемого значения:* string
+
+=== URL: /alba/nodes/{guid}/remove_disk/
+
+==== Метод: POST
+===== Описание
+Remove the Disk
+
+===== Параметры
+
+[options="header",cols="2,1,3,2"]
+|===
+| Параметр | Тип | Описание | Значение по умолчанию
+| guid | string | *_<обязательный параметр>_* +
+ Identifier of the object on which to call is applied. | 
+| albanode | Не указано | _<необязательный параметр>_ +
+ Описание отсутствует. | 
+|===
+===== Ответы
+
+[options="header",cols="1,4"]
+|===
+| Код | Описание
+| 200 | Remove the Disk
+| default | Error payload
+|===
+*Тип возвращаемого значения:* string
+
+=== URL: /alba/nodes/{guid}/replace_node/
+
+==== Метод: POST
+===== Описание
+Replace an existing ALBA Node with a newly configured node (only possible if IPs are identical)
+
+===== Параметры
+
+[options="header",cols="2,1,3,2"]
+|===
+| Параметр | Тип | Описание | Значение по умолчанию
+| guid | string | *_<обязательный параметр>_* +
+ Identifier of the object on which to call is applied. | 
+| albanode | Не указано | _<необязательный параметр>_ +
+ Описание отсутствует. | 
+|===
+===== Ответы
+
+[options="header",cols="1,4"]
+|===
+| Код | Описание
+| 200 | Replace an existing ALBA Node with a newly configured node (only possible if IPs are identical)
+| default | Error payload
+|===
+*Тип возвращаемого значения:* string
+
+=== URL: /alba/nodes/{guid}/reset_asd/
+
+==== Метод: POST
+===== Описание
+Remove and re-add an ASD
+
+===== Параметры
+
+[options="header",cols="2,1,3,2"]
+|===
+| Параметр | Тип | Описание | Значение по умолчанию
+| guid | string | *_<обязательный параметр>_* +
+ Identifier of the object on which to call is applied. | 
+| albanode | Не указано | _<необязательный параметр>_ +
+ Описание отсутствует. | 
+|===
+===== Ответы
+
+[options="header",cols="1,4"]
+|===
+| Код | Описание
+| 200 | Remove and re-add an ASD
+| default | Error payload
+|===
+*Тип возвращаемого значения:* string
+
+=== URL: /alba/nodes/{guid}/restart_asd/
+
+==== Метод: POST
+===== Описание
+Restart an ASD process
+
+===== Параметры
+
+[options="header",cols="2,1,3,2"]
+|===
+| Параметр | Тип | Описание | Значение по умолчанию
+| guid | string | *_<обязательный параметр>_* +
+ Identifier of the object on which to call is applied. | 
+| albanode | Не указано | _<необязательный параметр>_ +
+ Описание отсутствует. | 
+|===
+===== Ответы
+
+[options="header",cols="1,4"]
+|===
+| Код | Описание
+| 200 | Restart an ASD process
+| default | Error payload
+|===
+*Тип возвращаемого значения:* string
+
+=== URL: /alba/nodes/{guid}/restart_disk/
+
+==== Метод: POST
+===== Описание
+Restart a Disk
+
+===== Параметры
+
+[options="header",cols="2,1,3,2"]
+|===
+| Параметр | Тип | Описание | Значение по умолчанию
+| guid | string | *_<обязательный параметр>_* +
+ Identifier of the object on which to call is applied. | 
+| albanode | Не указано | _<необязательный параметр>_ +
+ Описание отсутствует. | 
+|===
+===== Ответы
+
+[options="header",cols="1,4"]
+|===
+| Код | Описание
+| 200 | Restart a Disk
+| default | Error payload
+|===
+*Тип возвращаемого значения:* string
+
+=== URL: /backends/
+
+==== Метод: GET
+===== Описание
+Overview of all Backends (from a certain type, if given) on the LOCAL Node (or a remote one)
+
+===== Параметры
+
+[options="header",cols="2,1,3,2"]
+|===
+| Параметр | Тип | Описание | Значение по умолчанию
+| backend_type | string | _<необязательный параметр>_ +
+  Optional BackendType code to filter | 
+| page | integer | _<необязательный параметр>_ +
+ Specifies the page to be returned. | 
+| page_size | integer | _<необязательный параметр>_ +
+ Specifies the size of a page. Supported values: 10, 25, 50 and 100. Requires "page" to be set. | 
+| sort | array | _<необязательный параметр>_ +
+ Specifies the sorting of the list. | None
+| contents | array | *_<обязательный параметр>_* +
+ Specify the returned contents. | 
+|===
+===== Ответы
+
+[options="header",cols="1,4"]
+|===
+| Код | Описание
+| 200 | Overview of all Backends (from a certain type, if given) on the LOCAL Node (or a remote one)
+| default | Error payload
+|===
+*Тип возвращаемого значения:* object
+
+
+==== Метод: POST
+===== Описание
+Creates a Backend
+
+===== Параметры
+
+[options="header",cols="2,1,3,2"]
+|===
+| Параметр | Тип | Описание | Значение по умолчанию
+| contents | array | *_<обязательный параметр>_* +
+ Specify the returned contents. | 
+| body | Не указано | _<необязательный параметр>_ +
+ Описание отсутствует. | 
+|===
+===== Ответы
+
+[options="header",cols="1,4"]
+|===
+| Код | Описание
+| 201 | Creates a Backend
+| default | Error payload
+|===
+=== URL: /backends/{guid}/
+
+==== Метод: GET
+===== Описание
+Load information about a given Backend
+
+===== Параметры
+
+[options="header",cols="2,1,3,2"]
+|===
+| Параметр | Тип | Описание | Значение по умолчанию
+| guid | string | *_<обязательный параметр>_* +
+ Identifier of the object on which to call is applied. | 
+| contents | array | *_<обязательный параметр>_* +
+ Specify the returned contents. | 
+|===
+===== Ответы
+
+[options="header",cols="1,4"]
+|===
+| Код | Описание
+| 200 | Load information about a given Backend
+| default | Error payload
+|===
+*Тип возвращаемого значения:* Backend
+
+=== URL: /backends/{guid}/configure_rights/
+
+==== Метод: POST
+===== Описание
+Configures the access rights for this Backend
+
+===== Параметры
+
+[options="header",cols="2,1,3,2"]
+|===
+| Параметр | Тип | Описание | Значение по умолчанию
+| guid | string | *_<обязательный параметр>_* +
+ Identifier of the object on which to call is applied. | 
+| backend | Не указано | _<необязательный параметр>_ +
+ Описание отсутствует. | 
+|===
+===== Ответы
+
+[options="header",cols="1,4"]
+|===
+| Код | Описание
+| 200 | Configures the access rights for this Backend
+| default | Error payload
+|===
+*Тип возвращаемого значения:* object
+
+=== URL: /backends/{guid}/set_domains/
+
+==== Метод: POST
+===== Описание
+Configures the given Domains to the Storage Router.
+
+===== Параметры
+
+[options="header",cols="2,1,3,2"]
+|===
+| Параметр | Тип | Описание | Значение по умолчанию
+| guid | string | *_<обязательный параметр>_* +
+ Identifier of the object on which to call is applied. | 
+| backend | Не указано | _<необязательный параметр>_ +
+ Описание отсутствует. | 
+|===
+===== Ответы
+
+[options="header",cols="1,4"]
+|===
+| Код | Описание
+| 204 | Configures the given Domains to the Storage Router.
+| default | Error payload
+|===
+=== URL: /backendtypes/
+
+==== Метод: GET
+===== Описание
+Overview of all Backend Types
+
+===== Параметры
+
+[options="header",cols="2,1,3,2"]
+|===
+| Параметр | Тип | Описание | Значение по умолчанию
+| query | string | _<необязательный параметр>_ +
+  Optional filter for BackendTypes | 
+| page | integer | _<необязательный параметр>_ +
+ Specifies the page to be returned. | 
+| page_size | integer | _<необязательный параметр>_ +
+ Specifies the size of a page. Supported values: 10, 25, 50 and 100. Requires "page" to be set. | 
+| sort | array | _<необязательный параметр>_ +
+ Specifies the sorting of the list. | None
+| contents | array | *_<обязательный параметр>_* +
+ Specify the returned contents. | 
+|===
+===== Ответы
+
+[options="header",cols="1,4"]
+|===
+| Код | Описание
+| 200 | Overview of all Backend Types
+| default | Error payload
+|===
+*Тип возвращаемого значения:* object
+
+=== URL: /backendtypes/{guid}/
+
+==== Метод: GET
+===== Описание
+Load information about a given Backend Type
+
+===== Параметры
+
+[options="header",cols="2,1,3,2"]
+|===
+| Параметр | Тип | Описание | Значение по умолчанию
+| guid | string | *_<обязательный параметр>_* +
+ Identifier of the object on which to call is applied. | 
+| contents | array | *_<обязательный параметр>_* +
+ Specify the returned contents. | 
+|===
+===== Ответы
+
+[options="header",cols="1,4"]
+|===
+| Код | Описание
+| 200 | Load information about a given Backend Type
+| default | Error payload
+|===
+*Тип возвращаемого значения:* BackendType
+
+=== URL: /branding/
+
+==== Метод: GET
+===== Описание
+Overview of all Brandings
+
+===== Параметры
+
+[options="header",cols="2,1,3,2"]
+|===
+| Параметр | Тип | Описание | Значение по умолчанию
+| page | integer | _<необязательный параметр>_ +
+ Specifies the page to be returned. | 
+| page_size | integer | _<необязательный параметр>_ +
+ Specifies the size of a page. Supported values: 10, 25, 50 and 100. Requires "page" to be set. | 
+| sort | array | _<необязательный параметр>_ +
+ Specifies the sorting of the list. | None
+| contents | array | *_<обязательный параметр>_* +
+ Specify the returned contents. | 
+|===
+===== Ответы
+
+[options="header",cols="1,4"]
+|===
+| Код | Описание
+| 200 | Overview of all Brandings
+| default | Error payload
+|===
+*Тип возвращаемого значения:* object
+
+=== URL: /branding/{guid}/
+
+==== Метод: GET
+===== Описание
+Load information about a given Branding
+
+===== Параметры
+
+[options="header",cols="2,1,3,2"]
+|===
+| Параметр | Тип | Описание | Значение по умолчанию
+| guid | string | *_<обязательный параметр>_* +
+ Identifier of the object on which to call is applied. | 
+| contents | array | *_<обязательный параметр>_* +
+ Specify the returned contents. | 
+|===
+===== Ответы
+
+[options="header",cols="1,4"]
+|===
+| Код | Описание
+| 200 | Load information about a given Branding
+| default | Error payload
+|===
+*Тип возвращаемого значения:* Branding
+
+=== URL: /clients/
+
+==== Метод: GET
+===== Описание
+Lists all available Clients where the logged in user has access to
+
+===== Параметры
+
+[options="header",cols="2,1,3,2"]
+|===
+| Параметр | Тип | Описание | Значение по умолчанию
+| userguid | string | _<необязательный параметр>_ +
+  User guid to filter the clients | 
+| ovs_type | string | _<необязательный параметр>_ +
+  Filter on the Client's ovs_type | 
+| page | integer | _<необязательный параметр>_ +
+ Specifies the page to be returned. | 
+| page_size | integer | _<необязательный параметр>_ +
+ Specifies the size of a page. Supported values: 10, 25, 50 and 100. Requires "page" to be set. | 
+| sort | array | _<необязательный параметр>_ +
+ Specifies the sorting of the list. | None
+| contents | array | *_<обязательный параметр>_* +
+ Specify the returned contents. | 
+|===
+===== Ответы
+
+[options="header",cols="1,4"]
+|===
+| Код | Описание
+| 200 | Lists all available Clients where the logged in user has access to
+| default | Error payload
+|===
+*Тип возвращаемого значения:* object
+
+
+==== Метод: POST
+===== Описание
+Creates a Client
+
+===== Параметры
+
+[options="header",cols="2,1,3,2"]
+|===
+| Параметр | Тип | Описание | Значение по умолчанию
+| contents | array | *_<обязательный параметр>_* +
+ Specify the returned contents. | 
+| body | Не указано | _<необязательный параметр>_ +
+ Описание отсутствует. | 
+|===
+===== Ответы
+
+[options="header",cols="1,4"]
+|===
+| Код | Описание
+| 201 | Creates a Client
+| default | Error payload
+|===
+=== URL: /clients/{guid}/
+
+==== Метод: DELETE
+===== Описание
+Deletes a User
+
+===== Параметры
+
+[options="header",cols="2,1,3,2"]
+|===
+| Параметр | Тип | Описание | Значение по умолчанию
+| guid | string | *_<обязательный параметр>_* +
+ Identifier of the object on which to call is applied. | 
+|===
+===== Ответы
+
+[options="header",cols="1,4"]
+|===
+| Код | Описание
+| 204 | Deletes a User
+| default | Error payload
+|===
+
+==== Метод: GET
+===== Описание
+Load information about a given Client
+
+===== Параметры
+
+[options="header",cols="2,1,3,2"]
+|===
+| Параметр | Тип | Описание | Значение по умолчанию
+| guid | string | *_<обязательный параметр>_* +
+ Identifier of the object on which to call is applied. | 
+| contents | array | *_<обязательный параметр>_* +
+ Specify the returned contents. | 
+|===
+===== Ответы
+
+[options="header",cols="1,4"]
+|===
+| Код | Описание
+| 200 | Load information about a given Client
+| default | Error payload
+|===
+*Тип возвращаемого значения:* Client
+
+=== URL: /diskpartitions/
+
+==== Метод: GET
+===== Описание
+Overview of all Disks
+
+===== Параметры
+
+[options="header",cols="2,1,3,2"]
+|===
+| Параметр | Тип | Описание | Значение по умолчанию
+| diskguid | string | _<необязательный параметр>_ +
+  Disk guid to get the partitions from | 
+| page | integer | _<необязательный параметр>_ +
+ Specifies the page to be returned. | 
+| page_size | integer | _<необязательный параметр>_ +
+ Specifies the size of a page. Supported values: 10, 25, 50 and 100. Requires "page" to be set. | 
+| sort | array | _<необязательный параметр>_ +
+ Specifies the sorting of the list. | None
+| contents | array | *_<обязательный параметр>_* +
+ Specify the returned contents. | 
+|===
+===== Ответы
+
+[options="header",cols="1,4"]
+|===
+| Код | Описание
+| 200 | Overview of all Disks
+| default | Error payload
+|===
+*Тип возвращаемого значения:* object
+
+=== URL: /diskpartitions/{guid}/
+
+==== Метод: GET
+===== Описание
+Load information about a given Disk Partition
+
+===== Параметры
+
+[options="header",cols="2,1,3,2"]
+|===
+| Параметр | Тип | Описание | Значение по умолчанию
+| guid | string | *_<обязательный параметр>_* +
+ Identifier of the object on which to call is applied. | 
+| contents | array | *_<обязательный параметр>_* +
+ Specify the returned contents. | 
+|===
+===== Ответы
+
+[options="header",cols="1,4"]
+|===
+| Код | Описание
+| 200 | Load information about a given Disk Partition
+| default | Error payload
+|===
+*Тип возвращаемого значения:* DiskPartition
+
+=== URL: /disks/
+
+==== Метод: GET
+===== Описание
+Overview of all disks
+
+===== Параметры
+
+[options="header",cols="2,1,3,2"]
+|===
+| Параметр | Тип | Описание | Значение по умолчанию
+| storagerouterguid | string | _<необязательный параметр>_ +
+  The StorageRouter to get the disks from | 
+| page | integer | _<необязательный параметр>_ +
+ Specifies the page to be returned. | 
+| page_size | integer | _<необязательный параметр>_ +
+ Specifies the size of a page. Supported values: 10, 25, 50 and 100. Requires "page" to be set. | 
+| sort | array | _<необязательный параметр>_ +
+ Specifies the sorting of the list. | None
+| contents | array | *_<обязательный параметр>_* +
+ Specify the returned contents. | 
+|===
+===== Ответы
+
+[options="header",cols="1,4"]
+|===
+| Код | Описание
+| 200 | Overview of all disks
+| default | Error payload
+|===
+*Тип возвращаемого значения:* object
+
+=== URL: /disks/{guid}/
+
+==== Метод: GET
+===== Описание
+Load information about a given disk
+
+===== Параметры
+
+[options="header",cols="2,1,3,2"]
+|===
+| Параметр | Тип | Описание | Значение по умолчанию
+| guid | string | *_<обязательный параметр>_* +
+ Identifier of the object on which to call is applied. | 
+| contents | array | *_<обязательный параметр>_* +
+ Specify the returned contents. | 
+|===
+===== Ответы
+
+[options="header",cols="1,4"]
+|===
+| Код | Описание
+| 200 | Load information about a given disk
+| default | Error payload
+|===
+*Тип возвращаемого значения:* Disk
+
+=== URL: /domains/
+
+==== Метод: GET
+===== Описание
+Lists all available Domains
+
+===== Параметры
+
+[options="header",cols="2,1,3,2"]
+|===
+| Параметр | Тип | Описание | Значение по умолчанию
+| vdisk_guid | string | _<необязательный параметр>_ +
+  Optional vDisk GUID. If passed in, only domains suitable for this vDisk will be returned | 
+| page | integer | _<необязательный параметр>_ +
+ Specifies the page to be returned. | 
+| page_size | integer | _<необязательный параметр>_ +
+ Specifies the size of a page. Supported values: 10, 25, 50 and 100. Requires "page" to be set. | 
+| sort | array | _<необязательный параметр>_ +
+ Specifies the sorting of the list. | None
+| contents | array | *_<обязательный параметр>_* +
+ Specify the returned contents. | 
+|===
+===== Ответы
+
+[options="header",cols="1,4"]
+|===
+| Код | Описание
+| 200 | Lists all available Domains
+| default | Error payload
+|===
+*Тип возвращаемого значения:* object
+
+
+==== Метод: POST
+===== Описание
+Creates a new Domain
+
+===== Параметры
+
+[options="header",cols="2,1,3,2"]
+|===
+| Параметр | Тип | Описание | Значение по умолчанию
+| contents | array | *_<обязательный параметр>_* +
+ Specify the returned contents. | 
+| body | Не указано | _<необязательный параметр>_ +
+ Описание отсутствует. | 
+|===
+===== Ответы
+
+[options="header",cols="1,4"]
+|===
+| Код | Описание
+| 201 | Creates a new Domain
+| default | Error payload
+|===
+=== URL: /domains/{guid}/
+
+==== Метод: DELETE
+===== Описание
+Deletes a Domain
+
+===== Параметры
+
+[options="header",cols="2,1,3,2"]
+|===
+| Параметр | Тип | Описание | Значение по умолчанию
+| guid | string | *_<обязательный параметр>_* +
+ Identifier of the object on which to call is applied. | 
+|===
+===== Ответы
+
+[options="header",cols="1,4"]
+|===
+| Код | Описание
+| 204 | Deletes a Domain
+| default | Error payload
+|===
+
+==== Метод: GET
+===== Описание
+Load information about a given Domain
+
+===== Параметры
+
+[options="header",cols="2,1,3,2"]
+|===
+| Параметр | Тип | Описание | Значение по умолчанию
+| guid | string | *_<обязательный параметр>_* +
+ Identifier of the object on which to call is applied. | 
+| contents | array | *_<обязательный параметр>_* +
+ Specify the returned contents. | 
+|===
+===== Ответы
+
+[options="header",cols="1,4"]
+|===
+| Код | Описание
+| 200 | Load information about a given Domain
+| default | Error payload
+|===
+*Тип возвращаемого значения:* Domain
+
+
+==== Метод: PATCH
+===== Описание
+Update a Failure Domain
+
+===== Параметры
+
+[options="header",cols="2,1,3,2"]
+|===
+| Параметр | Тип | Описание | Значение по умолчанию
+| guid | string | *_<обязательный параметр>_* +
+ Identifier of the object on which to call is applied. | 
+| contents | array | *_<обязательный параметр>_* +
+ Specify the returned contents. | 
+| domain | Не указано | _<необязательный параметр>_ +
+ Описание отсутствует. | 
+|===
+===== Ответы
+
+[options="header",cols="1,4"]
+|===
+| Код | Описание
+| 202 | Update a Failure Domain
+| default | Error payload
+|===
+=== URL: /groups/
+
+==== Метод: GET
+===== Описание
+Lists all available Groups
+
+===== Параметры
+
+[options="header",cols="2,1,3,2"]
+|===
+| Параметр | Тип | Описание | Значение по умолчанию
+| page | integer | _<необязательный параметр>_ +
+ Specifies the page to be returned. | 
+| page_size | integer | _<необязательный параметр>_ +
+ Specifies the size of a page. Supported values: 10, 25, 50 and 100. Requires "page" to be set. | 
+| sort | array | _<необязательный параметр>_ +
+ Specifies the sorting of the list. | None
+| contents | array | *_<обязательный параметр>_* +
+ Specify the returned contents. | 
+|===
+===== Ответы
+
+[options="header",cols="1,4"]
+|===
+| Код | Описание
+| 200 | Lists all available Groups
+| default | Error payload
+|===
+*Тип возвращаемого значения:* object
+
+=== URL: /groups/{guid}/
+
+==== Метод: GET
+===== Описание
+Load information about a given Group
+
+===== Параметры
+
+[options="header",cols="2,1,3,2"]
+|===
+| Параметр | Тип | Описание | Значение по умолчанию
+| guid | string | *_<обязательный параметр>_* +
+ Identifier of the object on which to call is applied. | 
+| contents | array | *_<обязательный параметр>_* +
+ Specify the returned contents. | 
+|===
+===== Ответы
+
+[options="header",cols="1,4"]
+|===
+| Код | Описание
+| 200 | Load information about a given Group
+| default | Error payload
+|===
+*Тип возвращаемого значения:* Group
+
+=== URL: /health/
+
+==== Метод: GET
+===== Описание
+Returns {IP: Status} of LOCAL Storage Router
+
+===== Параметры
+
+[options="header",cols="2,1,3,2"]
+|===
+| Параметр | Тип | Описание | Значение по умолчанию
+|===
+===== Ответы
+
+[options="header",cols="1,4"]
+|===
+| Код | Описание
+| 200 | Returns {IP: Status} of LOCAL Storage Router
+| default | Error payload
+|===
+*Тип возвращаемого значения:* object
+
+=== URL: /health/run_healthchecks/
+
+==== Метод: POST
+===== Описание
+Execute chosen HealthChecks (tests) on DES node and return results.
+
+===== Параметры
+
+[options="header",cols="2,1,3,2"]
+|===
+| Параметр | Тип | Описание | Значение по умолчанию
+| body | Не указано | _<необязательный параметр>_ +
+ Описание отсутствует. | 
+|===
+===== Ответы
+
+[options="header",cols="1,4"]
+|===
+| Код | Описание
+| 200 | Execute chosen HealthChecks (tests) on DES node and return results.
+| default | Error payload
+|===
+*Тип возвращаемого значения:* string
+
+=== URL: /iscsi/nodes/
+
+==== Метод: GET
+===== Описание
+Lists all available iSCSI Nodes
+
+===== Параметры
+
+[options="header",cols="2,1,3,2"]
+|===
+| Параметр | Тип | Описание | Значение по умолчанию
+| discover | boolean | _<необязательный параметр>_ +
+  If True, only the registered iSCSI nodes are returned | 
+| page | integer | _<необязательный параметр>_ +
+ Specifies the page to be returned. | 
+| page_size | integer | _<необязательный параметр>_ +
+ Specifies the size of a page. Supported values: 10, 25, 50 and 100. Requires "page" to be set. | 
+| sort | array | _<необязательный параметр>_ +
+ Specifies the sorting of the list. | None
+| contents | array | *_<обязательный параметр>_* +
+ Specify the returned contents. | 
+|===
+===== Ответы
+
+[options="header",cols="1,4"]
+|===
+| Код | Описание
+| 200 | Lists all available iSCSI Nodes
+| default | Error payload
+|===
+*Тип возвращаемого значения:* object
+
+
+==== Метод: POST
+===== Описание
+Adds a node with a given node_id to the model
+
+===== Параметры
+
+[options="header",cols="2,1,3,2"]
+|===
+| Параметр | Тип | Описание | Значение по умолчанию
+| contents | array | *_<обязательный параметр>_* +
+ Specify the returned contents. | 
+| body | Не указано | _<необязательный параметр>_ +
+ Описание отсутствует. | 
+|===
+===== Ответы
+
+[options="header",cols="1,4"]
+|===
+| Код | Описание
+| 201 | Adds a node with a given node_id to the model
+| default | Error payload
+|===
+=== URL: /iscsi/nodes/unexpose_vdisk/
+
+==== Метод: POST
+===== Описание
+Un-expose a vDisk from all iSCSI Nodes
+
+===== Параметры
+
+[options="header",cols="2,1,3,2"]
+|===
+| Параметр | Тип | Описание | Значение по умолчанию
+| body | Не указано | _<необязательный параметр>_ +
+ Описание отсутствует. | 
+|===
+===== Ответы
+
+[options="header",cols="1,4"]
+|===
+| Код | Описание
+| 200 | Un-expose a vDisk from all iSCSI Nodes
+| default | Error payload
+|===
+*Тип возвращаемого значения:* string
+
+=== URL: /iscsi/nodes/{guid}/
+
+==== Метод: DELETE
+===== Описание
+Deletes an iSCSI node
+
+===== Параметры
+
+[options="header",cols="2,1,3,2"]
+|===
+| Параметр | Тип | Описание | Значение по умолчанию
+| guid | string | *_<обязательный параметр>_* +
+ Identifier of the object on which to call is applied. | 
+|===
+===== Ответы
+
+[options="header",cols="1,4"]
+|===
+| Код | Описание
+| 200 | Deletes an iSCSI node
+| default | Error payload
+|===
+*Тип возвращаемого значения:* string
+
+
+==== Метод: GET
+===== Описание
+Load information about a given iSCSI Node
+
+===== Параметры
+
+[options="header",cols="2,1,3,2"]
+|===
+| Параметр | Тип | Описание | Значение по умолчанию
+| guid | string | *_<обязательный параметр>_* +
+ Identifier of the object on which to call is applied. | 
+| contents | array | *_<обязательный параметр>_* +
+ Specify the returned contents. | 
+|===
+===== Ответы
+
+[options="header",cols="1,4"]
+|===
+| Код | Описание
+| 200 | Load information about a given iSCSI Node
+| default | Error payload
+|===
+*Тип возвращаемого значения:* IscsiNode
+
+=== URL: /iscsi/nodes/{guid}/expose_vdisk/
+
+==== Метод: POST
+===== Описание
+Expose a vDisk on the specified iSCSI Node
+
+===== Параметры
+
+[options="header",cols="2,1,3,2"]
+|===
+| Параметр | Тип | Описание | Значение по умолчанию
+| guid | string | *_<обязательный параметр>_* +
+ Identifier of the object on which to call is applied. | 
+| iscsinode | Не указано | _<необязательный параметр>_ +
+ Описание отсутствует. | 
+|===
+===== Ответы
+
+[options="header",cols="1,4"]
+|===
+| Код | Описание
+| 200 | Expose a vDisk on the specified iSCSI Node
+| default | Error payload
+|===
+*Тип возвращаемого значения:* string
+
+=== URL: /iscsi/nodes/{guid}/get_config/
+
+==== Метод: GET
+===== Описание
+Retrieve the configuration of the specified iSCSI node
+
+===== Параметры
+
+[options="header",cols="2,1,3,2"]
+|===
+| Параметр | Тип | Описание | Значение по умолчанию
+| guid | string | *_<обязательный параметр>_* +
+ Identifier of the object on which to call is applied. | 
+|===
+===== Ответы
+
+[options="header",cols="1,4"]
+|===
+| Код | Описание
+| 200 | Retrieve the configuration of the specified iSCSI node
+| default | Error payload
+|===
+*Тип возвращаемого значения:* object
+
+=== URL: /iscsi/nodes/{guid}/get_logfiles/
+
+==== Метод: GET
+===== Описание
+Retrieve the log files of an iSCSI Node
+
+===== Параметры
+
+[options="header",cols="2,1,3,2"]
+|===
+| Параметр | Тип | Описание | Значение по умолчанию
+| guid | string | *_<обязательный параметр>_* +
+ Identifier of the object on which to call is applied. | 
+|===
+===== Ответы
+
+[options="header",cols="1,4"]
+|===
+| Код | Описание
+| 200 | Retrieve the log files of an iSCSI Node
+| default | Error payload
+|===
+*Тип возвращаемого значения:* string
+
+=== URL: /iscsi/nodes/{guid}/get_vdisks_exposed_on_node/
+
+==== Метод: GET
+===== Описание
+Retrieve the vDisks exposed on specified iSCSI node
+
+===== Параметры
+
+[options="header",cols="2,1,3,2"]
+|===
+| Параметр | Тип | Описание | Значение по умолчанию
+| guid | string | *_<обязательный параметр>_* +
+ Identifier of the object on which to call is applied. | 
+| page | integer | _<необязательный параметр>_ +
+ Specifies the page to be returned. | 
+| page_size | integer | _<необязательный параметр>_ +
+ Specifies the size of a page. Supported values: 10, 25, 50 and 100. Requires "page" to be set. | 
+| sort | array | _<необязательный параметр>_ +
+ Specifies the sorting of the list. | None
+| contents | array | *_<обязательный параметр>_* +
+ Specify the returned contents. | 
+|===
+===== Ответы
+
+[options="header",cols="1,4"]
+|===
+| Код | Описание
+| 200 | Retrieve the vDisks exposed on specified iSCSI node
+| default | Error payload
+|===
+*Тип возвращаемого значения:* object
+
+=== URL: /iscsi/nodes/{guid}/service_restart/
+
+==== Метод: POST
+===== Описание
+Restart the iSCSI Manager service on the specified iSCSI node
+
+===== Параметры
+
+[options="header",cols="2,1,3,2"]
+|===
+| Параметр | Тип | Описание | Значение по умолчанию
+| guid | string | *_<обязательный параметр>_* +
+ Identifier of the object on which to call is applied. | 
+| iscsinode | Не указано | _<необязательный параметр>_ +
+ Описание отсутствует. | 
+|===
+===== Ответы
+
+[options="header",cols="1,4"]
+|===
+| Код | Описание
+| 200 | Restart the iSCSI Manager service on the specified iSCSI node
+| default | Error payload
+|===
+*Тип возвращаемого значения:* string
+
+=== URL: /nbd/nodes/
+
+==== Метод: GET
+===== Описание
+Lists all available NBD Nodes
+
+===== Параметры
+
+[options="header",cols="2,1,3,2"]
+|===
+| Параметр | Тип | Описание | Значение по умолчанию
+| discover | boolean | _<необязательный параметр>_ +
+  If True, only the registered NBD nodes are returned | 
+| page | integer | _<необязательный параметр>_ +
+ Specifies the page to be returned. | 
+| page_size | integer | _<необязательный параметр>_ +
+ Specifies the size of a page. Supported values: 10, 25, 50 and 100. Requires "page" to be set. | 
+| sort | array | _<необязательный параметр>_ +
+ Specifies the sorting of the list. | None
+| contents | array | *_<обязательный параметр>_* +
+ Specify the returned contents. | 
+|===
+===== Ответы
+
+[options="header",cols="1,4"]
+|===
+| Код | Описание
+| 200 | Lists all available NBD Nodes
+| default | Error payload
+|===
+*Тип возвращаемого значения:* object
+
+
+==== Метод: POST
+===== Описание
+Adds a node with a given node_id to the model
+
+===== Параметры
+
+[options="header",cols="2,1,3,2"]
+|===
+| Параметр | Тип | Описание | Значение по умолчанию
+| contents | array | *_<обязательный параметр>_* +
+ Specify the returned contents. | 
+| body | Не указано | _<необязательный параметр>_ +
+ Описание отсутствует. | 
+|===
+===== Ответы
+
+[options="header",cols="1,4"]
+|===
+| Код | Описание
+| 201 | Adds a node with a given node_id to the model
+| default | Error payload
+|===
+=== URL: /nbd/nodes/restart_exports/
+
+==== Метод: POST
+===== Описание
+Restart NBD exports of chosen vDisks.
+
+===== Параметры
+
+[options="header",cols="2,1,3,2"]
+|===
+| Параметр | Тип | Описание | Значение по умолчанию
+| body | Не указано | _<необязательный параметр>_ +
+ Описание отсутствует. | 
+|===
+===== Ответы
+
+[options="header",cols="1,4"]
+|===
+| Код | Описание
+| 200 | Restart NBD exports of chosen vDisks.
+| default | Error payload
+|===
+*Тип возвращаемого значения:* string
+
+=== URL: /nbd/nodes/unexpose_vdisk/
+
+==== Метод: POST
+===== Описание
+Un-expose a vDisk from all NBD Nodes
+
+===== Параметры
+
+[options="header",cols="2,1,3,2"]
+|===
+| Параметр | Тип | Описание | Значение по умолчанию
+| body | Не указано | _<необязательный параметр>_ +
+ Описание отсутствует. | 
+|===
+===== Ответы
+
+[options="header",cols="1,4"]
+|===
+| Код | Описание
+| 200 | Un-expose a vDisk from all NBD Nodes
+| default | Error payload
+|===
+*Тип возвращаемого значения:* string
+
+=== URL: /nbd/nodes/{guid}/
+
+==== Метод: DELETE
+===== Описание
+Deletes an NBD node
+
+===== Параметры
+
+[options="header",cols="2,1,3,2"]
+|===
+| Параметр | Тип | Описание | Значение по умолчанию
+| guid | string | *_<обязательный параметр>_* +
+ Identifier of the object on which to call is applied. | 
+|===
+===== Ответы
+
+[options="header",cols="1,4"]
+|===
+| Код | Описание
+| 200 | Deletes an NBD node
+| default | Error payload
+|===
+*Тип возвращаемого значения:* string
+
+
+==== Метод: GET
+===== Описание
+Load information about a given NBD Node
+
+===== Параметры
+
+[options="header",cols="2,1,3,2"]
+|===
+| Параметр | Тип | Описание | Значение по умолчанию
+| guid | string | *_<обязательный параметр>_* +
+ Identifier of the object on which to call is applied. | 
+| contents | array | *_<обязательный параметр>_* +
+ Specify the returned contents. | 
+|===
+===== Ответы
+
+[options="header",cols="1,4"]
+|===
+| Код | Описание
+| 200 | Load information about a given NBD Node
+| default | Error payload
+|===
+*Тип возвращаемого значения:* NbdNode
+
+=== URL: /nbd/nodes/{guid}/expose_vdisk/
+
+==== Метод: POST
+===== Описание
+Expose a vDisk on the specified NBD Node
+
+===== Параметры
+
+[options="header",cols="2,1,3,2"]
+|===
+| Параметр | Тип | Описание | Значение по умолчанию
+| guid | string | *_<обязательный параметр>_* +
+ Identifier of the object on which to call is applied. | 
+| nbdnode | Не указано | _<необязательный параметр>_ +
+ Описание отсутствует. | 
+|===
+===== Ответы
+
+[options="header",cols="1,4"]
+|===
+| Код | Описание
+| 200 | Expose a vDisk on the specified NBD Node
+| default | Error payload
+|===
+*Тип возвращаемого значения:* string
+
+=== URL: /nbd/nodes/{guid}/get_config/
+
+==== Метод: GET
+===== Описание
+Retrieve the configuration of the specified NBD node
+
+===== Параметры
+
+[options="header",cols="2,1,3,2"]
+|===
+| Параметр | Тип | Описание | Значение по умолчанию
+| guid | string | *_<обязательный параметр>_* +
+ Identifier of the object on which to call is applied. | 
+|===
+===== Ответы
+
+[options="header",cols="1,4"]
+|===
+| Код | Описание
+| 200 | Retrieve the configuration of the specified NBD node
+| default | Error payload
+|===
+*Тип возвращаемого значения:* object
+
+=== URL: /nbd/nodes/{guid}/get_export_config/
+
+==== Метод: GET
+===== Описание
+Retrieve current NBD export config of vDisk from NBD Node.
+
+===== Параметры
+
+[options="header",cols="2,1,3,2"]
+|===
+| Параметр | Тип | Описание | Значение по умолчанию
+| guid | string | *_<обязательный параметр>_* +
+ Identifier of the object on which to call is applied. | 
+| vdisk_guid | string | *_<обязательный параметр>_* +
+  GUID of the vDisk to get config of. | 
+|===
+===== Ответы
+
+[options="header",cols="1,4"]
+|===
+| Код | Описание
+| 200 | Retrieve current NBD export config of vDisk from NBD Node.
+| default | Error payload
+|===
+*Тип возвращаемого значения:* object
+
+=== URL: /nbd/nodes/{guid}/get_logfiles/
+
+==== Метод: GET
+===== Описание
+Retrieve the log files of an NBD Node
+
+===== Параметры
+
+[options="header",cols="2,1,3,2"]
+|===
+| Параметр | Тип | Описание | Значение по умолчанию
+| guid | string | *_<обязательный параметр>_* +
+ Identifier of the object on which to call is applied. | 
+|===
+===== Ответы
+
+[options="header",cols="1,4"]
+|===
+| Код | Описание
+| 200 | Retrieve the log files of an NBD Node
+| default | Error payload
+|===
+*Тип возвращаемого значения:* string
+
+=== URL: /nbd/nodes/{guid}/get_main_config/
+
+==== Метод: GET
+===== Описание
+Return main NBD config as dict (e.g. contents of "/etc/nbd-server/config").
+
+===== Параметры
+
+[options="header",cols="2,1,3,2"]
+|===
+| Параметр | Тип | Описание | Значение по умолчанию
+| guid | string | *_<обязательный параметр>_* +
+ Identifier of the object on which to call is applied. | 
+|===
+===== Ответы
+
+[options="header",cols="1,4"]
+|===
+| Код | Описание
+| 200 | Return main NBD config as dict (e.g. contents of "/etc/nbd-server/config").
+| default | Error payload
+|===
+*Тип возвращаемого значения:* object
+
+=== URL: /nbd/nodes/{guid}/get_vdisks_exposed_on_node/
+
+==== Метод: GET
+===== Описание
+Retrieve the vDisks exposed on specified NBD node
+
+===== Параметры
+
+[options="header",cols="2,1,3,2"]
+|===
+| Параметр | Тип | Описание | Значение по умолчанию
+| guid | string | *_<обязательный параметр>_* +
+ Identifier of the object on which to call is applied. | 
+| page | integer | _<необязательный параметр>_ +
+ Specifies the page to be returned. | 
+| page_size | integer | _<необязательный параметр>_ +
+ Specifies the size of a page. Supported values: 10, 25, 50 and 100. Requires "page" to be set. | 
+| sort | array | _<необязательный параметр>_ +
+ Specifies the sorting of the list. | None
+| contents | array | *_<обязательный параметр>_* +
+ Specify the returned contents. | 
+|===
+===== Ответы
+
+[options="header",cols="1,4"]
+|===
+| Код | Описание
+| 200 | Retrieve the vDisks exposed on specified NBD node
+| default | Error payload
+|===
+*Тип возвращаемого значения:* object
+
+=== URL: /nbd/nodes/{guid}/list_export_connections/
+
+==== Метод: GET
+===== Описание
+List all active NBD connections to vDisk (NBD export).
+
+===== Параметры
+
+[options="header",cols="2,1,3,2"]
+|===
+| Параметр | Тип | Описание | Значение по умолчанию
+| guid | string | *_<обязательный параметр>_* +
+ Identifier of the object on which to call is applied. | 
+| vdisk_guid | string | *_<обязательный параметр>_* +
+  GUID of the vDisk. | 
+|===
+===== Ответы
+
+[options="header",cols="1,4"]
+|===
+| Код | Описание
+| 200 | List all active NBD connections to vDisk (NBD export).
+| default | Error payload
+|===
+*Тип возвращаемого значения:* object
+
+=== URL: /nbd/nodes/{guid}/service_restart/
+
+==== Метод: POST
+===== Описание
+Restart the NBD Manager service on the specified NBD node
+
+===== Параметры
+
+[options="header",cols="2,1,3,2"]
+|===
+| Параметр | Тип | Описание | Значение по умолчанию
+| guid | string | *_<обязательный параметр>_* +
+ Identifier of the object on which to call is applied. | 
+| nbdnode | Не указано | _<необязательный параметр>_ +
+ Описание отсутствует. | 
+|===
+===== Ответы
+
+[options="header",cols="1,4"]
+|===
+| Код | Описание
+| 200 | Restart the NBD Manager service on the specified NBD node
+| default | Error payload
+|===
+*Тип возвращаемого значения:* string
+
+=== URL: /nbd/nodes/{guid}/set_export_config/
+
+==== Метод: PATCH
+===== Описание
+Set NBD export config on NBD Node.
+
+===== Параметры
+
+[options="header",cols="2,1,3,2"]
+|===
+| Параметр | Тип | Описание | Значение по умолчанию
+| guid | string | *_<обязательный параметр>_* +
+ Identifier of the object on which to call is applied. | 
+| nbdnode | Не указано | _<необязательный параметр>_ +
+ Описание отсутствует. | 
+|===
+===== Ответы
+
+[options="header",cols="1,4"]
+|===
+| Код | Описание
+| 200 | Set NBD export config on NBD Node.
+| default | Error payload
+|===
+*Тип возвращаемого значения:* string
+
+=== URL: /nbd/nodes/{guid}/set_main_config/
+
+==== Метод: PATCH
+===== Описание
+Set NBD main config on NBD Node.
+
+===== Параметры
+
+[options="header",cols="2,1,3,2"]
+|===
+| Параметр | Тип | Описание | Значение по умолчанию
+| guid | string | *_<обязательный параметр>_* +
+ Identifier of the object on which to call is applied. | 
+| nbdnode | Не указано | _<необязательный параметр>_ +
+ Описание отсутствует. | 
+|===
+===== Ответы
+
+[options="header",cols="1,4"]
+|===
+| Код | Описание
+| 200 | Set NBD main config on NBD Node.
+| default | Error payload
+|===
+*Тип возвращаемого значения:* string
+
+=== URL: /roles/
+
+==== Метод: GET
+===== Описание
+Lists all available Roles
+
+===== Параметры
+
+[options="header",cols="2,1,3,2"]
+|===
+| Параметр | Тип | Описание | Значение по умолчанию
+| page | integer | _<необязательный параметр>_ +
+ Specifies the page to be returned. | 
+| page_size | integer | _<необязательный параметр>_ +
+ Specifies the size of a page. Supported values: 10, 25, 50 and 100. Requires "page" to be set. | 
+| sort | array | _<необязательный параметр>_ +
+ Specifies the sorting of the list. | None
+| contents | array | *_<обязательный параметр>_* +
+ Specify the returned contents. | 
+|===
+===== Ответы
+
+[options="header",cols="1,4"]
+|===
+| Код | Описание
+| 200 | Lists all available Roles
+| default | Error payload
+|===
+*Тип возвращаемого значения:* object
+
+=== URL: /roles/{guid}/
+
+==== Метод: GET
+===== Описание
+Load information about a given Role
+
+===== Параметры
+
+[options="header",cols="2,1,3,2"]
+|===
+| Параметр | Тип | Описание | Значение по умолчанию
+| guid | string | *_<обязательный параметр>_* +
+ Identifier of the object on which to call is applied. | 
+| contents | array | *_<обязательный параметр>_* +
+ Specify the returned contents. | 
+|===
+===== Ответы
+
+[options="header",cols="1,4"]
+|===
+| Код | Описание
+| 200 | Load information about a given Role
+| default | Error payload
+|===
+*Тип возвращаемого значения:* Role
+
+=== URL: /storagedrivers/
+
+==== Метод: GET
+===== Описание
+Overview of all Storage Drivers
+
+===== Параметры
+
+[options="header",cols="2,1,3,2"]
+|===
+| Параметр | Тип | Описание | Значение по умолчанию
+| vpool_guid | string | _<необязательный параметр>_ +
+  Guid of the vPool | 
+| page | integer | _<необязательный параметр>_ +
+ Specifies the page to be returned. | 
+| page_size | integer | _<необязательный параметр>_ +
+ Specifies the size of a page. Supported values: 10, 25, 50 and 100. Requires "page" to be set. | 
+| sort | array | _<необязательный параметр>_ +
+ Specifies the sorting of the list. | None
+| contents | array | *_<обязательный параметр>_* +
+ Specify the returned contents. | 
+|===
+===== Ответы
+
+[options="header",cols="1,4"]
+|===
+| Код | Описание
+| 200 | Overview of all Storage Drivers
+| default | Error payload
+|===
+*Тип возвращаемого значения:* object
+
+=== URL: /storagedrivers/{guid}/
+
+==== Метод: GET
+===== Описание
+Load information about a given Storage Driver
+
+===== Параметры
+
+[options="header",cols="2,1,3,2"]
+|===
+| Параметр | Тип | Описание | Значение по умолчанию
+| guid | string | *_<обязательный параметр>_* +
+ Identifier of the object on which to call is applied. | 
+| contents | array | *_<обязательный параметр>_* +
+ Specify the returned contents. | 
+|===
+===== Ответы
+
+[options="header",cols="1,4"]
+|===
+| Код | Описание
+| 200 | Load information about a given Storage Driver
+| default | Error payload
+|===
+*Тип возвращаемого значения:* StorageDriver
+
+=== URL: /storagedrivers/{guid}/refresh_configuration/
+
+==== Метод: POST
+===== Описание
+Refresh the configuration of the Storage Driver
+
+===== Параметры
+
+[options="header",cols="2,1,3,2"]
+|===
+| Параметр | Тип | Описание | Значение по умолчанию
+| guid | string | *_<обязательный параметр>_* +
+ Identifier of the object on which to call is applied. | 
+|===
+===== Ответы
+
+[options="header",cols="1,4"]
+|===
+| Код | Описание
+| 200 | Refresh the configuration of the Storage Driver
+| default | Error payload
+|===
+*Тип возвращаемого значения:* string
+
+=== URL: /storagerouters/
+
+==== Метод: GET
+===== Описание
+Overview of all Storage Routers
+
+===== Параметры
+
+[options="header",cols="2,1,3,2"]
+|===
+| Параметр | Тип | Описание | Значение по умолчанию
+| query | string | _<необязательный параметр>_ +
+  A query to filter the StorageRouters | 
+| page | integer | _<необязательный параметр>_ +
+ Specifies the page to be returned. | 
+| page_size | integer | _<необязательный параметр>_ +
+ Specifies the size of a page. Supported values: 10, 25, 50 and 100. Requires "page" to be set. | 
+| sort | array | _<необязательный параметр>_ +
+ Specifies the sorting of the list. | name
+| contents | array | *_<обязательный параметр>_* +
+ Specify the returned contents. | 
+|===
+===== Ответы
+
+[options="header",cols="1,4"]
+|===
+| Код | Описание
+| 200 | Overview of all Storage Routers
+| default | Error payload
+|===
+*Тип возвращаемого значения:* object
+
+=== URL: /storagerouters/configure_support/
+
+==== Метод: POST
+===== Описание
+Configures support
+
+===== Параметры
+
+[options="header",cols="2,1,3,2"]
+|===
+| Параметр | Тип | Описание | Значение по умолчанию
+| body | Не указано | _<необязательный параметр>_ +
+ Описание отсутствует. | 
+|===
+===== Ответы
+
+[options="header",cols="1,4"]
+|===
+| Код | Описание
+| 200 | Configures support
+| default | Error payload
+|===
+*Тип возвращаемого значения:* string
+
+=== URL: /storagerouters/get_update_information/
+
+==== Метод: GET
+===== Описание
+Retrieve the update information for all Storage Routers
+
+===== Параметры
+
+[options="header",cols="2,1,3,2"]
+|===
+| Параметр | Тип | Описание | Значение по умолчанию
+|===
+===== Ответы
+
+[options="header",cols="1,4"]
+|===
+| Код | Описание
+| 200 | Retrieve the update information for all Storage Routers
+| default | Error payload
+|===
+*Тип возвращаемого значения:* string
+
+=== URL: /storagerouters/merge_package_information/
+
+==== Метод: GET
+===== Описание
+Retrieve the package information from the model for both Storage Routers and ALBA Nodes and merge it
+
+===== Параметры
+
+[options="header",cols="2,1,3,2"]
+|===
+| Параметр | Тип | Описание | Значение по умолчанию
+|===
+===== Ответы
+
+[options="header",cols="1,4"]
+|===
+| Код | Описание
+| 200 | Retrieve the package information from the model for both Storage Routers and ALBA Nodes and merge it
+| default | Error payload
+|===
+*Тип возвращаемого значения:* string
+
+=== URL: /storagerouters/refresh_package_information/
+
+==== Метод: GET
+===== Описание
+Refresh the package information for all StorageRouters.
+
+===== Параметры
+
+[options="header",cols="2,1,3,2"]
+|===
+| Параметр | Тип | Описание | Значение по умолчанию
+|===
+===== Ответы
+
+[options="header",cols="1,4"]
+|===
+| Код | Описание
+| 200 | Refresh the package information for all StorageRouters.
+| default | Error payload
+|===
+*Тип возвращаемого значения:* string
+
+=== URL: /storagerouters/update_components/
+
+==== Метод: POST
+===== Описание
+Initiate a task on a Storage Router to update the specified components on all Storage Routers
+
+===== Параметры
+
+[options="header",cols="2,1,3,2"]
+|===
+| Параметр | Тип | Описание | Значение по умолчанию
+| body | Не указано | _<необязательный параметр>_ +
+ Описание отсутствует. | 
+|===
+===== Ответы
+
+[options="header",cols="1,4"]
+|===
+| Код | Описание
+| 200 | Initiate a task on a Storage Router to update the specified components on all Storage Routers
+| default | Error payload
+|===
+*Тип возвращаемого значения:* string
+
+=== URL: /storagerouters/{guid}/
+
+==== Метод: GET
+===== Описание
+Load information about a given Storage Router
+
+===== Параметры
+
+[options="header",cols="2,1,3,2"]
+|===
+| Параметр | Тип | Описание | Значение по умолчанию
+| guid | string | *_<обязательный параметр>_* +
+ Identifier of the object on which to call is applied. | 
+| contents | array | *_<обязательный параметр>_* +
+ Specify the returned contents. | 
+|===
+===== Ответы
+
+[options="header",cols="1,4"]
+|===
+| Код | Описание
+| 200 | Load information about a given Storage Router
+| default | Error payload
+|===
+*Тип возвращаемого значения:* StorageRouter
+
+
+==== Метод: PATCH
+===== Описание
+Update a Storage Router
+
+===== Параметры
+
+[options="header",cols="2,1,3,2"]
+|===
+| Параметр | Тип | Описание | Значение по умолчанию
+| guid | string | *_<обязательный параметр>_* +
+ Identifier of the object on which to call is applied. | 
+| contents | array | *_<обязательный параметр>_* +
+ Specify the returned contents. | 
+| storagerouter | Не указано | _<необязательный параметр>_ +
+ Описание отсутствует. | 
+|===
+===== Ответы
+
+[options="header",cols="1,4"]
+|===
+| Код | Описание
+| 202 | Update a Storage Router
+| default | Error payload
+|===
+=== URL: /storagerouters/{guid}/add_vpool/
+
+==== Метод: POST
+===== Описание
+Adds a vPool to a given Storage Router
+
+===== Параметры
+
+[options="header",cols="2,1,3,2"]
+|===
+| Параметр | Тип | Описание | Значение по умолчанию
+| guid | string | *_<обязательный параметр>_* +
+ Identifier of the object on which to call is applied. | 
+| storagerouter | Не указано | _<необязательный параметр>_ +
+ Описание отсутствует. | 
+|===
+===== Ответы
+
+[options="header",cols="1,4"]
+|===
+| Код | Описание
+| 200 | Adds a vPool to a given Storage Router
+| default | Error payload
+|===
+*Тип возвращаемого значения:* string
+
+=== URL: /storagerouters/{guid}/check_mtpt/
+
+==== Метод: POST
+===== Описание
+Validates whether the mountpoint for a vPool is available
+
+===== Параметры
+
+[options="header",cols="2,1,3,2"]
+|===
+| Параметр | Тип | Описание | Значение по умолчанию
+| guid | string | *_<обязательный параметр>_* +
+ Identifier of the object on which to call is applied. | 
+| storagerouter | Не указано | _<необязательный параметр>_ +
+ Описание отсутствует. | 
+|===
+===== Ответы
+
+[options="header",cols="1,4"]
+|===
+| Код | Описание
+| 200 | Validates whether the mountpoint for a vPool is available
+| default | Error payload
+|===
+*Тип возвращаемого значения:* string
+
+=== URL: /storagerouters/{guid}/configure_disk/
+
+==== Метод: POST
+===== Описание
+Configures a Disk on a Storage Router
+
+===== Параметры
+
+[options="header",cols="2,1,3,2"]
+|===
+| Параметр | Тип | Описание | Значение по умолчанию
+| guid | string | *_<обязательный параметр>_* +
+ Identifier of the object on which to call is applied. | 
+| storagerouter | Не указано | _<необязательный параметр>_ +
+ Описание отсутствует. | 
+|===
+===== Ответы
+
+[options="header",cols="1,4"]
+|===
+| Код | Описание
+| 200 | Configures a Disk on a Storage Router
+| default | Error payload
+|===
+*Тип возвращаемого значения:* string
+
+=== URL: /storagerouters/{guid}/create_hprm_config_files/
+
+==== Метод: GET
+===== Описание
+Create the required configuration files to be able to make use of HPRM (aka PRACC)
+
+===== Параметры
+
+[options="header",cols="2,1,3,2"]
+|===
+| Параметр | Тип | Описание | Значение по умолчанию
+| guid | string | *_<обязательный параметр>_* +
+ Identifier of the object on which to call is applied. | 
+| parameters | object | *_<обязательный параметр>_* +
+  Additional information required for the HPRM configuration files | 
+|===
+===== Ответы
+
+[options="header",cols="1,4"]
+|===
+| Код | Описание
+| 200 | Create the required configuration files to be able to make use of HPRM (aka PRACC)
+| default | Error payload
+|===
+*Тип возвращаемого значения:* string
+
+=== URL: /storagerouters/{guid}/extend_vpool/
+
+==== Метод: POST
+===== Описание
+Extend vPool to a given Storage Router
+
+===== Параметры
+
+[options="header",cols="2,1,3,2"]
+|===
+| Параметр | Тип | Описание | Значение по умолчанию
+| guid | string | *_<обязательный параметр>_* +
+ Identifier of the object on which to call is applied. | 
+| storagerouter | Не указано | _<необязательный параметр>_ +
+ Описание отсутствует. | 
+|===
+===== Ответы
+
+[options="header",cols="1,4"]
+|===
+| Код | Описание
+| 200 | Extend vPool to a given Storage Router
+| default | Error payload
+|===
+*Тип возвращаемого значения:* string
+
+=== URL: /storagerouters/{guid}/get_logfiles/
+
+==== Метод: GET
+===== Описание
+Collects logs, moves them to a web-accessible location and returns log tgz's filename
+
+===== Параметры
+
+[options="header",cols="2,1,3,2"]
+|===
+| Параметр | Тип | Описание | Значение по умолчанию
+| guid | string | *_<обязательный параметр>_* +
+ Identifier of the object on which to call is applied. | 
+|===
+===== Ответы
+
+[options="header",cols="1,4"]
+|===
+| Код | Описание
+| 200 | Collects logs, moves them to a web-accessible location and returns log tgz's filename
+| default | Error payload
+|===
+*Тип возвращаемого значения:* string
+
+=== URL: /storagerouters/{guid}/get_metadata/
+
+==== Метод: GET
+===== Описание
+Returns a list of mountpoints on the given Storage Router
+
+===== Параметры
+
+[options="header",cols="2,1,3,2"]
+|===
+| Параметр | Тип | Описание | Значение по умолчанию
+| guid | string | *_<обязательный параметр>_* +
+ Identifier of the object on which to call is applied. | 
+|===
+===== Ответы
+
+[options="header",cols="1,4"]
+|===
+| Код | Описание
+| 200 | Returns a list of mountpoints on the given Storage Router
+| default | Error payload
+|===
+*Тип возвращаемого значения:* string
+
+=== URL: /storagerouters/{guid}/get_proxy_config/
+
+==== Метод: GET
+===== Описание
+Gets the ALBA Proxy for a given Storage Router and vPool
+
+===== Параметры
+
+[options="header",cols="2,1,3,2"]
+|===
+| Параметр | Тип | Описание | Значение по умолчанию
+| guid | string | *_<обязательный параметр>_* +
+ Identifier of the object on which to call is applied. | 
+| vpool_guid | string | *_<обязательный параметр>_* +
+  Guid of the vPool for which the proxy is configured | 
+|===
+===== Ответы
+
+[options="header",cols="1,4"]
+|===
+| Код | Описание
+| 200 | Gets the ALBA Proxy for a given Storage Router and vPool
+| default | Error payload
+|===
+*Тип возвращаемого значения:* string
+
+=== URL: /storagerouters/{guid}/get_support_info/
+
+==== Метод: GET
+===== Описание
+Gets support information of a given Storage Router
+
+===== Параметры
+
+[options="header",cols="2,1,3,2"]
+|===
+| Параметр | Тип | Описание | Значение по умолчанию
+| guid | string | *_<обязательный параметр>_* +
+ Identifier of the object on which to call is applied. | 
+|===
+===== Ответы
+
+[options="header",cols="1,4"]
+|===
+| Код | Описание
+| 200 | Gets support information of a given Storage Router
+| default | Error payload
+|===
+*Тип возвращаемого значения:* string
+
+=== URL: /storagerouters/{guid}/get_support_metadata/
+
+==== Метод: GET
+===== Описание
+Gets support metadata of a given Storage Router
+
+===== Параметры
+
+[options="header",cols="2,1,3,2"]
+|===
+| Параметр | Тип | Описание | Значение по умолчанию
+| guid | string | *_<обязательный параметр>_* +
+ Identifier of the object on which to call is applied. | 
+|===
+===== Ответы
+
+[options="header",cols="1,4"]
+|===
+| Код | Описание
+| 200 | Gets support metadata of a given Storage Router
+| default | Error payload
+|===
+*Тип возвращаемого значения:* string
+
+=== URL: /storagerouters/{guid}/get_update_metadata/
+
+==== Метод: GET
+===== Описание
+Returns metadata required for updating
+
+===== Параметры
+
+[options="header",cols="2,1,3,2"]
+|===
+| Параметр | Тип | Описание | Значение по умолчанию
+| guid | string | *_<обязательный параметр>_* +
+ Identifier of the object on which to call is applied. | 
+|===
+===== Ответы
+
+[options="header",cols="1,4"]
+|===
+| Код | Описание
+| 200 | Returns metadata required for updating
+| default | Error payload
+|===
+*Тип возвращаемого значения:* string
+
+=== URL: /storagerouters/{guid}/get_version_info/
+
+==== Метод: GET
+===== Описание
+Gets version information of a given Storage Router
+
+===== Параметры
+
+[options="header",cols="2,1,3,2"]
+|===
+| Параметр | Тип | Описание | Значение по умолчанию
+| guid | string | *_<обязательный параметр>_* +
+ Identifier of the object on which to call is applied. | 
+|===
+===== Ответы
+
+[options="header",cols="1,4"]
+|===
+| Код | Описание
+| 200 | Gets version information of a given Storage Router
+| default | Error payload
+|===
+*Тип возвращаемого значения:* string
+
+=== URL: /storagerouters/{guid}/mark_offline/
+
+==== Метод: POST
+===== Описание
+Marks all Storage Drivers of a given Node offline. DO NOT USE ON RUNNING STORAGE ROUTERS!
+
+===== Параметры
+
+[options="header",cols="2,1,3,2"]
+|===
+| Параметр | Тип | Описание | Значение по умолчанию
+| guid | string | *_<обязательный параметр>_* +
+ Identifier of the object on which to call is applied. | 
+|===
+===== Ответы
+
+[options="header",cols="1,4"]
+|===
+| Код | Описание
+| 200 | Marks all Storage Drivers of a given Node offline. DO NOT USE ON RUNNING STORAGE ROUTERS!
+| default | Error payload
+|===
+*Тип возвращаемого значения:* string
+
+=== URL: /storagerouters/{guid}/refresh_hardware/
+
+==== Метод: POST
+===== Описание
+Refreshes all hardware parameters
+
+===== Параметры
+
+[options="header",cols="2,1,3,2"]
+|===
+| Параметр | Тип | Описание | Значение по умолчанию
+| guid | string | *_<обязательный параметр>_* +
+ Identifier of the object on which to call is applied. | 
+|===
+===== Ответы
+
+[options="header",cols="1,4"]
+|===
+| Код | Описание
+| 200 | Refreshes all hardware parameters
+| default | Error payload
+|===
+*Тип возвращаемого значения:* string
+
+=== URL: /storagerouters/{guid}/rescan_disks/
+
+==== Метод: POST
+===== Описание
+Triggers a Disk sync on the given Storage Router
+
+===== Параметры
+
+[options="header",cols="2,1,3,2"]
+|===
+| Параметр | Тип | Описание | Значение по умолчанию
+| guid | string | *_<обязательный параметр>_* +
+ Identifier of the object on which to call is applied. | 
+|===
+===== Ответы
+
+[options="header",cols="1,4"]
+|===
+| Код | Описание
+| 200 | Triggers a Disk sync on the given Storage Router
+| default | Error payload
+|===
+*Тип возвращаемого значения:* string
+
+=== URL: /storagerouters/{guid}/set_domains/
+
+==== Метод: POST
+===== Описание
+Configures the given Domains to the Storage Router.
+
+===== Параметры
+
+[options="header",cols="2,1,3,2"]
+|===
+| Параметр | Тип | Описание | Значение по умолчанию
+| guid | string | *_<обязательный параметр>_* +
+ Identifier of the object on which to call is applied. | 
+| storagerouter | Не указано | _<необязательный параметр>_ +
+ Описание отсутствует. | 
+|===
+===== Ответы
+
+[options="header",cols="1,4"]
+|===
+| Код | Описание
+| 204 | Configures the given Domains to the Storage Router.
+| default | Error payload
+|===
+=== URL: /tasks/
+
+==== Метод: GET
+===== Описание
+Overview of active, scheduled, reserved and revoked tasks
+
+===== Параметры
+
+[options="header",cols="2,1,3,2"]
+|===
+| Параметр | Тип | Описание | Значение по умолчанию
+|===
+===== Ответы
+
+[options="header",cols="1,4"]
+|===
+| Код | Описание
+| 200 | Overview of active, scheduled, reserved and revoked tasks
+| default | Error payload
+|===
+*Тип возвращаемого значения:* object
+
+=== URL: /tasks/{guid}/
+
+==== Метод: GET
+===== Описание
+Load information about a given task
+
+===== Параметры
+
+[options="header",cols="2,1,3,2"]
+|===
+| Параметр | Тип | Описание | Значение по умолчанию
+| guid | string | *_<обязательный параметр>_* +
+ Identifier of the object on which the call is applied. | 
+|===
+===== Ответы
+
+[options="header",cols="1,4"]
+|===
+| Код | Описание
+| 200 | Load information about a given task
+| default | Error payload
+|===
+*Тип возвращаемого значения:* object
+
+=== URL: /tasks/{guid}/get/
+
+==== Метод: GET
+===== Описание
+Gets a given task's result
+
+===== Параметры
+
+[options="header",cols="2,1,3,2"]
+|===
+| Параметр | Тип | Описание | Значение по умолчанию
+| guid | string | *_<обязательный параметр>_* +
+ Identifier of the object on which the call is applied. | 
+|===
+===== Ответы
+
+[options="header",cols="1,4"]
+|===
+| Код | Описание
+| 200 | Gets a given task's result
+| default | Error payload
+|===
+*Тип возвращаемого значения:* object
+
+=== URL: /users/
+
+==== Метод: GET
+===== Описание
+Lists all available Users where the logged in User has access to
+
+===== Параметры
+
+[options="header",cols="2,1,3,2"]
+|===
+| Параметр | Тип | Описание | Значение по умолчанию
+| page | integer | _<необязательный параметр>_ +
+ Specifies the page to be returned. | 
+| page_size | integer | _<необязательный параметр>_ +
+ Specifies the size of a page. Supported values: 10, 25, 50 and 100. Requires "page" to be set. | 
+| sort | array | _<необязательный параметр>_ +
+ Specifies the sorting of the list. | None
+| contents | array | *_<обязательный параметр>_* +
+ Specify the returned contents. | 
+|===
+===== Ответы
+
+[options="header",cols="1,4"]
+|===
+| Код | Описание
+| 200 | Lists all available Users where the logged in User has access to
+| default | Error payload
+|===
+*Тип возвращаемого значения:* object
+
+
+==== Метод: POST
+===== Описание
+Creates a User
+
+===== Параметры
+
+[options="header",cols="2,1,3,2"]
+|===
+| Параметр | Тип | Описание | Значение по умолчанию
+| contents | array | *_<обязательный параметр>_* +
+ Specify the returned contents. | 
+| body | Не указано | _<необязательный параметр>_ +
+ Описание отсутствует. | 
+|===
+===== Ответы
+
+[options="header",cols="1,4"]
+|===
+| Код | Описание
+| 201 | Creates a User
+| default | Error payload
+|===
+=== URL: /users/{guid}/
+
+==== Метод: DELETE
+===== Описание
+Deletes a User
+
+===== Параметры
+
+[options="header",cols="2,1,3,2"]
+|===
+| Параметр | Тип | Описание | Значение по умолчанию
+| guid | string | *_<обязательный параметр>_* +
+ Identifier of the object on which to call is applied. | 
+|===
+===== Ответы
+
+[options="header",cols="1,4"]
+|===
+| Код | Описание
+| 204 | Deletes a User
+| default | Error payload
+|===
+
+==== Метод: GET
+===== Описание
+Load information about a given User. Only the currently logged in User is accessible, or all if the logged in User has a manage role
+
+===== Параметры
+
+[options="header",cols="2,1,3,2"]
+|===
+| Параметр | Тип | Описание | Значение по умолчанию
+| guid | string | *_<обязательный параметр>_* +
+ Identifier of the object on which to call is applied. | 
+| contents | array | *_<обязательный параметр>_* +
+ Specify the returned contents. | 
+|===
+===== Ответы
+
+[options="header",cols="1,4"]
+|===
+| Код | Описание
+| 200 | Load information about a given User. Only the currently logged in User is accessible, or all if the logged in User has a manage role
+| default | Error payload
+|===
+*Тип возвращаемого значения:* User
+
+
+==== Метод: PATCH
+===== Описание
+Update a User
+
+===== Параметры
+
+[options="header",cols="2,1,3,2"]
+|===
+| Параметр | Тип | Описание | Значение по умолчанию
+| guid | string | *_<обязательный параметр>_* +
+ Identifier of the object on which to call is applied. | 
+| contents | array | *_<обязательный параметр>_* +
+ Specify the returned contents. | 
+| user | Не указано | _<необязательный параметр>_ +
+ Описание отсутствует. | 
+|===
+===== Ответы
+
+[options="header",cols="1,4"]
+|===
+| Код | Описание
+| 202 | Update a User
+| default | Error payload
+|===
+=== URL: /users/{guid}/set_password/
+
+==== Метод: POST
+===== Описание
+Sets the password of a given User. A logged in User can only changes its own password, or all passwords if the logged in User has a manage role
+
+===== Параметры
+
+[options="header",cols="2,1,3,2"]
+|===
+| Параметр | Тип | Описание | Значение по умолчанию
+| guid | string | *_<обязательный параметр>_* +
+ Identifier of the object on which to call is applied. | 
+| contents | array | *_<обязательный параметр>_* +
+ Specify the returned contents. | 
+| user | Не указано | _<необязательный параметр>_ +
+ Описание отсутствует. | 
+|===
+===== Ответы
+
+[options="header",cols="1,4"]
+|===
+| Код | Описание
+| 202 | Sets the password of a given User. A logged in User can only changes its own password, or all passwords if the logged in User has a manage role
+| default | Error payload
+|===
+=== URL: /vdisks/
+
+==== Метод: GET
+===== Описание
+Overview of all vDisks
+
+===== Параметры
+
+[options="header",cols="2,1,3,2"]
+|===
+| Параметр | Тип | Описание | Значение по умолчанию
+| vpoolguid | string | _<необязательный параметр>_ +
+  Guid of the vPool to retrieve its disks | 
+| storagerouterguid | string | _<необязательный параметр>_ +
+  Guid of the StorageRouter to retrieve its disks | 
+| query | string | _<необязательный параметр>_ +
+  A query to be executed if required | 
+| page | integer | _<необязательный параметр>_ +
+ Specifies the page to be returned. | 
+| page_size | integer | _<необязательный параметр>_ +
+ Specifies the size of a page. Supported values: 10, 25, 50 and 100. Requires "page" to be set. | 
+| sort | array | _<необязательный параметр>_ +
+ Specifies the sorting of the list. | None
+| contents | array | *_<обязательный параметр>_* +
+ Specify the returned contents. | 
+|===
+===== Ответы
+
+[options="header",cols="1,4"]
+|===
+| Код | Описание
+| 200 | Overview of all vDisks
+| default | Error payload
+|===
+*Тип возвращаемого значения:* object
+
+
+==== Метод: POST
+===== Описание
+Create a new vDisk
+
+===== Параметры
+
+[options="header",cols="2,1,3,2"]
+|===
+| Параметр | Тип | Описание | Значение по умолчанию
+| body | Не указано | _<необязательный параметр>_ +
+ Описание отсутствует. | 
+|===
+===== Ответы
+
+[options="header",cols="1,4"]
+|===
+| Код | Описание
+| 200 | Create a new vDisk
+| default | Error payload
+|===
+*Тип возвращаемого значения:* string
+
+=== URL: /vdisks/{guid}/
+
+==== Метод: DELETE
+===== Описание
+Delete a given vDisk
+
+===== Параметры
+
+[options="header",cols="2,1,3,2"]
+|===
+| Параметр | Тип | Описание | Значение по умолчанию
+| guid | string | *_<обязательный параметр>_* +
+ Identifier of the object on which to call is applied. | 
+|===
+===== Ответы
+
+[options="header",cols="1,4"]
+|===
+| Код | Описание
+| 200 | Delete a given vDisk
+| default | Error payload
+|===
+*Тип возвращаемого значения:* string
+
+
+==== Метод: GET
+===== Описание
+Load information about a given vDisk
+
+===== Параметры
+
+[options="header",cols="2,1,3,2"]
+|===
+| Параметр | Тип | Описание | Значение по умолчанию
+| guid | string | *_<обязательный параметр>_* +
+ Identifier of the object on which to call is applied. | 
+| contents | array | *_<обязательный параметр>_* +
+ Specify the returned contents. | 
+|===
+===== Ответы
+
+[options="header",cols="1,4"]
+|===
+| Код | Описание
+| 200 | Load information about a given vDisk
+| default | Error payload
+|===
+*Тип возвращаемого значения:* VDisk
+
+=== URL: /vdisks/{guid}/clone/
+
+==== Метод: POST
+===== Описание
+Clones a vDisk
+
+===== Параметры
+
+[options="header",cols="2,1,3,2"]
+|===
+| Параметр | Тип | Описание | Значение по умолчанию
+| guid | string | *_<обязательный параметр>_* +
+ Identifier of the object on which to call is applied. | 
+| vdisk | Не указано | _<необязательный параметр>_ +
+ Описание отсутствует. | 
+|===
+===== Ответы
+
+[options="header",cols="1,4"]
+|===
+| Код | Описание
+| 200 | Clones a vDisk
+| default | Error payload
+|===
+*Тип возвращаемого значения:* string
+
+=== URL: /vdisks/{guid}/create_from_template/
+
+==== Метод: POST
+===== Описание
+Create a new vDisk from a Template vDisk
+
+===== Параметры
+
+[options="header",cols="2,1,3,2"]
+|===
+| Параметр | Тип | Описание | Значение по умолчанию
+| guid | string | *_<обязательный параметр>_* +
+ Identifier of the object on which to call is applied. | 
+| vdisk | Не указано | _<необязательный параметр>_ +
+ Описание отсутствует. | 
+|===
+===== Ответы
+
+[options="header",cols="1,4"]
+|===
+| Код | Описание
+| 200 | Create a new vDisk from a Template vDisk
+| default | Error payload
+|===
+*Тип возвращаемого значения:* string
+
+=== URL: /vdisks/{guid}/create_snapshot/
+
+==== Метод: POST
+===== Описание
+Creates a snapshot from the vDisk
+
+===== Параметры
+
+[options="header",cols="2,1,3,2"]
+|===
+| Параметр | Тип | Описание | Значение по умолчанию
+| guid | string | *_<обязательный параметр>_* +
+ Identifier of the object on which to call is applied. | 
+| vdisk | Не указано | _<необязательный параметр>_ +
+ Описание отсутствует. | 
+|===
+===== Ответы
+
+[options="header",cols="1,4"]
+|===
+| Код | Описание
+| 200 | Creates a snapshot from the vDisk
+| default | Error payload
+|===
+*Тип возвращаемого значения:* string
+
+=== URL: /vdisks/{guid}/extend/
+
+==== Метод: POST
+===== Описание
+Extends a given vDisk to a new size
+
+===== Параметры
+
+[options="header",cols="2,1,3,2"]
+|===
+| Параметр | Тип | Описание | Значение по умолчанию
+| guid | string | *_<обязательный параметр>_* +
+ Identifier of the object on which to call is applied. | 
+| vdisk | Не указано | _<необязательный параметр>_ +
+ Описание отсутствует. | 
+|===
+===== Ответы
+
+[options="header",cols="1,4"]
+|===
+| Код | Описание
+| 200 | Extends a given vDisk to a new size
+| default | Error payload
+|===
+*Тип возвращаемого значения:* string
+
+=== URL: /vdisks/{guid}/get_config_params/
+
+==== Метод: GET
+===== Описание
+Retrieve the configuration parameters for the given Disk from the Storage Driver.
+
+===== Параметры
+
+[options="header",cols="2,1,3,2"]
+|===
+| Параметр | Тип | Описание | Значение по умолчанию
+| guid | string | *_<обязательный параметр>_* +
+ Identifier of the object on which to call is applied. | 
+|===
+===== Ответы
+
+[options="header",cols="1,4"]
+|===
+| Код | Описание
+| 200 | Retrieve the configuration parameters for the given Disk from the Storage Driver.
+| default | Error payload
+|===
+*Тип возвращаемого значения:* string
+
+=== URL: /vdisks/{guid}/get_scrub_storagerouters/
+
+==== Метод: GET
+===== Описание
+Loads a list of suitable Storage Routers for scrubbing the given vDisk
+
+===== Параметры
+
+[options="header",cols="2,1,3,2"]
+|===
+| Параметр | Тип | Описание | Значение по умолчанию
+| guid | string | *_<обязательный параметр>_* +
+ Identifier of the object on which to call is applied. | 
+| page | integer | _<необязательный параметр>_ +
+ Specifies the page to be returned. | 
+| page_size | integer | _<необязательный параметр>_ +
+ Specifies the size of a page. Supported values: 10, 25, 50 and 100. Requires "page" to be set. | 
+| sort | array | _<необязательный параметр>_ +
+ Specifies the sorting of the list. | None
+| contents | array | *_<обязательный параметр>_* +
+ Specify the returned contents. | 
+|===
+===== Ответы
+
+[options="header",cols="1,4"]
+|===
+| Код | Описание
+| 200 | Loads a list of suitable Storage Routers for scrubbing the given vDisk
+| default | Error payload
+|===
+*Тип возвращаемого значения:* object
+
+=== URL: /vdisks/{guid}/get_target_storagerouters/
+
+==== Метод: GET
+===== Описание
+Gets all possible target Storage Routers for a given vDisk (e.g. when cloning, creating from template or moving)
+
+===== Параметры
+
+[options="header",cols="2,1,3,2"]
+|===
+| Параметр | Тип | Описание | Значение по умолчанию
+| guid | string | *_<обязательный параметр>_* +
+ Identifier of the object on which to call is applied. | 
+| page | integer | _<необязательный параметр>_ +
+ Specifies the page to be returned. | 
+| page_size | integer | _<необязательный параметр>_ +
+ Specifies the size of a page. Supported values: 10, 25, 50 and 100. Requires "page" to be set. | 
+| sort | array | _<необязательный параметр>_ +
+ Specifies the sorting of the list. | None
+| contents | array | *_<обязательный параметр>_* +
+ Specify the returned contents. | 
+|===
+===== Ответы
+
+[options="header",cols="1,4"]
+|===
+| Код | Описание
+| 200 | Gets all possible target Storage Routers for a given vDisk (e.g. when cloning, creating from template or moving)
+| default | Error payload
+|===
+*Тип возвращаемого значения:* object
+
+=== URL: /vdisks/{guid}/is_volume_synced_up_to_snapshot/
+
+==== Метод: POST
+===== Описание
+Verify if volume is synced to Backend up to a specific snapshot
+
+===== Параметры
+
+[options="header",cols="2,1,3,2"]
+|===
+| Параметр | Тип | Описание | Значение по умолчанию
+| guid | string | *_<обязательный параметр>_* +
+ Identifier of the object on which to call is applied. | 
+| vdisk | Не указано | _<необязательный параметр>_ +
+ Описание отсутствует. | 
+|===
+===== Ответы
+
+[options="header",cols="1,4"]
+|===
+| Код | Описание
+| 200 | Verify if volume is synced to Backend up to a specific snapshot
+| default | Error payload
+|===
+*Тип возвращаемого значения:* string
+
+=== URL: /vdisks/{guid}/is_volume_synced_up_to_tlog/
+
+==== Метод: POST
+===== Описание
+Verify if volume is synced to Backend up to a specific tlog
+
+===== Параметры
+
+[options="header",cols="2,1,3,2"]
+|===
+| Параметр | Тип | Описание | Значение по умолчанию
+| guid | string | *_<обязательный параметр>_* +
+ Identifier of the object on which to call is applied. | 
+| vdisk | Не указано | _<необязательный параметр>_ +
+ Описание отсутствует. | 
+|===
+===== Ответы
+
+[options="header",cols="1,4"]
+|===
+| Код | Описание
+| 200 | Verify if volume is synced to Backend up to a specific tlog
+| default | Error payload
+|===
+*Тип возвращаемого значения:* string
+
+=== URL: /vdisks/{guid}/move/
+
+==== Метод: POST
+===== Описание
+Moves a vDisk
+
+===== Параметры
+
+[options="header",cols="2,1,3,2"]
+|===
+| Параметр | Тип | Описание | Значение по умолчанию
+| guid | string | *_<обязательный параметр>_* +
+ Identifier of the object on which to call is applied. | 
+| vdisk | Не указано | _<необязательный параметр>_ +
+ Описание отсутствует. | 
+|===
+===== Ответы
+
+[options="header",cols="1,4"]
+|===
+| Код | Описание
+| 200 | Moves a vDisk
+| default | Error payload
+|===
+*Тип возвращаемого значения:* string
+
+=== URL: /vdisks/{guid}/remove_snapshot/
+
+==== Метод: POST
+===== Описание
+Remove a snapshot from a vDisk
+
+===== Параметры
+
+[options="header",cols="2,1,3,2"]
+|===
+| Параметр | Тип | Описание | Значение по умолчанию
+| guid | string | *_<обязательный параметр>_* +
+ Identifier of the object on which to call is applied. | 
+| vdisk | Не указано | _<необязательный параметр>_ +
+ Описание отсутствует. | 
+|===
+===== Ответы
+
+[options="header",cols="1,4"]
+|===
+| Код | Описание
+| 200 | Remove a snapshot from a vDisk
+| default | Error payload
+|===
+*Тип возвращаемого значения:* string
+
+=== URL: /vdisks/{guid}/restart/
+
+==== Метод: POST
+===== Описание
+Restart a vDisk
+
+===== Параметры
+
+[options="header",cols="2,1,3,2"]
+|===
+| Параметр | Тип | Описание | Значение по умолчанию
+| guid | string | *_<обязательный параметр>_* +
+ Identifier of the object on which to call is applied. | 
+| vdisk | Не указано | _<необязательный параметр>_ +
+ Описание отсутствует. | 
+|===
+===== Ответы
+
+[options="header",cols="1,4"]
+|===
+| Код | Описание
+| 200 | Restart a vDisk
+| default | Error payload
+|===
+*Тип возвращаемого значения:* string
+
+=== URL: /vdisks/{guid}/rollback/
+
+==== Метод: POST
+===== Описание
+Rollbacks a vDisk to a given timestamp
+
+===== Параметры
+
+[options="header",cols="2,1,3,2"]
+|===
+| Параметр | Тип | Описание | Значение по умолчанию
+| guid | string | *_<обязательный параметр>_* +
+ Identifier of the object on which to call is applied. | 
+| vdisk | Не указано | _<необязательный параметр>_ +
+ Описание отсутствует. | 
+|===
+===== Ответы
+
+[options="header",cols="1,4"]
+|===
+| Код | Описание
+| 200 | Rollbacks a vDisk to a given timestamp
+| default | Error payload
+|===
+*Тип возвращаемого значения:* string
+
+=== URL: /vdisks/{guid}/schedule_backend_sync/
+
+==== Метод: POST
+===== Описание
+Schedule a Backend sync on a vDisk
+
+===== Параметры
+
+[options="header",cols="2,1,3,2"]
+|===
+| Параметр | Тип | Описание | Значение по умолчанию
+| guid | string | *_<обязательный параметр>_* +
+ Identifier of the object on which to call is applied. | 
+|===
+===== Ответы
+
+[options="header",cols="1,4"]
+|===
+| Код | Описание
+| 200 | Schedule a Backend sync on a vDisk
+| default | Error payload
+|===
+*Тип возвращаемого значения:* string
+
+=== URL: /vdisks/{guid}/scrub/
+
+==== Метод: POST
+===== Описание
+Scrubs a given vDisk on a given Storage Router
+
+===== Параметры
+
+[options="header",cols="2,1,3,2"]
+|===
+| Параметр | Тип | Описание | Значение по умолчанию
+| guid | string | *_<обязательный параметр>_* +
+ Identifier of the object on which to call is applied. | 
+| vdisk | Не указано | _<необязательный параметр>_ +
+ Описание отсутствует. | 
+|===
+===== Ответы
+
+[options="header",cols="1,4"]
+|===
+| Код | Описание
+| 200 | Scrubs a given vDisk on a given Storage Router
+| default | Error payload
+|===
+*Тип возвращаемого значения:* string
+
+=== URL: /vdisks/{guid}/set_as_template/
+
+==== Метод: POST
+===== Описание
+Sets a vDisk as Template
+
+===== Параметры
+
+[options="header",cols="2,1,3,2"]
+|===
+| Параметр | Тип | Описание | Значение по умолчанию
+| guid | string | *_<обязательный параметр>_* +
+ Identifier of the object on which to call is applied. | 
+|===
+===== Ответы
+
+[options="header",cols="1,4"]
+|===
+| Код | Описание
+| 200 | Sets a vDisk as Template
+| default | Error payload
+|===
+*Тип возвращаемого значения:* string
+
+=== URL: /vdisks/{guid}/set_config_params/
+
+==== Метод: POST
+===== Описание
+Sets configuration parameters to a given vDisk.
+
+===== Параметры
+
+[options="header",cols="2,1,3,2"]
+|===
+| Параметр | Тип | Описание | Значение по умолчанию
+| guid | string | *_<обязательный параметр>_* +
+ Identifier of the object on which to call is applied. | 
+| vdisk | Не указано | _<необязательный параметр>_ +
+ Описание отсутствует. | 
+|===
+===== Ответы
+
+[options="header",cols="1,4"]
+|===
+| Код | Описание
+| 200 | Sets configuration parameters to a given vDisk.
+| default | Error payload
+|===
+*Тип возвращаемого значения:* string
+
+=== URL: /vpools/
+
+==== Метод: GET
+===== Описание
+Overview of all vPools
+
+===== Параметры
+
+[options="header",cols="2,1,3,2"]
+|===
+| Параметр | Тип | Описание | Значение по умолчанию
+| page | integer | _<необязательный параметр>_ +
+ Specifies the page to be returned. | 
+| page_size | integer | _<необязательный параметр>_ +
+ Specifies the size of a page. Supported values: 10, 25, 50 and 100. Requires "page" to be set. | 
+| sort | array | _<необязательный параметр>_ +
+ Specifies the sorting of the list. | name
+| contents | array | *_<обязательный параметр>_* +
+ Specify the returned contents. | 
+|===
+===== Ответы
+
+[options="header",cols="1,4"]
+|===
+| Код | Описание
+| 200 | Overview of all vPools
+| default | Error payload
+|===
+*Тип возвращаемого значения:* object
+
+=== URL: /vpools/create_snapshots/
+
+==== Метод: POST
+===== Описание
+Creates snapshots for a list of VDisks
+
+===== Параметры
+
+[options="header",cols="2,1,3,2"]
+|===
+| Параметр | Тип | Описание | Значение по умолчанию
+| body | Не указано | _<необязательный параметр>_ +
+ Описание отсутствует. | 
+|===
+===== Ответы
+
+[options="header",cols="1,4"]
+|===
+| Код | Описание
+| 200 | Creates snapshots for a list of VDisks
+| default | Error payload
+|===
+*Тип возвращаемого значения:* string
+
+=== URL: /vpools/remove_snapshots/
+
+==== Метод: POST
+===== Описание
+Remove a snapshot from a list of VDisks
+
+===== Параметры
+
+[options="header",cols="2,1,3,2"]
+|===
+| Параметр | Тип | Описание | Значение по умолчанию
+| body | Не указано | _<необязательный параметр>_ +
+ Описание отсутствует. | 
+|===
+===== Ответы
+
+[options="header",cols="1,4"]
+|===
+| Код | Описание
+| 200 | Remove a snapshot from a list of VDisks
+| default | Error payload
+|===
+*Тип возвращаемого значения:* string
+
+=== URL: /vpools/{guid}/
+
+==== Метод: GET
+===== Описание
+Load information about a given vPool
+
+===== Параметры
+
+[options="header",cols="2,1,3,2"]
+|===
+| Параметр | Тип | Описание | Значение по умолчанию
+| guid | string | *_<обязательный параметр>_* +
+ Identifier of the object on which to call is applied. | 
+| contents | array | *_<обязательный параметр>_* +
+ Specify the returned contents. | 
+|===
+===== Ответы
+
+[options="header",cols="1,4"]
+|===
+| Код | Описание
+| 200 | Load information about a given vPool
+| default | Error payload
+|===
+*Тип возвращаемого значения:* VPool
+
+=== URL: /vpools/{guid}/devicename_exists/
+
+==== Метод: GET
+===== Описание
+Checks whether a given name can be created on the vPool
+
+===== Параметры
+
+[options="header",cols="2,1,3,2"]
+|===
+| Параметр | Тип | Описание | Значение по умолчанию
+| guid | string | *_<обязательный параметр>_* +
+ Identifier of the object on which to call is applied. | 
+| name | string | _<необязательный параметр>_ +
+  Candidate name | 
+| names | array | _<необязательный параметр>_ +
+  Candidate names | 
+|===
+===== Ответы
+
+[options="header",cols="1,4"]
+|===
+| Код | Описание
+| 200 | Checks whether a given name can be created on the vPool
+| default | Error payload
+|===
+*Тип возвращаемого значения:* boolean
+
+=== URL: /vpools/{guid}/scrub_all_vdisks/
+
+==== Метод: POST
+===== Описание
+Scrubs the vDisks linked to the specified vPool
+
+===== Параметры
+
+[options="header",cols="2,1,3,2"]
+|===
+| Параметр | Тип | Описание | Значение по умолчанию
+| guid | string | *_<обязательный параметр>_* +
+ Identifier of the object on which to call is applied. | 
+|===
+===== Ответы
+
+[options="header",cols="1,4"]
+|===
+| Код | Описание
+| 200 | Scrubs the vDisks linked to the specified vPool
+| default | Error payload
+|===
+*Тип возвращаемого значения:* string
+
+=== URL: /vpools/{guid}/scrub_multiple_vdisks/
+
+==== Метод: POST
+===== Описание
+Scrubs the specified vDisks or all vDisks of the vPool is no guids are passed in
+
+===== Параметры
+
+[options="header",cols="2,1,3,2"]
+|===
+| Параметр | Тип | Описание | Значение по умолчанию
+| guid | string | *_<обязательный параметр>_* +
+ Identifier of the object on which to call is applied. | 
+| vpool | Не указано | _<необязательный параметр>_ +
+ Описание отсутствует. | 
+|===
+===== Ответы
+
+[options="header",cols="1,4"]
+|===
+| Код | Описание
+| 200 | Scrubs the specified vDisks or all vDisks of the vPool is no guids are passed in
+| default | Error payload
+|===
+*Тип возвращаемого значения:* string
+
+=== URL: /vpools/{guid}/shrink_vpool/
+
+==== Метод: POST
+===== Описание
+Remove the Storage Driver linking the specified vPool and storagerouter_guid
+
+===== Параметры
+
+[options="header",cols="2,1,3,2"]
+|===
+| Параметр | Тип | Описание | Значение по умолчанию
+| guid | string | *_<обязательный параметр>_* +
+ Identifier of the object on which to call is applied. | 
+| vpool | Не указано | _<необязательный параметр>_ +
+ Описание отсутствует. | 
+|===
+===== Ответы
+
+[options="header",cols="1,4"]
+|===
+| Код | Описание
+| 200 | Remove the Storage Driver linking the specified vPool and storagerouter_guid
+| default | Error payload
+|===
+*Тип возвращаемого значения:* string
+
+=== URL: /vpools/{guid}/storagerouters/
+
+==== Метод: GET
+===== Описание
+Retrieves a list of Storage Routers, serving a given vPool
+
+===== Параметры
+
+[options="header",cols="2,1,3,2"]
+|===
+| Параметр | Тип | Описание | Значение по умолчанию
+| guid | string | *_<обязательный параметр>_* +
+ Identifier of the object on which to call is applied. | 
+| page | integer | _<необязательный параметр>_ +
+ Specifies the page to be returned. | 
+| page_size | integer | _<необязательный параметр>_ +
+ Specifies the size of a page. Supported values: 10, 25, 50 and 100. Requires "page" to be set. | 
+| sort | array | _<необязательный параметр>_ +
+ Specifies the sorting of the list. | None
+| contents | array | *_<обязательный параметр>_* +
+ Specify the returned contents. | 
+|===
+===== Ответы
+
+[options="header",cols="1,4"]
+|===
+| Код | Описание
+| 200 | Retrieves a list of Storage Routers, serving a given vPool
+| default | Error payload
+|===
+*Тип возвращаемого значения:* object
+
+=== URL: /vpools/{guid}/sync_with_reality/
+
+==== Метод: POST
+===== Описание
+Syncs the model for a given vPool with real values.
+
+===== Параметры
+
+[options="header",cols="2,1,3,2"]
+|===
+| Параметр | Тип | Описание | Значение по умолчанию
+| guid | string | *_<обязательный параметр>_* +
+ Identifier of the object on which to call is applied. | 
+|===
+===== Ответы
+
+[options="header",cols="1,4"]
+|===
+| Код | Описание
+| 200 | Syncs the model for a given vPool with real values.
+| default | Error payload
+|===
+*Тип возвращаемого значения:* string
+
