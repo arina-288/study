@@ -610,7 +610,8 @@
 <script>
   window.onload = function() {
     const ui = SwaggerUIBundle({
-      url: "/study/swagger/openapi.yaml",
+      //url: "/swagger/openapi.yaml",// для локальной сборки
+      url: "/study/swagger/openapi.yaml", // для сборки в гите
       dom_id: '#swagger-ui',
       presets: [
         SwaggerUIBundle.presets.apis,
