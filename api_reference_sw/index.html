@@ -12,13 +12,13 @@
         <meta name="author" content="(C) 2024, BASIS">
       
       
-        <link rel="canonical" href="https://basis.api.doc.ru/contacts/">
+        <link rel="canonical" href="https://basis.api.doc.ru/api_reference_sw/">
       
       
-        <link rel="prev" href="../history_of_changes/">
+        <link rel="prev" href="../getting_started_guide/">
       
       
-        <link rel="next" href="../glossary/">
+        <link rel="next" href="../api_reference_rd/">
       
       
       <link rel="icon" href="../basis_short-logo_color.png">
@@ -26,7 +26,7 @@
     
     
       
-        <title>Контакты - Документация API</title>
+        <title>Swagger - Документация API</title>
       
     
     
@@ -77,6 +77,11 @@
     <label class="md-overlay" for="__drawer"></label>
     <div data-md-component="skip">
       
+        
+        <a href="#api" class="md-skip">
+          Перейти к содержанию
+        </a>
+      
     </div>
     <div data-md-component="announce">
       
@@ -106,7 +111,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Контакты
+              Swagger
             
           </span>
         </div>
@@ -224,11 +229,13 @@
         
   
   
+    
+  
   
     
     
-      <li class="md-tabs__item">
-        <a href="../api_reference_sw/" class="md-tabs__link">
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="./" class="md-tabs__link">
           
   
   Справочник API
@@ -276,11 +283,9 @@
         
   
   
-    
   
-  
-    <li class="md-tabs__item md-tabs__item--active">
-      <a href="./" class="md-tabs__link">
+    <li class="md-tabs__item">
+      <a href="../contacts/" class="md-tabs__link">
         
   
     
@@ -407,23 +412,28 @@
       
   
   
+    
   
   
+  
     
     
     
-      
-      
-    
-    
-    <li class="md-nav__item md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" checked>
         
           
-          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="">
             
   
   <span class="md-ellipsis">
@@ -434,7 +444,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_4">
             <span class="md-nav__icon md-icon"></span>
             Справочник API
@@ -445,10 +455,19 @@
                 
   
   
+    
   
   
-    <li class="md-nav__item">
-      <a href="../api_reference_sw/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         
   
   <span class="md-ellipsis">
@@ -457,6 +476,7 @@
   
 
       </a>
+      
     </li>
   
 
@@ -534,17 +554,10 @@
       
   
   
-    
   
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../contacts/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -553,7 +566,6 @@
   
 
       </a>
-      
     </li>
   
 
@@ -593,9 +605,22 @@
                   
 
 
-  <h1>Контакты</h1>
-
-
+<h1 id="api">Справочник API</h1>
+<div id="swagger-ui"></div>
+<script>
+  window.onload = function() {
+    const ui = SwaggerUIBundle({
+      url: "/study/swagger/openapi.yaml",
+      dom_id: '#swagger-ui',
+      presets: [
+        SwaggerUIBundle.presets.apis,
+        SwaggerUIStandalonePreset
+      ],
+      layout: "StandaloneLayout"
+    })
+    window.ui = ui
+  }
+</script>
 
 
 
