@@ -12,7 +12,7 @@
     </style>
 </head>
 <body>
-    <redoc spec-url='/swagger/openapi.yaml'></redoc>
+    <redoc spec-url='/study/study/docs/swagger/openapi.yaml'></redoc>
     <script src="https://cdn.jsdelivr.net/npm/redoc/bundles/redoc.standalone.js"> </script>
 </body>
 </html>
